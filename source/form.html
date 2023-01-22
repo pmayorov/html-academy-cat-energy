@@ -28,8 +28,85 @@
 
   <!-- FORM - MAIN -->
   <main class="page__main page-main">
+
     <h1 class="">Подбор программы</h1>
     <p class="">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    <section class="">
+      <h2 class="visually-hidden">Форма заявки</h2>
+      <!-- Форма заявки -->
+      <form class="" action="https://echo.htmlacademy.ru" name="initial-form" method="get">
+        <!-- Информация о коте -->
+        <fieldset class="">
+          <legend class="visually-hidden">Информация о коте</legend>
+          <ul class="">
+            <li class="">
+              <label class=""><span class="">Имя:*</span><input class="" name="cat-name" type="text" placeholder="Степан"></label>
+            </li>
+            <li class="">
+              <label class=""><span class="">Вес (кг):*</span><input class="" name="cat-weight" type="number" min="1" step="0.5" placeholder="7"></label>
+            </li>
+            <li class="">
+              <label class=""><span class="">Возраст (лет):</span><input class="" name="cat-age" type="number" min="1" placeholder="7"></label>
+            </li>
+          </ul>
+        </fieldset>
+        <!-- Цель программы -->
+        <fieldset class="">
+          <legend class="visually-hidden">Цель программы</legend>
+          <ul class="">
+            <li class="">
+              <label class=""><input class="" type="radio" name="target" value="slim" checked><span class="">Похудение</span></label>
+            </li>
+            <li class="">
+              <label class=""><input class="" type="radio" name="target" value="fatten"><span class="">Набор массы</span></label>
+            </li>
+            <li class="">
+              <label class=""><input class="" type="radio" name="target" value="offer"><span class="">Не знаю (Нужен ваш совет)</span></label>
+            </li>
+          </ul>
+        </fieldset>
+        <!-- Контактные данные -->
+        <fieldset class="">
+          <legend class="">Контактные данные (владельца кота)</legend>
+          <ul class="">
+            <li class="">
+              <label class=""><span class="">E-mail:*</span><input class="" type="email" name="email" placeholder="catstepan@gmail.com"></label>
+            </li>
+            <li class="">
+              <label class=""><span class="">Телефон:*</span><input class="" type="tel" name="phone" placeholder="8 (960) 900-60-90"></label>
+            </li>
+          </ul>
+        </fieldset>
+        <!-- Коментарий -->
+        <div class="">
+          <label class="" for="comment_field">Коментарий</label>
+          <div class="">
+            <textarea name="comment-field" id="comment_field" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
+        </div>
+        <!-- Дополнительно -->
+        <fieldset class="">
+          <legend class="">Дополнительно</legend>
+          <ul class="">
+            <li class="">
+              <label class=""><input class="" type="checkbox" name="addition" value="sweetener" checked><span class="">Сахарозаменитель</span></label>
+            </li>
+            <li class="">
+              <label class=""><input class="" type="checkbox" name="addition" value="water"><span class="">Питьевая вода</span></label>
+            </li>
+            <li class="">
+              <label class=""><input class="" type="checkbox" name="addition" value="milk"><span class="">Молоко</span></label>
+            </li>
+            <li class="">
+              <label class=""><input class="" type="checkbox" name="addition" value="vitamin"><span class="">Витамины</span></label>
+            </li>
+          </ul>
+        </fieldset>
+        <!-- Отправить -->
+        <button class="" for="initial-form" type="submit">Отправить заявку</button>
+        <p class="">* – Обязательные поля</p>
+      </form>
+    </section>
   </main>
 
   <!-- FORM - FOOTER -->
@@ -63,42 +140,3 @@
 </body>
 
 </html>
-
-<!--
-
-Имя:* Степан
-Вес (кг):* 7
-Возраст (лет): 7
-
-Похудение
-Набор массы
-Не знаю (Нужен ваш совет)
-
-Контактные данные (владельца кота)
-E-mail:* kuklachev@gmail.com
-Телефон:* 8 (960) 900-60-90
-
-Комментарий
-Расскажите обо всех повадках кота
-
-Дополнительно
-Сахарозаменитель
-Питьевая вода
-Молоко
-Витамины
-
-Отправить заявку
-
-* — Обязательные поля
-
-Приглашаем к сотрудничеству дилеров!
-ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-
-Вконтакте
-Инстаграмм
-Фейсбук
-
-HTML Academy
-
-
- -->
