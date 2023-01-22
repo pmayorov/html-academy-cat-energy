@@ -1,0 +1,292 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: #000000;
+  text-decoration: none;
+}
+
+*::before {
+  position: absolute;
+  padding: 2px 8px;
+  left: 0;
+  top: 0;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: bold;
+}
+
+body {
+  font-size: 16px;
+  padding: 20px;
+}
+
+header,
+main,
+aside,
+footer {
+  position: relative;
+  padding: 20px;
+  margin-bottom: 40px;
+  border: 3px solid #b0e0e6;
+}
+
+header::before,
+main::before,
+aside::before,
+footer::before {
+  background-color: #b0e0e6;
+}
+
+header::before {
+  content: "header";
+}
+
+main::before {
+  content: "main";
+}
+
+aside::before {
+  content: "aside";
+}
+
+footer::before {
+  content: "footer";
+}
+
+nav,
+section,
+article {
+  position: relative;
+  padding: 20px;
+  margin: 30px 0;
+  border: 3px solid #dda0dd;
+}
+
+nav::before,
+section::before,
+article::before {
+  background-color: #dda0dd;
+}
+
+nav::before {
+  content: "nav";
+}
+
+section::before {
+  content: "section";
+}
+
+article::before {
+  content: "article";
+}
+
+div {
+  position: relative;
+  padding: 20px 50px;
+  margin: 20px 0;
+  border: 3px solid #d3d3d3;
+}
+
+div::before {
+  background-color: #d3d3d3;
+  content: "div";
+}
+
+h1,
+h2,
+h3,
+h4 {
+  position: relative;
+  padding: 20px 50px;
+  margin: 30px 0;
+  padding-bottom: 10pt;
+  background-color: #f8f8ff;
+  border: 1px solid #9370db;
+}
+
+h1::before,
+h2::before,
+h3::before,
+h4::before {
+  background-color: #9370db;
+  color: #ffffff;
+}
+
+h1::before {
+  content: "h1";
+}
+
+h2::before {
+  content: "h2";
+}
+
+h3::before {
+  content: "h3";
+}
+
+h4::before {
+  content: "h4";
+}
+
+li h2,
+li h3 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+p,
+blockquote,
+cite,
+address {
+  display: block;
+  position: relative;
+  padding: 20px 50px;
+  margin: 15px 0;
+  background-color: #f5f5f5;
+  border: 1px solid #708090;
+}
+
+p::before,
+blockquote::before,
+cite::before,
+address::before {
+  background-color: #708090;
+  color: #ffffff;
+  content: "p";
+}
+
+blockquote::before {
+  content: "blockquote";
+}
+
+cite::before {
+  content: "cite";
+}
+
+p::before {
+  content: "p";
+}
+
+address::before {
+  content: "address";
+}
+
+ul,
+ol,
+dl {
+  position: relative;
+  padding: 20px 50px;
+  margin: 30px 0;
+  background-color: #fff8dc;
+  border: 1px solid #cd853f;
+}
+
+li,
+dt,
+dd {
+  list-style-type: none;
+  position: relative;
+  margin-bottom: 5px;
+  padding: 5px 12px 5px 45px;
+  border: 1px solid #cd853f;
+}
+
+dd:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+ul::before,
+ol::before,
+li::before,
+dl::before,
+dt::before,
+dd::before {
+  background-color: #cd853f;
+  color: #ffffff;
+}
+
+ul::before {
+  content: "ul";
+}
+
+ol::before {
+  content: "ol";
+}
+
+li::before {
+  content: "li";
+}
+
+dl::before {
+  content: "dl";
+}
+
+dt::before {
+  content: "dt";
+}
+
+dd::before {
+  content: "dd";
+}
+
+img {
+  display: inline-block;
+  width: auto;
+  max-height: 200px;
+  padding: 20px;
+  background-color: #f0f8ff;
+  border: 1px solid #708090;
+}
+
+span {
+  display: inline-block;
+  position: relative;
+  padding: 5px 10px 5px 60px;
+  background-color: #f5f5f5;
+  border: 1px solid #708090;
+  margin: 0 10px;
+}
+
+a {
+  display: inline-block;
+  position: relative;
+  padding: 5px 10px 5px 55px;
+  background-color: #f5f5f5;
+  border: 1px solid #5fa5eb;
+}
+
+
+span::before {
+  background-color: #708090;
+  color: #ffffff;
+  content: "span";
+  top: 4px;
+  left: 5px;
+}
+
+a::before {
+  background-color: #5fa5eb;
+  color: #ffffff;
+  content: "link";
+  top: 4px;
+  left: 5px;
+}
+
+button,
+input {
+  padding: 12px;
+}
+
+form {
+  position: relative;
+  padding: 20px 70px;
+  margin-bottom: 10px;
+  background-color: #f0f8ff;
+  border: 1px solid #708090;
+}
+
+form::before {
+  background-color: #708090;
+  color: #ffffff;
+  content: "form";
+}

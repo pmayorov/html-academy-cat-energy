@@ -1,0 +1,23 @@
+{
+  "name": "{{projectName}}",
+  "private": true,
+  "description": "Личный проект «{{projectTitle}}» от HTML Academy",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.0.0",
+    "stylelint": "13.13.1",
+    "stylelint-config-htmlacademy": "^0.1.11"
+  },
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint .",
+    "lint": "npm run editorconfig"
+  },
+  "editorconfig-cli": [
+    "*.json",
+    "source/*.html"
+  ],
+  "engines": {
+    "node": "^16"
+  },
+  "type": "module"
+}
