@@ -11,7 +11,7 @@
 <body class="page__body">
 
   <!-- CATALOG - HEADER -->
-  <header class="page__header">
+  <header class="page__header page-header">
     <nav class="page-header__nav">
       <a class="page-header__logo logo" href="./index.html">
         <img class="logo__image" width="34" height="38" src="./img/logo-cat.svg" alt="Cat Energy">
@@ -26,8 +26,179 @@
     </nav>
   </header>
 
-  <main>
-    <h1 class="">Каталог продукции</h1>
+  <!-- CATALOG - MAIN -->
+  <main class="page__main page-main">
+    <h1 class="page-main__title">Каталог продукции</h1>
+    <!-- Секция основного товара -->
+
+    <section class="page-main__section products">
+      <h2 class="visually-hidden">Основные товары</h2>
+      <!-- Список основного товара -->
+
+      <ul class="products__list">
+        <!-- 1-я карточка -->
+        <li class="products__item card">
+          <h3 class="card__title">Cat Energy PRO 500 г</h3>
+          <img class="card__image" width="140" height="112" src="./img/cat-500-chicken.png" alt="Корм со вкусом курицы в упаковке 500 грамм">
+          <dl class="card__list">
+            <dt class="card__term">Масса</dt>
+            <dd class="card__desc">500 г</dd>
+            <dt class="card__term">Вкус</dt>
+            <dd class="card__desc">Курица</dd>
+            <dt class="card__term">Цена</dt>
+            <dd class="card__desc">700 Р.</dd>
+          </dl>
+          <a class="card__button button" href="#">Заказать</a>
+        </li>
+        <!-- 2-я карточка -->
+        <li class="products__item card">
+          <h3 class="card__title">Cat Energy PRO 1000 г</h3>
+          <img class="card__image" width="140" height="112" src="./img/cat-1000-chicken.png" alt="Корм со вкусом курицы в упаковке 1000 грамм">
+          <dl class="card__list">
+            <dt class="card__term">Масса</dt>
+            <dd class="card__desc">1000 г</dd>
+            <dt class="card__term">Вкус</dt>
+            <dd class="card__desc">Курица</dd>
+            <dt class="card__term">Цена</dt>
+            <dd class="card__desc">1000 Р.</dd>
+          </dl>
+          <a class="card__button button" href="#">Заказать</a>
+        </li>
+        <!-- 3-я карточка -->
+        <li class="products__item card">
+          <h3 class="card__title"></h3>
+          <img class="card__image" width="140" height="112" src="./img/cat-500-fish.png" alt="">
+          <dl class="card__list">
+            <dt class="card__term">Масса</dt>
+            <dd class="card__desc">500 г</dd>
+            <dt class="card__term">Вкус</dt>
+            <dd class="card__desc"></dd>
+            <dt class="card__term">Цена</dt>
+            <dd class="card__desc">700 Р.</dd>
+          </dl>
+          <a class="card__button button" href="#">Заказать</a>
+        </li>
+        <!-- 4-я карточка -->
+        <li class="products__item card">
+          <h3 class="card__title"></h3>
+          <img class="card__image" width="140" height="112" src="./img/cat-1000-fish.png" alt="">
+          <dl class="card__list">
+            <dt class="card__term">Масса</dt>
+            <dd class="card__desc">1000 г</dd>
+            <dt class="card__term">Вкус</dt>
+            <dd class="card__desc">Рыба</dd>
+            <dt class="card__term">Цена</dt>
+            <dd class="card__desc">1000 Р.</dd>
+          </dl>
+          <a class="card__button button" href="#">Заказать</a>
+        </li>
+        <!-- 5-я карточка -->
+        <li class="products__item card">
+          <h3 class="card__title"></h3>
+          <img class="card__image" width="140" height="112" src="./img/cat-500-buckwheat.png" alt="">
+          <dl class="card__list">
+            <dt class="card__term">Масса</dt>
+            <dd class="card__desc">500 г</dd>
+            <dt class="card__term">Вкус</dt>
+            <dd class="card__desc">Гречка</dd>
+            <dt class="card__term">Цена</dt>
+            <dd class="card__desc">400 Р.</dd>
+          </dl>
+          <a class="card__button button" href="#">Заказать</a>
+        </li>
+        <!-- 6-я карточка -->
+        <li class="products__item card">
+          <h3 class="card__title"></h3>
+          <img class="card__image" width="140" height="112" src="./img/cat-1000-buckwheat.png" alt="">
+          <dl class="card__list">
+            <dt class="card__term">Масса</dt>
+            <dd class="card__desc">1000 г</dd>
+            <dt class="card__term">Вкус</dt>
+            <dd class="card__desc">Гречка</dd>
+            <dt class="card__term">Цена</dt>
+            <dd class="card__desc">700 Р.</dd>
+          </dl>
+          <a class="card__button button" href="#">Заказать</a>
+        </li>
+        <!-- 7-я карточка -->
+        <li class="products__item card">
+          <h3 class="card__title"></h3>
+          <img class="card__image" width="140" height="112" src="./img/cat-500-rice.png" alt="">
+          <dl class="card__list">
+            <dt class="card__term">Масса</dt>
+            <dd class="card__desc">500 г</dd>
+            <dt class="card__term">Вкус</dt>
+            <dd class="card__desc">Рис</dd>
+            <dt class="card__term">Цена</dt>
+            <dd class="card__desc">500 Р.</dd>
+          </dl>
+          <a class="card__button button" href="#">Заказать</a>
+        </li>
+        <!-- 8-я – показать всё! -->
+        <li class="products__item card">
+          <h3 class="card__title">Показать еще 100500 товаров</h3>
+          <p class="card__term">На самом деле вкусов гораздо больше!</p>
+          <a class="card__button card__button--all button" href="#">Заказать</a>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- Секция дополнительного товара -->
+    <section class="page-main__section more-products">
+      <h2 class="page-main__title more-products__title">Дополнительные товары</h2>
+
+      <!-- Список дополнительного товара -->
+      <ul class="more-products__list">
+        <li class="more-products__item card-row">
+          <h3 class="card-row__title">Сахарозаменитель</h3>
+          <dl class="card-row__list">
+            <dt class="visually-hidden">Объем</dt>
+            <dd class="card-row__desc">1 упаковка (100 г)</dd>
+            <dt class="visually-hidden">Цена</dt>
+            <dd class="card-row__desc">200 Р.</dd>
+          </dl>
+          <a class="card-row__button button" href="#">Заказать</a>
+        </li>
+
+        <li class="more-products__item card-row">
+          <h3 class="card-row__title">Питьевая вода</h3>
+          <dl class="card-row__list">
+            <dt class="visually-hidden">Объем</dt>
+            <dd class="card-row__desc">5 литров</dd>
+            <dt class="visually-hidden">Цена</dt>
+            <dd class="card-row__desc">50 Р.</dd>
+          </dl>
+          <a class="card-row__button button" href="#">Заказать</a>
+        </li>
+
+        <li class="more-products__item card-row">
+          <h3 class="card-row__title">Молоко</h3>
+          <dl class="card-row__list">
+            <dt class="visually-hidden">Объем</dt>
+            <dd class="card-row__desc">1 литр</dd>
+            <dt class="visually-hidden">Цена</dt>
+            <dd class="card-row__desc">100 Р.</dd>
+          </dl>
+          <a class="card-row__button button" href="#">Заказать</a>
+        </li>
+
+        <li class="more-products__item card-row">
+          <h3 class="card-row__title">Витамины</h3>
+          <dl class="card-row__list">
+            <dt class="visually-hidden">Объем</dt>
+            <dd class="card-row__desc">1 упаковка (30 г)</dd>
+            <dt class="visually-hidden">Цена</dt>
+            <dd class="card-row__desc">300 Р.</dd>
+          </dl>
+          <a class="card-row__button button" href="#">Заказать</a>
+        </li>
+      </ul>
+      <!-- Заказать всё! -->
+      <div class="more-products__bonus bonus">
+        <p class="bonus__text">Закажите все и получите чехол для кота в подарок!</p>
+      </div>
+    </section>
   </main>
 
   <!-- CATALOG - FOOTER -->
