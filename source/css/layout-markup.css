@@ -277,7 +277,7 @@ input {
   padding: 12px;
 }
 
-form {
+form, button {
   position: relative;
   padding: 20px 70px;
   margin-bottom: 10px;
@@ -289,4 +289,10 @@ form::before {
   background-color: #708090;
   color: #ffffff;
   content: "form";
+}
+
+button::before {
+  background-color: #708090;
+  color: #ffffff;
+  content: "button";
 }
