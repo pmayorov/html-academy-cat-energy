@@ -1,20 +1,43 @@
 {
   "name": "Cat-Energy",
   "private": true,
-  "description": "Личный проект Cat-Energy от HTML Academy",
+  "description": "Личный проект «Cat-Energy» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
+    "@linthtml/linthtml": "^0.9.4",
+    "autoprefixer": "^10.4.13",
+    "browser-sync": "^2.27.7",
+    "gulp": "4.0.2",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "9.0.1",
+    "linthtml-config-htmlacademy": "^1.0.3",
+    "postcss": "^8.4.21",
     "stylelint": "^14.16.1",
-    "stylelint-config-htmlacademy": "^1.1.4"
+    "stylelint-config-htmlacademy": "^1.1.4",
+    "stylelint-config-standard-scss": "^6.1.0"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint .",
-    "lint": "npm run editorconfig"
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --custom-syntax",
+    "lint": "npm run editorconfig && npm run stylelint",
+    "build": "gulp styles",
+    "start": "gulp"
   },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all",
+    "not < 0.25%"
+  ],
   "editorconfig-cli": [
     "*.json",
-    "source/*.html"
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/sass/**/*.scss"
   ],
   "engines": {
     "node": "^16"
