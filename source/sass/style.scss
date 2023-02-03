@@ -1,9 +1,5 @@
-@mixin fill () {
-  background-color: #eef3ac;
-}
+// Импорт
+@import './fonts.scss'; 
+@import './variables.scss';
 
-.page__body {
-  color: #1a090d;
-
-  @include fill();
-}
+// Блоки

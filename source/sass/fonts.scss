@@ -1,0 +1,21 @@
+// Шрифты проекта
+
+@font-face {
+  font-display: swap;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('../fonts/oswaldregular.woff2') format('woff2'),
+    url('../fonts/oswaldregular.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('../fonts/oswaldmedium.woff2') format('woff2'),
+    url('../fonts/oswaldmedium.woff') format('woff'),
+}
