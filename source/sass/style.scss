@@ -1,1 +1,11 @@
-// Hello, Sasss / SCSS world!
+/**/
+
+@mixin fill () {
+  background-color: #eef3ac;
+}
+
+.page__body {
+  color: #1a090d;
+
+  @include fill();
+}
