@@ -76,18 +76,9 @@
   color: #ffffff;
   background-color: #5eaa2f;
   text-align: center;
-  position: relative;
-}
-
-.promo__wrapper::after {
-  content: "";
-  background-image: url("../../img/promo-background-image.jpg");
-  opacity: 0.15;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
+  background-image: url("../../img/backimages/promo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .promo__title {
@@ -109,9 +100,17 @@
   padding: 7px;
 }
 
+.catalogues {
+  padding: 20px;
+}
+
 .catalogues__item {
   padding: 20px;
   background-color: #f2f2f2;
+}
+
+.catalogues__item:not(:last-of-type) {
+  margin-bottom: 20px;
 }
 
 .catalogues__title {
@@ -135,6 +134,10 @@
   text-decoration: none;
 }
 
+.progress {
+  padding: 0 20px 50px 20px;
+}
+
 .progress__list {
   margin: 0;
   padding: 0;
@@ -147,6 +150,7 @@
 }
 
 .example {
+  padding: 25px 20px 40px 20px;
   background-color: #ebebeb;
 }
 
@@ -185,5 +189,38 @@
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+.page-footer__inner {
+  padding: 40px 20px 20px 20px;
+  background-color: #f2f2f2;
+}
+
+.contacts {
+  background-color: #ffffff;
+}
+
+.contacts__address {
+  padding: 26px 20px;
+  font-style: normal;
+}
+
+.contacts__title {
+  color: #111111;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.contacts__text {
+  line-height: 20px;
+  color: #444444;
+}
+
+.academy {
+  font-size: 16px;
+  color: #444444;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

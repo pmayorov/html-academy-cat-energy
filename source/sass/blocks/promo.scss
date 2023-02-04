@@ -3,21 +3,12 @@
   color: $color-white;
   background-color: $basic-green;
   text-align: center;
-  position: relative;
-}
 
-.promo__wrapper::after {
-  content: "";
-  background-image: url("../../img/promo-background-image.jpg");
-  // background-repeat: no-repeat;
-  // background-size: contain;
-  // background-position: center;
-  opacity: 0.15;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
+  background: {
+    image: url("../../img/backimages/promo.jpg");
+    repeat: no-repeat;
+    position: center;
+  }
 }
 
 .promo__title {

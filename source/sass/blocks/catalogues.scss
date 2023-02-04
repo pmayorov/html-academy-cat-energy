@@ -1,6 +1,13 @@
+.catalogues {
+  padding: 20px;
+}
 .catalogues__item {
   padding: 20px;
   background-color: $basic-grey;
+}
+
+.catalogues__item:not(:last-of-type) {
+  margin-bottom: 20px;
 }
 
 .catalogues__title {
