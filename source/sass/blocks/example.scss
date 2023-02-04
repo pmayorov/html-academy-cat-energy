@@ -1,0 +1,40 @@
+.example {
+  background-color: $special-grey-100;
+}
+
+.example__text {
+  color: $special-grey-700;
+}
+
+.example__list {
+  text-align: center;
+}
+
+.example__term {
+  font-size: 12px;
+  line-height: 1;
+  color: $special-grey-700;
+  text-transform: lowercase;
+}
+
+.example__desc {
+  margin: 0;
+  font-family: $font-title;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.example__costs {
+  font-family: $font-title;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.switcher__button {
+  border: none;
+  background-color: transparent;
+  font-family: $font-title;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}

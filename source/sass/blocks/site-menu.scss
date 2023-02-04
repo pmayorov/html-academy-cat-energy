@@ -1,0 +1,21 @@
+.site-menu {
+  font-family: $font-title;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  list-style-type: none;
+}
+
+.site-menu__item {
+  padding: {
+    top: 22px;
+    bottom: 24px;
+  }
+}
+
+.site-menu__link {
+  color: $color-black;
+  text-decoration: none;
+}

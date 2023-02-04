@@ -19,7 +19,7 @@
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"source/sass/**/*.scss\" --custom-syntax postcss",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --custom-syntax postcss-scss",
     "lint": "npm run editorconfig && npm run stylelint",
     "build": "gulp styles",
     "start": "gulp"
@@ -40,7 +40,7 @@
     "source/sass/**/*.scss"
   ],
   "engines": {
-    "node": "^16"
+    "node": ">=16"
   },
   "type": "module"
 }

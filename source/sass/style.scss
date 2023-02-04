@@ -1,5 +1,15 @@
 // Импорт
-@import './fonts.scss';
-@import './variables.scss';
+@import "./fonts.scss";
+@import "./variables.scss";
 
 // Блоки
+@import "./blocks/visually-hidden.scss";
+@import "./blocks/button.scss";
+@import "./blocks/page.scss";
+@import "./blocks/site-menu.scss";
+@import "./blocks/page-main.scss";
+@import "./blocks/promo.scss";
+@import "./blocks/catalogues.scss";
+@import "./blocks/progress.scss";
+@import "./blocks/example.scss";
+// @import "./blocks/page-footer.scss";

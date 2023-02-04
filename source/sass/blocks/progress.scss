@@ -1,0 +1,10 @@
+.progress__list {
+  margin: 0;
+  padding: 0;
+  color: $special-grey-700;
+  list-style-type: none;
+}
+
+.progress__item:not(:last-of-type) {
+  margin-bottom: 20px;
+}

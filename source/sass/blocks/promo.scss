@@ -1,0 +1,46 @@
+.promo__wrapper {
+  padding: 27px 20px;
+  color: $color-white;
+  background-color: $basic-green;
+  text-align: center;
+  position: relative;
+}
+
+.promo__wrapper::after {
+  content: "";
+  background-image: url("../../img/promo-background-image.jpg");
+  // background-repeat: no-repeat;
+  // background-size: contain;
+  // background-position: center;
+  opacity: 0.15;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+.promo__title {
+  font: {
+    family: $font-title;
+    size: 36px;
+    weight: 400;
+  }
+
+  line-height: 1;
+}
+
+.promo__subtitle {
+  font: {
+    family: $font-title;
+    size: 14px;
+    weight: 400;
+  }
+
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.promo__button {
+  padding: 7px;
+}
