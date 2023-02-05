@@ -1,0 +1,18 @@
+.button {
+  // display: block;
+  color: $color-white;
+  background-color: $basic-green;
+  border: 0;
+  font-family: $font-title;
+
+  text: {
+    align: center;
+    decoration: none;
+    transform: uppercase;
+  }
+}
+
+.button--secondary {
+  color: $special-grey-700;
+  background-color: $basic-grey;
+}

@@ -1,0 +1,23 @@
+.contacts {
+  &--no-fill {
+    background-color: $color-white;
+  }
+}
+
+.contacts__address {
+  padding: 26px 20px;
+  font-style: normal;
+}
+
+.contacts__title {
+  color: $special-grey-900;
+  font-family: $font-title;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.contacts__text {
+  line-height: 20px;
+  color: $special-grey-700;
+}

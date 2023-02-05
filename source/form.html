@@ -38,69 +38,69 @@
       <!-- Форма заявки -->
       <form class="form__body" action="https://echo.htmlacademy.ru" name="initial-form" method="post">
         <!-- Информация о коте -->
-        <fieldset class="form__fields field-set">
+        <fieldset class="form__fields fieldset">
           <legend class="visually-hidden">Информация о коте</legend>
-          <ul class="field-set__list">
-            <li class="field-set__item">
-              <label class="field"><span class="field__text">Имя:*</span><input class="field__input" name="cat-name" type="text" placeholder="Степан" required></label>
+          <ul class="fieldset__list">
+            <li class="fieldset__item">
+              <label class="field"><span class="field__text">Имя:* </span><input class="field__input" name="cat-name" type="text" placeholder="Степан" required></label>
             </li>
-            <li class="field-set__item">
-              <label class="field"><span class="field__text">Вес (кг):*</span><input class="field__input" name="cat-weight" type="number" min="1" step="0.5" placeholder="7" required></label>
+            <li class="fieldset__item">
+              <label class="field"><span class="field__text">Вес (кг):* </span><input class="field__input" name="cat-weight" type="number" min="1" step="0.5" placeholder="7" required></label>
             </li>
-            <li class="field-set__item">
-              <label class="field"><span class="field__text">Возраст (лет):</span><input class="field__input" name="cat-age" type="number" min="1" placeholder="7"></label>
+            <li class="fieldset__item">
+              <label class="field"><span class="field__text">Возраст (лет): </span><input class="field__input" name="cat-age" type="number" min="1" placeholder="7"></label>
             </li>
           </ul>
         </fieldset>
         <!-- Цель программы -->
-        <fieldset class="form__fields field-set">
+        <fieldset class="form__fields fieldset">
           <legend class="visually-hidden">Цель программы</legend>
-          <ul class="field-set__list">
-            <li class="field-set__item">
-              <label class="field"><input class="field__input" type="radio" name="target" value="slim" checked><span class="field__text">Похудение</span></label>
+          <ul class="fieldset__list">
+            <li class="fieldset__item">
+              <label class="select select--radio"><input class="select__input" type="radio" name="target" value="slim" checked><span class="select__text"> Похудение</span></label>
             </li>
-            <li class="field-set__item">
-              <label class="field"><input class="field__input" type="radio" name="target" value="fatten"><span class="field__text">Набор массы</span></label>
+            <li class="fieldset__item">
+              <label class="select select--radio"><input class="select__input" type="radio" name="target" value="fatten"><span class="select__text"> Набор массы</span></label>
             </li>
-            <li class="field-set__item">
-              <label class="field"><input class="field__input" type="radio" name="target" value="offer"><span class="field__text">Не знаю (Нужен ваш совет)</span></label>
+            <li class="fieldset__item">
+              <label class="select select--radio"><input class="select__input" type="radio" name="target" value="offer"><span class="select__text"> Не знаю (Нужен ваш совет)</span></label>
             </li>
           </ul>
         </fieldset>
         <!-- Контактные данные -->
-        <fieldset class="form__fields field-set">
-          <legend class="field-set__title">Контактные данные (владельца кота)</legend>
-          <ul class="field-set__list">
-            <li class="field-set__item">
-              <label class="field"><span class="field__text">E-mail:*</span><input class="field__input" type="email" name="email" placeholder="catstepan@gmail.com" required></label>
+        <fieldset class="form__fields fieldset">
+          <legend class="fieldset__title">Контактные данные (владельца кота)</legend>
+          <ul class="fieldset__list">
+            <li class="fieldset__item">
+              <label class="field"><span class="field__text">E-mail:* </span><input class="field__input" type="email" name="email" placeholder="catstepan@gmail.com" required></label>
             </li>
-            <li class="field-set__item">
-              <label class="field"><span class="field__text">Телефон:*</span><input class="field__input" type="tel" name="phone" placeholder="8 (960) 900-60-90" required></label>
+            <li class="fieldset__item">
+              <label class="field"><span class="field__text">Телефон:* </span><input class="field__input" type="tel" name="phone" placeholder="8 (960) 900-60-90" required></label>
             </li>
           </ul>
         </fieldset>
         <!-- Коментарий -->
-        <div class="form__fields field-set">
-          <label class="field-set__title" for="comments">Коментарий</label>
+        <div class="form__fields fieldset">
+          <label class="fieldset__title" for="comments">Коментарий</label>
           <div class="field">
             <textarea class="field__input" name="comments" id="comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </div>
         <!-- Дополнительно -->
-        <fieldset class="form__fields field-set">
-          <legend class="field-set__title">Дополнительно</legend>
-          <ul class="field-set__list">
-            <li class="field-set__item">
-              <label class="field"><input class="field__input" type="checkbox" name="addition" value="sweetener" checked><span class="field__text">Сахарозаменитель</span></label>
+        <fieldset class="form__fields fieldset">
+          <legend class="fieldset__title">Дополнительно</legend>
+          <ul class="fieldset__list">
+            <li class="fieldset__item">
+              <label class="select select--checkbox"><input class="select__input" type="checkbox" name="addition" value="sweetener" checked><span class="select__text"> Сахарозаменитель</span></label>
             </li>
-            <li class="field-set__item">
-              <label class="field"><input class="field__input" type="checkbox" name="addition" value="water"><span class="field__text">Питьевая вода</span></label>
+            <li class="fieldset__item">
+              <label class="select select--checkbox"><input class="select__input" type="checkbox" name="addition" value="water"><span class="select__text"> Питьевая вода</span></label>
             </li>
-            <li class="field-set__item">
-              <label class="field"><input class="field__input" type="checkbox" name="addition" value="milk"><span class="field__text">Молоко</span></label>
+            <li class="fieldset__item">
+              <label class="select select--checkbox"><input class="select__input" type="checkbox" name="addition" value="milk"><span class="select__text"> Молоко</span></label>
             </li>
-            <li class="field-set__item">
-              <label class="field"><input class="field__input" type="checkbox" name="addition" value="vitamin"><span class="field__text">Витамины</span></label>
+            <li class="fieldset__item">
+              <label class="select select--checkbox"><input class="select__input" type="checkbox" name="addition" value="vitamin"><span class="select__text"> Витамины</span></label>
             </li>
           </ul>
         </fieldset>

@@ -1,2 +1,65 @@
 
+.bonus {
+  padding: 60px 60px 40px 60px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  background-image: url("../../img/backtile/bonus.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #68b738;
+}
+
+.form {
+  padding: 0 20px;
+}
+
+.form__notice {
+  line-height: 16px;
+}
+
+.fieldset {
+  padding: 0;
+  border: 0;
+}
+
+.fieldset__list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.fieldset__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.field {
+  color: #444444;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.field__input {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: inherit;
+}
+
+.select {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.select--radio {
+  color: #222222;
+}
 /*# sourceMappingURL=style.css.map */
