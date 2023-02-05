@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Cat Energy: Каталог продукции</title>
-  <!-- CATALOG - Визуализация разметки -->
-  <!-- <link rel="stylesheet" href="./css/layout-markup.cssgi"> -->
+  <!-- Визуализация разметки -->
+  <!-- <link rel="stylesheet" href="./css/layout-markup.css"> -->
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="page__body">
@@ -29,17 +30,19 @@
   <!-- CATALOG - MAIN -->
   <main class="page__main page-main">
     <h1 class="page-main__title">Каталог продукции</h1>
-    <!-- Секция основного товара -->
 
+    <!-- Секция основного товара -->
     <section class="page-main__section products">
       <h2 class="visually-hidden">Основные товары</h2>
-      <!-- Список основного товара -->
 
+      <!-- Список основного товара -->
       <ul class="products__list">
         <!-- 1-я карточка -->
         <li class="products__item card">
-          <h3 class="card__title">Cat Energy PRO 500 г</h3>
-          <img class="card__image" width="140" height="112" src="./img/cat-500-chicken.png" alt="Корм со вкусом курицы в упаковке 500 грамм">
+          <a class="card__link" href="#">
+            <h3 class="card__title">Cat Energy PRO 500 г</h3>
+          </a>
+          <img class="card__image" width="140" height="112" src="./img/catalog/cat-500-chicken.png" alt="Корм со вкусом курицы в упаковке 500 грамм">
           <dl class="card__list">
             <dt class="card__term">Масса</dt>
             <dd class="card__desc">500 г</dd>
@@ -52,8 +55,10 @@
         </li>
         <!-- 2-я карточка -->
         <li class="products__item card">
-          <h3 class="card__title">Cat Energy PRO 1000 г</h3>
-          <img class="card__image" width="140" height="112" src="./img/cat-1000-chicken.png" alt="Корм со вкусом курицы в упаковке 1000 грамм">
+          <a class="card__link" href="#">
+            <h3 class="card__title">Cat Energy PRO 1000 г</h3>
+          </a>
+          <img class="card__image" width="140" height="112" src="./img/catalog/cat-1000-chicken.png" alt="Корм со вкусом курицы в упаковке 1000 грамм">
           <dl class="card__list">
             <dt class="card__term">Масса</dt>
             <dd class="card__desc">1000 г</dd>
@@ -66,8 +71,10 @@
         </li>
         <!-- 3-я карточка -->
         <li class="products__item card">
-          <h3 class="card__title">Cat Energy PRO 500 г</h3>
-          <img class="card__image" width="140" height="112" src="./img/cat-500-fish.png" alt="">
+          <a class="card__link" href="#">
+            <h3 class="card__title">Cat Energy PRO 500 г</h3>
+          </a>
+          <img class="card__image" width="140" height="112" src="./img/catalog/cat-500-fish.png" alt="">
           <dl class="card__list">
             <dt class="card__term">Масса</dt>
             <dd class="card__desc">500 г</dd>
@@ -80,8 +87,10 @@
         </li>
         <!-- 4-я карточка -->
         <li class="products__item card">
-          <h3 class="card__title">Cat Energy PRO 1000 г</h3>
-          <img class="card__image" width="140" height="112" src="./img/cat-1000-fish.png" alt="">
+          <a class="card__link" href="#">
+            <h3 class="card__title">Cat Energy PRO 1000 г</h3>
+          </a>
+          <img class="card__image" width="140" height="112" src="./img/catalog/cat-1000-fish.png" alt="">
           <dl class="card__list">
             <dt class="card__term">Масса</dt>
             <dd class="card__desc">1000 г</dd>
@@ -94,8 +103,10 @@
         </li>
         <!-- 5-я карточка -->
         <li class="products__item card">
-          <h3 class="card__title">Cat Energy slim 500 г</h3>
-          <img class="card__image" width="140" height="112" src="./img/cat-500-buckwheat.png" alt="">
+          <a class="card__link" href="#">
+            <h3 class="card__title">Cat Energy slim 500 г</h3>
+          </a>
+          <img class="card__image" width="140" height="112" src="./img/catalog/cat-500-buckwheat.png" alt="">
           <dl class="card__list">
             <dt class="card__term">Масса</dt>
             <dd class="card__desc">500 г</dd>
@@ -108,8 +119,10 @@
         </li>
         <!-- 6-я карточка -->
         <li class="products__item card">
-          <h3 class="card__title">Cat Energy slim 1000 г</h3>
-          <img class="card__image" width="140" height="112" src="./img/cat-1000-buckwheat.png" alt="">
+          <a class="card__link" href="#">
+            <h3 class="card__title">Cat Energy slim 1000 г</h3>
+          </a>
+          <img class="card__image" width="140" height="112" src="./img/catalog/cat-1000-buckwheat.png" alt="">
           <dl class="card__list">
             <dt class="card__term">Масса</dt>
             <dd class="card__desc">1000 г</dd>
@@ -122,8 +135,10 @@
         </li>
         <!-- 7-я карточка -->
         <li class="products__item card">
-          <h3 class="card__title">Cat Energy slim 500 г</h3>
-          <img class="card__image" width="140" height="112" src="./img/cat-500-rice.png" alt="">
+          <a class="card__link" href="#">
+            <h3 class="card__title">Cat Energy slim 500 г</h3>
+          </a>
+          <img class="card__image" width="140" height="112" src="./img/catalog/cat-500-rice.png" alt="">
           <dl class="card__list">
             <dt class="card__term">Масса</dt>
             <dd class="card__desc">500 г</dd>
@@ -137,8 +152,10 @@
         <!-- 8-я – показать всё! -->
         <li class="products__item card">
           <h3 class="card__title">Показать еще 100500 товаров</h3>
-          <p class="card__term">На самом деле вкусов гораздо больше!</p>
-          <a class="card__button card__button--all button" href="#">Заказать</a>
+          <div class="card__list">
+            <p class="card__term">На самом деле вкусов гораздо больше!</p>
+          </div>
+          <a class="card__button button button--secondary" href="#">Заказать</a>
         </li>
 
       </ul>
@@ -196,14 +213,15 @@
       </ul>
       <!-- Заказать всё! -->
       <div class="more-products__bonus bonus">
-        <h2 class="visually-hiden">Специальное предложение</h2>
+        <h2 class="visually-hidden">Специальное предложение</h2>
         <p class="bonus__text">Закажите все и получите чехол для кота в подарок!</p>
       </div>
     </section>
   </main>
 
   <!-- CATALOG - FOOTER -->
-  <footer class="page__foter page-footer">
+
+  <footer class="page__footer page-footer">
     <!-- Раздел с адресами и картой -->
     <article class="page-footer__contacts contacts">
       <h2 class="visually-hidden">Контакты</h2>
@@ -213,21 +231,24 @@
       </address>
       <img class="contacts__map" width="320" height="362" src="./img/map.png" alt="Карта проезда к нашему офису">
     </article>
-    <!-- Логотип -->
-    <a class="page-footer__logo logo" href="./index.html">
-      <img class="logo__name" width="128" height="24" src="./img/logo-name.svg" alt="Cat Energy">
-    </a>
-    <!-- Список соцсетей -->
-    <ul class="page-footer__social social">
-      <li class="social__item"><a class="social__link" href="#"><span class="visually-hidden">ВКонтакте</span></a></li>
-      <li class="social__item"><a class="social__link" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
-      <li class="social__item"><a class="social__link" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
-    </ul>
-    <!-- Ссылка на академию -->
-    <a class="page-footer__academy academy" href="https://htmlacademy.org/">
-      <span class="visually-hidden">Разработано в</span>&nbsp;HTML Academy
-      <img class="academy__logo" width="27" height="34" src="./img/htmlacademy.svg" aria-hidden="true" alt="">
-    </a>
+    <!-- Внутрення обертка с отступами и заливкой для группы ссылок -->
+    <div class="page-footer__inner">
+      <!-- Логотип со ссылкой на главную-->
+      <a class="page-footer__logo logo" href="#">
+        <img class="logo__name" width="128" height="24" src="./img/logo-name.svg" alt="Cat Energy">
+      </a>
+      <!-- Список соцсетей -->
+      <ul class="page-footer__social social">
+        <li class="social__item"><a class="social__link social__link--vkontakte" href="#"><span class="visually-hidden">ВКонтакте</span></a></li>
+        <li class="social__item"><a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
+        <li class="social__item"><a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+      </ul>
+      <!-- Ссылка на академию -->
+      <a class="page-footer__academy academy" href="https://htmlacademy.org/">
+        <span class="visually-hidden">Разработано в</span>&nbsp;HTML Academy
+        <img class="academy__logo" width="27" height="34" src="./img/htmlacademy.svg" alt="" aria-hidden="true">
+      </a>
+    </div>
   </footer>
 
 </body>

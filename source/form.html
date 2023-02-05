@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Cat Energy: Подбор программы</title>
-  <!-- FORM - Визуализация разметки -->
+  <!-- Визуализация разметки -->
   <!-- <link rel="stylesheet" href="./css/layout-markup.css"> -->
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="page__body">
@@ -112,7 +113,8 @@
   </main>
 
   <!-- FORM - FOOTER -->
-  <footer class="page__foter page-footer">
+
+  <footer class="page__footer page-footer">
     <!-- Раздел с адресами и картой -->
     <article class="page-footer__contacts contacts">
       <h2 class="visually-hidden">Контакты</h2>
@@ -122,21 +124,24 @@
       </address>
       <img class="contacts__map" width="320" height="362" src="./img/map.png" alt="Карта проезда к нашему офису">
     </article>
-    <!-- Логотип -->
-    <a class="page-footer__logo logo" href="./index.html">
-      <img class="logo__name" width="128" height="24" src="./img/logo-name.svg" alt="Cat Energy">
-    </a>
-    <!-- Список соцсетей -->
-    <ul class="page-footer__social social">
-      <li class="social__item"><a class="social__link" href="#"><span class="visually-hidden">ВКонтакте</span></a></li>
-      <li class="social__item"><a class="social__link" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
-      <li class="social__item"><a class="social__link" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
-    </ul>
-    <!-- Ссылка на академию -->
-    <a class="page-footer__academy academy" href="https://htmlacademy.org/">
-      <span class="visually-hidden">Разработано в</span>&nbsp;HTML Academy
-      <img class="academy__logo" width="27" height="34" src="./img/htmlacademy.svg" aria-hidden="true" alt="">
-    </a>
+    <!-- Внутрення обертка с отступами и заливкой для группы ссылок -->
+    <div class="page-footer__inner">
+      <!-- Логотип со ссылкой на главную-->
+      <a class="page-footer__logo logo" href="#">
+        <img class="logo__name" width="128" height="24" src="./img/logo-name.svg" alt="Cat Energy">
+      </a>
+      <!-- Список соцсетей -->
+      <ul class="page-footer__social social">
+        <li class="social__item"><a class="social__link social__link--vkontakte" href="#"><span class="visually-hidden">ВКонтакте</span></a></li>
+        <li class="social__item"><a class="social__link social__link--instagram" href="#"><span class="visually-hidden">Инстаграм</span></a></li>
+        <li class="social__item"><a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+      </ul>
+      <!-- Ссылка на академию -->
+      <a class="page-footer__academy academy" href="https://htmlacademy.org/">
+        <span class="visually-hidden">Разработано в</span>&nbsp;HTML Academy
+        <img class="academy__logo" width="27" height="34" src="./img/htmlacademy.svg" alt="" aria-hidden="true">
+      </a>
+    </div>
   </footer>
 
 </body>

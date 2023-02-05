@@ -27,11 +27,18 @@
 }
 
 .button {
+  display: block;
   color: #ffffff;
-  background-color: #5eaa2f;
+  background-color: #68b738;
   font-family: "Oswald", "Arial", sans-serif;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.button--secondary {
+  color: #444444;
+  background-color: #f2f2f2;
 }
 
 .page {
@@ -44,7 +51,16 @@
   margin: 0;
 }
 
+.page-header__toggler {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+}
+
 .site-menu {
+  margin: 0;
+  padding: 0;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -68,17 +84,18 @@
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   font-weight: 400;
-  line-height: 40px;
+  line-height: 1;
 }
 
 .promo__wrapper {
   padding: 27px 20px;
   color: #ffffff;
-  background-color: #5eaa2f;
   text-align: center;
-  background-image: url("../../img/backimages/promo.jpg");
+  background-image: url("../../img/backtile/promo.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: #68b738;
 }
 
 .promo__title {
@@ -94,10 +111,6 @@
   font-weight: 400;
   line-height: 1;
   text-transform: uppercase;
-}
-
-.promo__button {
-  padding: 7px;
 }
 
 .catalogues {
@@ -228,12 +241,94 @@
   display: inline-block;
   width: 18px;
   height: 18px;
-  background-color: #666666;
+  background-color: #cdcdcd;
 }
 
 .academy {
   font-size: 16px;
   color: #444444;
   text-decoration: none;
+}
+
+.products {
+  padding: 0 20px;
+}
+
+.products__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.card__link {
+  text-decoration: none;
+}
+
+.card__list {
+  font-size: 12px;
+  line-height: 16px;
+  color: #444444;
+}
+
+.card__desc {
+  margin: 0;
+}
+
+.card__button {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.more-products__title {
+  font-size: 24px;
+}
+
+.more-products__list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.card-row__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.card-row__list {
+  line-height: 1;
+  color: #444444;
+}
+
+.card-row__desc {
+  margin: 0;
+}
+
+.card-row__button {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.bonus {
+  padding: 60px 60px 40px 60px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  background-image: url("../../img/backtile/bonus.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #68b738;
 }
 /*# sourceMappingURL=style.css.map */

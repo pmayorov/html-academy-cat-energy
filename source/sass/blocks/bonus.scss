@@ -1,0 +1,15 @@
+.bonus {
+  padding: 60px 60px 40px 60px;
+  color: $color-white;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+
+  background: {
+    image: url("../../img/backtile/bonus.jpg");
+    size: cover;
+    repeat: no-repeat;
+    position: center;
+    color: $basic-green;
+  }
+}

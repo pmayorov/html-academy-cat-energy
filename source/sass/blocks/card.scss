@@ -1,0 +1,27 @@
+.card__title {
+  font-family: $font-title;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $special-grey-800;
+}
+
+.card__link {
+  text-decoration: none;
+}
+
+.card__list {
+  font-size: 12px;
+  line-height: 16px;
+  color: $special-grey-700;
+}
+
+.card__desc {
+  margin: 0;
+}
+
+.card__button {
+  font-size: 16px;
+  line-height: 20px;
+}

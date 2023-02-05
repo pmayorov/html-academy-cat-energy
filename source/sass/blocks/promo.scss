@@ -1,13 +1,14 @@
 .promo__wrapper {
   padding: 27px 20px;
   color: $color-white;
-  background-color: $basic-green;
   text-align: center;
 
   background: {
-    image: url("../../img/backimages/promo.jpg");
+    image: url("../../img/backtile/promo.jpg");
+    size: cover;
     repeat: no-repeat;
     position: center;
+    color: $basic-green;
   }
 }
 
@@ -30,8 +31,4 @@
 
   line-height: 1;
   text-transform: uppercase;
-}
-
-.promo__button {
-  padding: 7px;
 }
