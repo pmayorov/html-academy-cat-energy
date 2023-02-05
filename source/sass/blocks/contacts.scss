@@ -1,5 +1,7 @@
 .contacts {
-  background-color: $color-white;
+  &--no-fill {
+    background-color: $color-white;
+  }
 }
 
 .contacts__address {

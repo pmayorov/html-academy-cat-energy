@@ -27,9 +27,9 @@
 }
 
 .button {
-  display: block;
   color: #ffffff;
   background-color: #68b738;
+  border: 0;
   font-family: "Oswald", "Arial", sans-serif;
   text-align: center;
   text-decoration: none;
@@ -39,6 +39,10 @@
 .button--secondary {
   color: #444444;
   background-color: #f2f2f2;
+}
+
+.logo {
+  text-decoration: none;
 }
 
 .page {
@@ -85,6 +89,11 @@
   font-size: 36px;
   font-weight: 400;
   line-height: 1;
+}
+
+.page-main__subtitle {
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
 }
 
 .promo__wrapper {
@@ -204,12 +213,15 @@
   text-transform: uppercase;
 }
 
-.page-footer__inner {
-  padding: 40px 20px 20px 20px;
+.page-footer {
   background-color: #f2f2f2;
 }
 
-.contacts {
+.page-footer__inner {
+  padding: 40px 20px 20px 20px;
+}
+
+.contacts--no-fill {
   background-color: #ffffff;
 }
 
@@ -330,5 +342,56 @@
   background-repeat: no-repeat;
   background-position: center;
   background-color: #68b738;
+}
+
+.form {
+  padding: 0 20px;
+}
+
+.form__notice {
+  line-height: 16px;
+}
+
+.fieldset {
+  padding: 0;
+  border: 0;
+}
+
+.fieldset__list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.fieldset__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.field {
+  color: #444444;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.field__input {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: inherit;
+}
+
+.select {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.select--radio {
+  color: #222222;
 }
 /*# sourceMappingURL=style.css.map */

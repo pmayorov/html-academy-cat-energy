@@ -1,0 +1,10 @@
+.select {
+  font-family: $font-title;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  &--radio {
+    color: $special-grey-800;
+  }
+}
