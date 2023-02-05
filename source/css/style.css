@@ -1,3 +1,338 @@
+<<<<<<< HEAD
+=======
+@font-face {
+  font-display: swap;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
+}
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+}
+
+.button {
+  color: #ffffff;
+  background-color: #68b738;
+  border: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button--secondary {
+  color: #444444;
+  background-color: #f2f2f2;
+}
+
+.logo {
+  text-decoration: none;
+}
+
+.page {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.page__body {
+  margin: 0;
+}
+
+.page-header__toggler {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+}
+
+.site-menu {
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  list-style-type: none;
+}
+
+.site-menu__item {
+  padding-top: 22px;
+  padding-bottom: 24px;
+}
+
+.site-menu__link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.page-main__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.page-main__subtitle {
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
+.promo__wrapper {
+  padding: 27px 20px;
+  color: #ffffff;
+  text-align: center;
+  background-image: url("../../img/backtile/promo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #68b738;
+}
+
+.promo__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.promo__subtitle {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.catalogues {
+  padding: 20px;
+}
+
+.catalogues__item {
+  padding: 20px;
+  background-color: #f2f2f2;
+}
+
+.catalogues__item:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.catalogues__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+.catalogues__text {
+  color: #444444;
+}
+
+.catalogues__link {
+  color: #000000;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.progress {
+  padding: 0 20px 50px 20px;
+}
+
+.progress__list {
+  margin: 0;
+  padding: 0;
+  color: #444444;
+  list-style-type: none;
+}
+
+.progress__item:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.example {
+  padding: 25px 20px 40px 20px;
+  background-color: #ebebeb;
+}
+
+.example__text {
+  color: #444444;
+}
+
+.example__list {
+  text-align: center;
+}
+
+.example__term {
+  font-size: 12px;
+  line-height: 1;
+  color: #444444;
+  text-transform: lowercase;
+}
+
+.example__desc {
+  margin: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.example__costs {
+  font-family: "Oswald", "Arial", sans-serif;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.switcher__button {
+  border: none;
+  background-color: transparent;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.page-footer {
+  background-color: #f2f2f2;
+}
+
+.page-footer__inner {
+  padding: 40px 20px 20px 20px;
+}
+
+.contacts--no-fill {
+  background-color: #ffffff;
+}
+
+.contacts__address {
+  padding: 26px 20px;
+  font-style: normal;
+}
+
+.contacts__title {
+  color: #111111;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.contacts__text {
+  line-height: 20px;
+  color: #444444;
+}
+
+.social {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social__link {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: #cdcdcd;
+}
+
+.academy {
+  font-size: 16px;
+  color: #444444;
+  text-decoration: none;
+}
+
+.products {
+  padding: 0 20px;
+}
+
+.products__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.card__link {
+  text-decoration: none;
+}
+
+.card__list {
+  font-size: 12px;
+  line-height: 16px;
+  color: #444444;
+}
+
+.card__desc {
+  margin: 0;
+}
+
+.card__button {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.more-products__title {
+  font-size: 24px;
+}
+
+.more-products__list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.card-row__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.card-row__list {
+  line-height: 1;
+  color: #444444;
+}
+
+.card-row__desc {
+  margin: 0;
+}
+
+.card-row__button {
+  font-size: 16px;
+  line-height: 20px;
+}
+>>>>>>> b4f59a0 (Базова стилізація форми (мобільної) - END!)
 
 .bonus {
   padding: 60px 60px 40px 60px;
@@ -62,4 +397,8 @@
 .select--radio {
   color: #222222;
 }
+<<<<<<< HEAD
 /*# sourceMappingURL=style.css.map */
+=======
+/*# sourceMappingURL=style.css.map */
+>>>>>>> b4f59a0 (Базова стилізація форми (мобільної) - END!)
