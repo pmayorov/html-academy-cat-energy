@@ -1,18 +1,19 @@
-.promo__wrapper {
-  padding: 27px 20px;
+.promo {
   color: $color-white;
   text-align: center;
 
   background: {
-    image: url("../../img/backtile/promo.jpg");
-    size: cover;
+    image: url("../../img/backtile/promo-small.jpg"),
+      linear-gradient($basic-green, $basic-green 302px, $color-white 302px);
     repeat: no-repeat;
-    position: center;
-    color: $basic-green;
+    position: 50% 0;
   }
 }
 
 .promo__title {
+  margin: 0;
+  margin-bottom: 25px;
+
   font: {
     family: $font-title;
     size: 36px;
@@ -23,6 +24,9 @@
 }
 
 .promo__subtitle {
+  margin: 0;
+  margin-bottom: 29px;
+
   font: {
     family: $font-title;
     size: 14px;
@@ -31,4 +35,9 @@
 
   line-height: 1;
   text-transform: uppercase;
+}
+
+.promo__button {
+  width: 100%;
+  padding: 11px 20px;
 }

@@ -1,5 +1,8 @@
 // Ссылка и логотип академии
 .academy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: 16px;
   color: $special-grey-700;
   text-decoration: none;

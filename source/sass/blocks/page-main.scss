@@ -1,8 +1,26 @@
+.page-main__section {
+  // …
+}
+
 .page-main__title {
+  margin: 0;
   font-family: $font-title;
   font-size: 36px;
   font-weight: 400;
   line-height: 1;
+
+  @media (max-width: $width-mobile-max) {
+    margin-bottom: 40px;
+  }
+}
+
+
+.page-main__header {
+  padding-top: 27px;
+
+  @media (max-width: $width-mobile-max) {
+    margin-bottom: 20px;
+  }
 }
 
 .page-main__subtitle {

@@ -1,21 +1,38 @@
 .example {
-  padding: 25px 20px 40px 20px;
+  padding: 25px 0 40px 0;
   background-color: $special-grey-100;
 }
 
 .example__text {
+  margin: 0;
+  margin-bottom: 20px;
   color: $special-grey-700;
 }
 
 .example__list {
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 32px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.example__item {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  row-gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid $special-grey-200;
 }
 
 .example__term {
+  width: 77px;
   font-size: 12px;
   line-height: 1;
   color: $special-grey-700;
   text-transform: lowercase;
+  text-align: center;
 }
 
 .example__desc {
@@ -23,19 +40,27 @@
   font-family: $font-title;
   font-size: 24px;
   line-height: 1;
+  text-align: center;
 }
 
 .example__costs {
+  margin: 0;
+  margin-bottom: 40px;
   font-family: $font-title;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
 }
 
-.switcher__button {
-  border: none;
-  background-color: transparent;
-  font-family: $font-title;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
+.example__images {
+  margin-bottom: 15px;
+}
+
+.example__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.example__switcher {
+  margin: 0 auto;
 }

@@ -1,5 +1,5 @@
 .progress {
-  padding: 0 20px 50px 20px;
+  margin-bottom: 49px;
 }
 
 .progress__list {
@@ -9,6 +9,22 @@
   list-style-type: none;
 }
 
-.progress__item:not(:last-of-type) {
-  margin-bottom: 20px;
+.progress__item {
+  @media (max-width: $width-mobile-max) {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    column-gap: 20px;
+
+    & + & {
+      margin-top: 20px;
+    }
+  }
+}
+
+.progress__item::before {
+  content: " ";
+  width: 60px;
+  height: 60px;
+  margin-top: -2px;
+  background-color: $basic-green;
 }

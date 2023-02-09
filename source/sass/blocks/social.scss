@@ -1,15 +1,19 @@
-// Ссылски социальных сетей
+// Ссылки социальных сетей
 
 .social {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 33px;
   list-style: none;
+  border-top: 1px solid $special-grey-200;
+  border-bottom: 1px solid $special-grey-200;
 }
 
 .social__link {
   //todo Временно!
   display: inline-block;
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   background-color: $special-grey-200;
 }

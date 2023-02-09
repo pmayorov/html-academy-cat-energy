@@ -1,9 +1,16 @@
-// Шрифты. Переменные
-@import "./fonts.scss";
-@import "./variables.scss";
+///Миксины
+@import "./common/mixins.scss";
 
-// Блоки
+/// Общие
+@import "./common/global.scss";
+
+/// Шрифты. Переменные
+@import "./common/fonts.scss";
+@import "./common/variables.scss";
+
+/// Блоки
 @import "./blocks/visually-hidden.scss";
+@import "./blocks/container.scss";
 @import "./blocks/button.scss";
 @import "./blocks/logo.scss";
 @import "./blocks/page.scss";
@@ -14,6 +21,7 @@
 @import "./blocks/catalogues.scss";
 @import "./blocks/progress.scss";
 @import "./blocks/example.scss";
+@import "./blocks/switcher.scss";
 @import "./blocks/page-footer.scss";
 @import "./blocks/contacts.scss";
 @import "./blocks/social.scss";

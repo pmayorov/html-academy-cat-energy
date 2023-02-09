@@ -1,6 +1,89 @@
+.page-header__nav {
+  @media (min-width: $width-tablet) {
+    display: grid;
+    grid-template-columns: 174px 1fr;
+    column-gap: 20px;
+    width: $width-tablet;
+    margin: 0 auto;
+    padding: 24px 30px 0 30px;
+  }
+}
+
+.page-header__bar {
+  @media (max-width: $width-mobile-max) {
+    display: grid;
+    width: 320px;
+    margin: 0 auto;
+    grid-template-columns: 34px 1fr 34px;
+    padding: 12px 20px 16px;
+    align-items: center;
+  }
+}
+
+.page-header__menu {
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $width-tablet) {
+    margin-right: -17px;
+  }
+}
+
+.page-header__logo {
+
+  // Растягиваем в мобильной версии хедера ссылку с логотипами на 2 ячейки грид-сетки. 3-я под кнопку [X]
+  @media (max-width: $width-mobile-max) {
+    grid-column: 1 / span 2;
+  }
+
+  // Скрываем в хедере текстовую часть логотипа
+  @media (min-width: $width-tablet) {
+    & .logo__name {
+      display: none;
+    }
+  }
+}
+
+/// Кнопка закрытия мобильного главного меню
+
+// По макету у кнопки закрытия меню [X] +3 мм отступ от правой границы контентной области.
+// Чтобы не "костылить" с правыми отступами добавляем эти 3 мм ввиде паддинга вокруг самой метки [X].
+// т.е. макетные ширина-высота: 18 мм + паддинги: 3 мм = область под кнопку: 24 мм,
+// которую уже выравниваем вправо под границу контентной области
+
 .page-header__toggler {
+  grid-column: -2;
+  justify-self: right;
+  position: relative;
   width: 24px;
   height: 24px;
   padding: 0;
   border: none;
+
+  @media (min-width: $width-tablet) {
+    display: none;
+  }
+}
+
+/// Иконка закрытия меню [X]
+
+.page-header__toggler--close {
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 11px;
+    width: 1.5px;
+    height: 25px;
+    content: " ";
+    background-color: $color-black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }

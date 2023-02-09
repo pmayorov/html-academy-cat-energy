@@ -1,15 +1,23 @@
 .contacts {
-  &--no-fill {
+  @media (max-width: $width-mobile-max) {
     background-color: $color-white;
   }
 }
 
 .contacts__address {
-  padding: 26px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  // Дублирую код из класса .container т.к. в планшетах
+  // и десктопах ширина блока будет отличаться .container-ной.
+  width: $width-mobile-content;
+  margin: 0 auto;
+  padding: 26px 0;
   font-style: normal;
 }
 
 .contacts__title {
+  margin: 0;
+  padding-right: 12px;
   color: $special-grey-900;
   font-family: $font-title;
   font-size: 16px;
@@ -18,6 +26,12 @@
 }
 
 .contacts__text {
+  margin: 0;
   line-height: 20px;
   color: $special-grey-700;
+}
+
+.contacts__map {
+  display: block;
+  width: 100%;
 }

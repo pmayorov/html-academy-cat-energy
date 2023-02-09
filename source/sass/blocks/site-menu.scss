@@ -1,6 +1,5 @@
 .site-menu {
-  margin: 0;
-  padding: 0;
+  display: none;
   font-family: $font-title;
   font-weight: 500;
   font-size: 20px;
@@ -8,16 +7,35 @@
   text-align: center;
   text-transform: uppercase;
   list-style-type: none;
+
+  @media (min-width: $width-tablet) {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+  }
+}
+
+.site-menu--open {
+  display: block;
 }
 
 .site-menu__item {
-  padding: {
-    top: 22px;
-    bottom: 24px;
+  border-top: 1px solid $special-grey-150;
+
+  @media (min-width: $width-tablet) {
+    border: 0;
   }
 }
 
 .site-menu__link {
+  display: block;
+  padding: 22px 22px 24px;
   color: $color-black;
   text-decoration: none;
+
+  @media (min-width: $width-tablet) {
+    padding: 17px;
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
