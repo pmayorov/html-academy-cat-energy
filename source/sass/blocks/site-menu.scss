@@ -16,7 +16,9 @@
 }
 
 .site-menu--open {
-  display: block;
+  @media(max-width: $width-max-mobile) {
+    display: block;
+  }
 }
 
 .site-menu__item {

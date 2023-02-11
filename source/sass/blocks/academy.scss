@@ -7,3 +7,9 @@
   color: $special-grey-700;
   text-decoration: none;
 }
+
+.academy__logo {
+  @media (min-width: $width-tablet) {
+    margin-left: 22px;
+  }
+}

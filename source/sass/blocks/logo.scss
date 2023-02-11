@@ -7,3 +7,11 @@
 .logo__name {
   margin: 0 auto;
 }
+
+// todo Тимчасовий бордер
+
+.page-header__logo.logo {
+  @media (min-width: $width-tablet) {
+    outline: 1px dashed lightgray;
+  }
+}

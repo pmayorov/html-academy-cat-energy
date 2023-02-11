@@ -1,16 +1,35 @@
 .switcher {
   display: grid;
-  grid-template-columns: 49px 1fr 49px;
-  width: 210px;
+
+  @media (max-width: $width-max-mobile) {
+    grid-template-columns: 49px 1fr 49px;
+    column-gap: 13px;
+  }
+
+  @media (min-width: $width-tablet) {
+    grid-template-columns: 70px 1fr 70px;
+    column-gap: 23px;
+  }
+
+
 }
 
 .switcher__button {
+  padding: 5px 0;
   border: none;
   background-color: transparent;
   font-family: $font-title;
-  font-size: 16px;
-  line-height: 20px;
   text-transform: uppercase;
+
+  @media (max-width: $width-max-mobile) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $width-tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .switcher__button--before {

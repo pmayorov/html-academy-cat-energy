@@ -2,15 +2,32 @@
   background-color: $basic-grey;
 }
 
+.page-footer__inner {
+  @media (min-width: $width-tablet) {
+    padding: 58px 0 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .page-footer__logo {
-  padding: 39px 0 32px 0;
+  @media (max-width: $width-max-mobile) {
+    padding: 39px 0 32px 0;
+  }
 }
 
 .page-footer__social {
   margin: 0;
-  padding: 20px 0;
+  padding: 0;
+
+  @media (max-width: $width-max-mobile) {
+    padding: 20px 0;
+  }
 }
 
 .page-footer__academy {
-  padding: 22px 0;
+  @media (max-width: $width-max-mobile) {
+    padding: 22px 0;
+  }
 }

@@ -1,26 +1,51 @@
-.catalogues {
-  margin-bottom: 20px;
+.catalogues__wrapper {
+  @media (min-width: $width-pre-desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
 }
 
 .catalogues__item {
   padding: 20px;
   background-color: $basic-grey;
-}
 
-.catalogues__item:not(:last-of-type) {
-  margin-bottom: 20px;
+  @media (min-width: $width-tablet) {
+    display: grid;
+    padding: 77px 324px 53px 53px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    padding: 77px 53px 53px;
+  }
+
+  &+& {
+    @media (max-width: $width-max-mobile) {
+      margin-top: 20px;
+    }
+
+    @media (min-width: $width-tablet) and (max-width: $width-pre-desktop) {
+      margin-top: 30px;
+    }
+  }
 }
 
 .catalogues__title {
   margin: 0;
   font-family: $font-title;
-  font-size: 24px;
   font-weight: 400;
-  line-height: 37px;
   text-transform: uppercase;
 
-  @media (max-width: $width-mobile-max) {
+  @media (max-width: $width-max-mobile) {
+    font-size: 24px;
+    line-height: 37px;
     margin-bottom: 29px;
+  }
+
+  @media (min-width: $width-tablet) {
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 24px;
   }
 }
 
@@ -28,23 +53,34 @@
   margin: 0;
   color: $special-grey-700;
 
-  @media (max-width: $width-mobile-max) {
+  @media (max-width: $width-max-mobile) {
     margin-bottom: 23px;
+  }
+
+  @media (min-width: $width-tablet) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 48px;
   }
 }
 
 .catalogues__link {
   display: inline-block;
-  width: 100%;
   color: $color-black;
   font-family: $font-title;
-  font-size: 16px;
-  line-height: 1;
   text-transform: uppercase;
   text-decoration: none;
 
-  @media (max-width: $width-mobile-max) {
+  @media (max-width: $width-max-mobile) {
+    width: 100%;
     padding-top: 15px;
-    border-top: 1px solid $special-grey-175;
+    border-top: 1px solid $special-grey-200;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  @media (min-width: $width-tablet) {
+    font-size: 20px;
+    line-height: 30px;
   }
 }

@@ -6,8 +6,11 @@
   align-items: center;
   column-gap: 33px;
   list-style: none;
-  border-top: 1px solid $special-grey-200;
-  border-bottom: 1px solid $special-grey-200;
+
+  @media (max-width: $width-max-mobile) {
+    border-top: 1px solid $special-grey-200;
+    border-bottom: 1px solid $special-grey-200;
+  }
 }
 
 .social__link {

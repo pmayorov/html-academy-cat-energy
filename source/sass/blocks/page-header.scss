@@ -3,14 +3,18 @@
     display: grid;
     grid-template-columns: 174px 1fr;
     column-gap: 20px;
-    width: $width-tablet;
+    width: $width-tablet-content;
     margin: 0 auto;
-    padding: 24px 30px 0 30px;
+    padding: 24px 0;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    width: $width-desktop-content;
   }
 }
 
 .page-header__bar {
-  @media (max-width: $width-mobile-max) {
+  @media (max-width: $width-max-mobile) {
     display: grid;
     width: 320px;
     margin: 0 auto;
@@ -32,7 +36,7 @@
 .page-header__logo {
 
   // Растягиваем в мобильной версии хедера ссылку с логотипами на 2 ячейки грид-сетки. 3-я под кнопку [X]
-  @media (max-width: $width-mobile-max) {
+  @media (max-width: $width-max-mobile) {
     grid-column: 1 / span 2;
   }
 
@@ -68,6 +72,7 @@
 /// Иконка закрытия меню [X]
 
 .page-header__toggler--close {
+
   &::before,
   &::after {
     position: absolute;

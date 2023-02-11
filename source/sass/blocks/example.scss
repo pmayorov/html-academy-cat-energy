@@ -3,10 +3,53 @@
   background-color: $special-grey-100;
 }
 
+.example__wrapper {
+  @media (min-width: $width-pre-desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+
+/// Общий контейнер для всей текстовой информации
+.example__info-inner {
+
+  @media (max-width: $width-max-mobile) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: 366px 1fr;
+    column-gap: 18px;
+    align-items: center;
+    justify-content: space-between;
+
+    .page-main__title {
+      margin-bottom: 63px;
+    }
+  }
+}
+
+.example__images-inner {
+  @media (min-width: $width-tablet) {
+    width: 592px;
+    margin: 0 auto;
+  }
+}
+
 .example__text {
   margin: 0;
   margin-bottom: 20px;
   color: $special-grey-700;
+
+  @media (min-width: $width-tablet) {
+    grid-column: 1 / -1;
+    margin-bottom: 54px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .example__list {
@@ -14,7 +57,10 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 32px;
   margin: 0;
-  margin-bottom: 20px;
+
+  @media (max-width: $width-max-mobile) {
+    margin-bottom: 20px;
+  }
 }
 
 .example__item {
@@ -28,39 +74,70 @@
 
 .example__term {
   width: 77px;
-  font-size: 12px;
   line-height: 1;
   color: $special-grey-700;
   text-transform: lowercase;
   text-align: center;
+
+  @media (max-width: $width-max-mobile) {
+    font-size: 12px;
+  }
+
+  @media (min-width: $width-tablet) {
+    font-size: 14px;
+  }
 }
 
 .example__desc {
   margin: 0;
   font-family: $font-title;
-  font-size: 24px;
-  line-height: 1;
   text-align: center;
+
+  @media (max-width: $width-max-mobile) {
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  @media (min-width: $width-tablet) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__costs {
   margin: 0;
-  margin-bottom: 40px;
   font-family: $font-title;
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: $width-tablet) {
+    font-size: 20px;
+    text-align: right;
+  }
 }
 
 .example__images {
   margin-bottom: 15px;
+
+  @media (min-width: $width-tablet) {
+    display: flex;
+  }
 }
 
 .example__image {
   display: block;
   margin: 0 auto;
+
+  @media (max-width: $width-max-mobile) {
+    &--after {
+      display: none;
+    }
+  }
 }
 
 .example__switcher {
-  margin: 0 auto;
+  @media (max-width: $width-max-mobile) {
+    margin: 0 35px;
+  }
 }

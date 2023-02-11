@@ -24,8 +24,8 @@
         </a>
         <button class="page-header__toggler page-header__toggler--close" type="button"><span class="visually-hidden">Открыть меню</span></button>
       </div>
-      <!-- <ul class="page-header__menu site-menu site-menu--open"> -->
-      <ul class="page-header__menu site-menu">
+      <ul class="page-header__menu site-menu site-menu--open">
+        <!-- <ul class="page-header__menu site-menu"> -->
         <li class="site-menu__item site-menu__item--active"><a class="site-menu__link">Главная</a></li>
         <li class="site-menu__item"><a class="site-menu__link" href="./catalog.html">Каталог продукции</a></li>
         <li class="site-menu__item"><a class="site-menu__link" href="./form.html">Подбор программы</a></li>
@@ -35,6 +35,7 @@
 
   <!-- INDEX - MAIN -->
   <main class="page__main page-main">
+
     <!-- Хедер в main с промо информацией -->
     <header class="page-main__header promo">
       <div class="promo__wrapper container">
@@ -66,7 +67,7 @@
 
     <!-- Секция принципа работы -->
     <section class="page-main__section progress">
-      <div class="catalogues__wrapper container">
+      <div class="progress__wrapper container">
         <h2 class="page-main__title">Как это работает</h2>
         <ol class="progress__list">
           <li class="progress__item progress__item--nutrient">Функциональное питание содержит только полезные питательные вещества.</li>
@@ -80,28 +81,34 @@
     <!-- Секция примеров -->
     <section class="page-main__section example">
       <div class="example__wrapper container">
-        <h2 class="page-main__title">Живой пример</h2>
-        <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <dl class="example__list ">
-          <div class="example__item">
-            <dt class="example__term">Cнижение веса</dt>
-            <dd class="example__desc">5 кг</dd>
-          </div>
-          <div class="example__item">
-            <dt class="example__term">Затрачено времени</dt>
-            <dd class="example__desc">60 дней</dd>
-          </div>
-        </dl>
-        <p class="example__costs">Затраты на питание: 15 000 руб.</p>
-        <!-- Рекламное фото -->
-        <div class="example__images">
-          <img class="example__image" width="280" height="232" src="./img/cat-before-mobile.png" alt="Толстый кот до питания кормом">
-          <!-- <img class="example__image" width="243" height="232" src="./img/cat-after-mobile.png" alt="Худой кот после питания кормом"> -->
+        <!-- Блок с информацией -->
+        <div class="example__info-inner">
+          <h2 class="page-main__title">Живой пример</h2>
+          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+          <dl class="example__list ">
+            <div class="example__item">
+              <dt class="example__term">Cнижение веса</dt>
+              <dd class="example__desc">5 кг</dd>
+            </div>
+            <div class="example__item">
+              <dt class="example__term">Затрачено времени</dt>
+              <dd class="example__desc">60 дней</dd>
+            </div>
+          </dl>
+          <p class="example__costs">Затраты на питание: 15 000 руб.</p>
         </div>
-        <!-- Переключатели фотографий -->
-        <div class="example__switcher switcher">
-          <button class="switcher__button switcher__button--before">Было</button>
-          <button class="switcher__button switcher__button--after">Стало</button>
+        <!-- Блок фото переключателя -->
+        <div class="example__images-inner">
+          <!-- Рекламное фото -->
+          <div class="example__images">
+            <img class="example__image example__image--before" width="280" height="232" src="./img/cat-before-mobile.png" alt="Толстый кот до питания кормом">
+            <img class="example__image example__image--after" width="243" height="232" src="./img/cat-after-mobile.png" alt="Худой кот после питания кормом">
+          </div>
+          <!-- Переключатели фотографий -->
+          <div class="example__switcher switcher">
+            <button class="switcher__button switcher__button--before">Было</button>
+            <button class="switcher__button switcher__button--after">Стало</button>
+          </div>
         </div>
       </div>
     </section>

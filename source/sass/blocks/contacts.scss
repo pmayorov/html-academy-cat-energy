@@ -1,5 +1,5 @@
 .contacts {
-  @media (max-width: $width-mobile-max) {
+  @media (max-width: $width-max-mobile) {
     background-color: $color-white;
   }
 }
@@ -7,31 +7,70 @@
 .contacts__address {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  // Дублирую код из класса .container т.к. в планшетах
-  // и десктопах ширина блока будет отличаться .container-ной.
-  width: $width-mobile-content;
   margin: 0 auto;
-  padding: 26px 0;
   font-style: normal;
+
+  // Блоку не добавляю класс .container, а дублирую его содержимое т.к. в планшетах
+  // и десктопах его ширина будет отличаться нативной .container-ной.
+
+  @media (max-width: $width-max-mobile) {
+    width: $width-mobile-content;
+    padding: 26px 0;
+  }
+
+  @media (min-width: $width-tablet) {
+    width: $width-tablet-content;
+    padding: 56px 40px;
+    grid-template-columns: 175px 175px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    width: 565px;
+    background-color: $color-white;
+  }
 }
 
 .contacts__title {
   margin: 0;
-  padding-right: 12px;
   color: $special-grey-900;
   font-family: $font-title;
-  font-size: 16px;
-  line-height: 20px;
   text-transform: uppercase;
+
+  @media (max-width: $width-max-mobile) {
+    font-size: 16px;
+    line-height: 20px;
+    padding-right: 12px;
+  }
+
+  @media (min-width: $width-tablet) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .contacts__text {
   margin: 0;
   line-height: 20px;
   color: $special-grey-700;
+
+  @media (min-width: $width-tablet) {
+    font-size: 16px;
+    text-align: right;
+  }
 }
 
 .contacts__map {
   display: block;
   width: 100%;
+
+  @media (max-width: $width-max-mobile) {
+    height: 362px;
+  }
+
+  @media (min-width: $width-tablet) {
+    height: 400px;
+  }
 }

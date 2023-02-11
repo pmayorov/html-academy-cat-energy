@@ -1,27 +1,53 @@
-.page-main__section {
-  // …
-}
-
 .page-main__title {
   margin: 0;
   font-family: $font-title;
-  font-size: 36px;
   font-weight: 400;
   line-height: 1;
 
-  @media (max-width: $width-mobile-max) {
+  @media (max-width: $width-max-mobile) {
+    font-size: 36px;
     margin-bottom: 40px;
+  }
+
+  @media (min-width: $width-tablet) {
+    grid-column: 1 / -1;
+    font-size: 60px;
   }
 }
 
-
 .page-main__header {
-  padding-top: 27px;
 
-  @media (max-width: $width-mobile-max) {
+  @media (max-width: $width-max-mobile) {
+    padding-top: 27px;
     margin-bottom: 20px;
   }
 }
+
+.page-main__section {
+
+  /// Отступы под (между) секциями в мобильной версии
+  @media (max-width: $width-max-mobile) {
+    &.catalogues {
+      margin-bottom: 20px;
+    }
+
+    &.progress {
+      margin-bottom: 49px;
+    }
+  }
+
+  /// Отступы под (между) секциями в планшетной версии
+  @media (min-width: $width-tablet) {
+    &.catalogues {
+      margin-bottom: 45px;
+    }
+
+    &.progress {
+      margin-bottom: 43px;
+    }
+  }
+}
+
 
 .page-main__subtitle {
   font-family: $font-title;
