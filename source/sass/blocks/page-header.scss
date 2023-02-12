@@ -10,6 +10,7 @@
 
   @media (min-width: $width-pre-desktop) {
     width: $width-desktop-content;
+    padding: 53px 0 29px;
   }
 }
 
@@ -72,7 +73,6 @@
 /// Иконка закрытия меню [X]
 
 .page-header__toggler--close {
-
   &::before,
   &::after {
     position: absolute;

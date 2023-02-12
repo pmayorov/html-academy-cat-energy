@@ -11,8 +11,9 @@
     }
   }
 
-  @media (min-width: $width-tablet) {
-    // background-color: $color-white;
+  @media (min-width: $width-pre-desktop) {
+    // Устанавливаем относительное позиционирование, чтобы по отношению к нему спозиционировать фоновый бекгрануд в псевдоэлементе.
+    position: relative;
   }
 }
 
@@ -20,6 +21,27 @@
   @media (min-width: $width-tablet) {
     position: relative;
     padding: 38px 87px 526px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    // Возвращаем исходное позиционирование в пользу родителя .promo.
+    position: initial;
+    padding: 111px 726px 185px 80px;
+    margin-bottom: 82px;
+
+    /// Оформляю фоновый бекграунд псевдоэлементом.
+    &::after {
+      content: "";
+      position: absolute;
+      width: 50%;
+      background-color: #68b738;
+      // Устанавливаю отрицательный отступ (-150px), чтобы top-граница фонового бекгранунда ушла вверх за область позиционирования.
+      // Высота меню в шапке 140px, поэтому -150px более чем достаточно.
+      top: -150px;
+      right: 0;
+      bottom: 0;
+      z-index: -2;
+    }
   }
 }
 
@@ -68,6 +90,15 @@
     z-index: -1;
     width: 709px;
     height: 609px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    top: 29px;
+    /// Расчет статичной левой позиции промофото –> середина вьюпорта минус половина ширины иллюстрации.
+    /// Иначе, если указать только процент, то при изменении ширины вьюпорта и фото будет сдвигаться на новое значение позиции.
+    left: calc(50% - 162px);
+    width: 552px;
+    height: 500px;
   }
 }
 

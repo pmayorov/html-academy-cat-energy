@@ -19,7 +19,7 @@
     padding: 77px 53px 53px;
   }
 
-  &+& {
+  & + & {
     @media (max-width: $width-max-mobile) {
       margin-top: 20px;
     }

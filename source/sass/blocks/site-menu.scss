@@ -16,7 +16,7 @@
 }
 
 .site-menu--open {
-  @media(max-width: $width-max-mobile) {
+  @media (max-width: $width-max-mobile) {
     display: block;
   }
 }

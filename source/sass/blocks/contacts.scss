@@ -4,28 +4,32 @@
   }
 }
 
+.contacts__wrapper {
+  @media (min-width: $width-pre-desktop) {
+    position: relative;
+  }
+}
+
 .contacts__address {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
   font-style: normal;
 
-  // Блоку не добавляю класс .container, а дублирую его содержимое т.к. в планшетах
-  // и десктопах его ширина будет отличаться нативной .container-ной.
-
   @media (max-width: $width-max-mobile) {
-    width: $width-mobile-content;
     padding: 26px 0;
   }
 
   @media (min-width: $width-tablet) {
-    width: $width-tablet-content;
     padding: 56px 40px;
     grid-template-columns: 175px 175px;
     justify-content: space-between;
   }
 
   @media (min-width: $width-pre-desktop) {
+    position: absolute;
+    left: 0;
+    top: 95px;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
     width: 565px;
