@@ -1,14 +1,13 @@
 .switcher {
   display: grid;
+  column-gap: 13px;
 
   @media (max-width: $width-max-mobile) {
     grid-template-columns: 49px 1fr 49px;
-    column-gap: 13px;
   }
 
   @media (min-width: $width-tablet) {
     grid-template-columns: 70px 1fr 70px;
-    column-gap: 23px;
   }
 }
 

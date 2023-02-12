@@ -1,6 +1,16 @@
 .example {
   padding: 25px 0 40px 0;
   background-color: $special-grey-100;
+
+  @media (min-width: $width-tablet) {
+    padding: 0;
+    padding-bottom: 55px;
+    background-image: linear-gradient(to top, $special-grey-100 462px, $color-white 462px);
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    padding-bottom: 65px;
+  }
 }
 
 .example__wrapper {
@@ -12,6 +22,7 @@
 }
 
 /// Общий контейнер для всей текстовой информации
+
 .example__info-inner {
   @media (max-width: $width-max-mobile) {
     margin-bottom: 40px;
@@ -29,12 +40,14 @@
       margin-bottom: 63px;
     }
   }
-}
 
-.example__images-inner {
-  @media (min-width: $width-tablet) {
-    width: 592px;
-    margin: 0 auto;
+  @media (min-width: $width-pre-desktop) {
+    align-self: start;
+    margin-bottom: 0;
+
+    .page-main__title {
+      margin: 43px 0 146px;
+    }
   }
 }
 
@@ -49,16 +62,29 @@
     font-size: 16px;
     line-height: 24px;
   }
+
+  @media (min-width: $width-pre-desktop) {
+    margin-bottom: 70px;
+  }
 }
 
 .example__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 32px;
   margin: 0;
 
   @media (max-width: $width-max-mobile) {
+    column-gap: 32px;
     margin-bottom: 20px;
+  }
+
+  @media (min-width: $width-tablet) {
+    column-gap: 42px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    margin-bottom: 55px;
+    grid-column: 1 / -1;  // Растягиваем информацию на всю ширину
   }
 }
 
@@ -66,9 +92,17 @@
   display: flex;
   align-items: center;
   flex-direction: column-reverse;
-  row-gap: 8px;
-  padding-top: 14px;
   border-top: 1px solid $special-grey-200;
+
+  @media (max-width: $width-max-mobile) {
+    row-gap: 8px;
+    padding-top: 14px;
+  }
+
+  @media (min-width: $width-tablet) {
+    row-gap: 11px;
+    padding-top: 15px;
+  }
 }
 
 .example__term {
@@ -114,6 +148,17 @@
     font-size: 20px;
     text-align: right;
   }
+
+  @media (min-width: $width-pre-desktop) {
+    text-align: left;
+  }
+}
+
+.example__images-inner {
+  @media (min-width: $width-tablet) {
+    width: 592px;
+    margin: 0 auto;
+  }
 }
 
 .example__images {
@@ -121,6 +166,7 @@
 
   @media (min-width: $width-tablet) {
     display: flex;
+    margin-bottom: 25px;
   }
 }
 
@@ -128,10 +174,13 @@
   display: block;
   margin: 0 auto;
 
-  @media (max-width: $width-max-mobile) {
-    &--after {
-      display: none;
-    }
+  &--after {
+    display: none;
+  }
+
+  @media (min-width: $width-tablet) {
+    width: auto;
+    height: 511px;
   }
 }
 

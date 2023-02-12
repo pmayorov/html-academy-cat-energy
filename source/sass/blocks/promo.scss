@@ -18,6 +18,10 @@
 }
 
 .promo__wrapper {
+  @media (max-width: $width-max-mobile) {
+    padding-top: 27px;
+  }
+
   @media (min-width: $width-tablet) {
     position: relative;
     padding: 38px 87px 526px;
@@ -27,7 +31,6 @@
     // Возвращаем исходное позиционирование в пользу родителя .promo.
     position: initial;
     padding: 111px 726px 185px 80px;
-    margin-bottom: 82px;
 
     /// Оформляю фоновый бекграунд псевдоэлементом.
     &::after {
@@ -104,10 +107,14 @@
 
 .promo__button {
   @media (max-width: $width-max-mobile) {
+    width: 100%;
     padding: 11px 26px;
   }
 
   @media (min-width: $width-tablet) {
     padding: 14px 26px;
+    width: auto;
+    font-size: 20px;
+    line-height: 20px;
   }
 }

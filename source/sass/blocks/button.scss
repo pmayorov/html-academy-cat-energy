@@ -10,12 +10,6 @@
     decoration: none;
     transform: uppercase;
   }
-
-  @media (min-width: $width-tablet) {
-    width: auto;
-    font-size: 20px;
-    line-height: 1;
-  }
 }
 
 .button--secondary {

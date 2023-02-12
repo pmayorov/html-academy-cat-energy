@@ -17,8 +17,11 @@
 
 .page-main__header {
   @media (max-width: $width-max-mobile) {
-    padding-top: 27px;
     margin-bottom: 20px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    margin-bottom: 82px;
   }
 }
 
@@ -30,7 +33,7 @@
       margin-bottom: 20px;
     }
 
-    &.progress {
+    &.functional {
       margin-bottom: 49px;
     }
   }
@@ -41,12 +44,22 @@
       margin-bottom: 45px;
     }
 
-    &.progress {
+    &.functional {
       margin-bottom: 43px;
     }
   }
-}
 
+  /// Отступы под (между) секциями в десктопной версии
+  @media (min-width: $width-pre-desktop) {
+    &.catalogues {
+      margin-bottom: 71px;
+    }
+
+    &.functional {
+      margin-bottom: 26px;
+    }
+  }
+}
 
 .page-main__subtitle {
   font-family: $font-title;
