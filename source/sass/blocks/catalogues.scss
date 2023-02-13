@@ -7,19 +7,37 @@
 }
 
 .catalogues__item {
-  padding: 20px;
   background-color: $basic-grey;
 
+  @media (max-width: $width-max-mobile) {
+    padding: 30px 20px 20px;
+  }
+
   @media (min-width: $width-tablet) {
+    position: relative;
     display: grid;
-    padding: 77px 324px 53px 53px;
+    grid-template-columns: 1fr 324px;
+    padding: 77px 0 53px 52px;
+
+    &::before {
+      position: absolute;
+      top: 92px;
+      right: 62px;
+      content: "";
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: $basic-green;
+    }
   }
 
   @media (min-width: $width-pre-desktop) {
-    padding: 77px 53px 53px;
+    display: initial;
+    position: initial;
+    padding: 77px 52px 55px 52px;
   }
 
-  & + & {
+  &+& {
     @media (max-width: $width-max-mobile) {
       margin-top: 20px;
     }
@@ -31,21 +49,51 @@
 }
 
 .catalogues__title {
+  position: relative;
+  display: flex;
+  align-items: center;
   margin: 0;
   font-family: $font-title;
   font-weight: 400;
   text-transform: uppercase;
 
   @media (max-width: $width-max-mobile) {
+    padding-left: 70px;
+    margin-bottom: 29px;
     font-size: 24px;
     line-height: 37px;
-    margin-bottom: 29px;
+
+    &::before {
+      position: absolute;
+      left: 2px;
+      content: "";
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $basic-green;
+    }
   }
 
   @media (min-width: $width-tablet) {
+    grid-column: 1 / 2;
     font-size: 36px;
     line-height: 1;
     margin-bottom: 24px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    padding-left: 162px;
+    margin-bottom: 73px;
+
+    &::before {
+      position: absolute;
+      left: 2px;
+      content: "";
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: $basic-green;
+    }
   }
 }
 
@@ -58,10 +106,16 @@
   }
 
   @media (min-width: $width-tablet) {
+    grid-column: 1 / 2;
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 48px;
   }
+
+  @media (min-width: $width-pre-desktop) {
+    margin-bottom: 23px;
+  }
+
 }
 
 .catalogues__link {
@@ -80,6 +134,7 @@
   }
 
   @media (min-width: $width-tablet) {
+    grid-column: 1 / 2;
     font-size: 20px;
     line-height: 30px;
   }

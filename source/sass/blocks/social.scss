@@ -13,10 +13,13 @@
   }
 }
 
+//todo Тимчасово!
+
 .social__link {
-  //todo Временно!
   display: inline-block;
   width: 22px;
   height: 22px;
-  background-color: $special-grey-200;
+  border-radius: 50%;
+  outline: 1px dotted $special-grey-250;
+  outline-offset: 1px;
 }

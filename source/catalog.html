@@ -15,13 +15,18 @@
   <!-- CATALOG - HEADER -->
   <header class="page__header page-header">
     <nav class="page-header__nav">
-      <a class="page-header__logo logo" href="./index.html">
-        <img class="logo__image" width="34" height="38" src="./img/logo-cat.svg" alt="Cat Energy">
-        <img class="logo__name" width="101" height="18" src="./img/logo-name.svg" alt="" aria-hidden="true">
-      </a>
-      <button class="page-header__toggler" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      <ul class="page-header__menu site-menu">
-        <li class="site-menu__item"><a class="site-menu__link" href="./index.html">Главная</a></li>
+      <div class="page-header__bar">
+        <a class="page-header__logo logo">
+          <img class="logo__image logo__image--mobile" width="34" height="38" src="./img/logo-cat.svg" alt="Cat Energy">
+          <!-- <img class="logo__image logo__image--tablet" width="174" height="52" src="./img/logo-cat-tablet.svg" alt="Cat Energy"> -->
+          <!-- <img class="logo__image logo__image--desktop" width="202" height="59" src="./img/logo-cat-desktop.svg" alt="Cat Energy"> -->
+          <img class="logo__name" width="101" height="18" src="./img/logo-name.svg" alt="" aria-hidden="true">
+        </a>
+        <button class="page-header__toggler page-header__toggler--close" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      </div>
+      <ul class="page-header__menu site-menu site-menu--open">
+        <!-- <ul class="page-header__menu site-menu"> -->
+        <li class="site-menu__item" href="./index.html"><a class="site-menu__link" href="./index.html">Главная</a></li>
         <li class="site-menu__item site-menu__item--active"><a class="site-menu__link">Каталог продукции</a></li>
         <li class="site-menu__item"><a class="site-menu__link" href="./form.html">Подбор программы</a></li>
       </ul>
@@ -223,17 +228,21 @@
   <!-- CATALOG - FOOTER -->
 
   <footer class="page__footer page-footer">
+
     <!-- Раздел с адресами и картой -->
     <article class="page-footer__contacts contacts">
       <h2 class="visually-hidden">Контакты</h2>
-      <address class="contacts__address">
-        <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-      </address>
-      <img class="contacts__map" width="320" height="362" src="./img/map.png" alt="Карта проезда к нашему офису">
+      <div class="contacts__wrapper container">
+        <address class="contacts__address">
+          <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </address>
+      </div>
+      <img class="contacts__map" width="320" height="362" src="./img/map.png" alt="">
     </article>
+
     <!-- Внутрення обертка с отступами для группы ссылок -->
-    <div class="page-footer__inner">
+    <div class="page-footer__inner container">
       <!-- Логотип со ссылкой на главную-->
       <a class="page-footer__logo logo" href="#">
         <img class="logo__name" width="128" height="24" src="./img/logo-name.svg" alt="Cat Energy">
