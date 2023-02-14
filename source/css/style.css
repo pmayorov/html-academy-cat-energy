@@ -112,6 +112,7 @@ img {
 
 @media (min-width: 768px) {
   .page-header__nav {
+    position: relative;
     display: grid;
     grid-template-columns: 174px 1fr;
     column-gap: 20px;
@@ -124,6 +125,12 @@ img {
   .page-header__nav {
     width: 1220px;
     padding: 53px 0 29px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-header__nav--decorate {
+    border-bottom: 1px solid #e6e6e6;
   }
 }
 
@@ -200,6 +207,11 @@ img {
   text-transform: uppercase;
   list-style-type: none;
 }
+@media (max-width: 767px) {
+  .site-menu {
+    border-top: 1px solid #e6e6e6;
+  }
+}
 @media (min-width: 768px) {
   .site-menu {
     display: flex;
@@ -210,12 +222,16 @@ img {
 
 @media (max-width: 767px) {
   .site-menu--open {
+    position: absolute;
     display: block;
+    min-width: 320px;
+    width: 100%;
+    background-color: #ffffff;
   }
 }
 
 .site-menu__item {
-  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
 }
 @media (min-width: 768px) {
   .site-menu__item {
@@ -928,6 +944,9 @@ img {
 .contacts {
   background-color: #ffffff;
 }
+.contacts--no-fill {
+  background-color: transparent;
+}
 
 @media (min-width: 1320px) {
   .contacts__wrapper {
@@ -1132,20 +1151,14 @@ img {
   background-color: #68b738;
 }
 
-.form {
-  padding: 0 20px;
-}
-
-.form__notice {
-  line-height: 16px;
-}
-
 .fieldset {
+  margin: 0;
   padding: 0;
   border: 0;
 }
 
 .fieldset__list {
+  margin: 0;
   padding: 0;
   list-style-type: none;
 }
@@ -1155,6 +1168,39 @@ img {
   font-weight: 400;
   font-size: 24px;
   line-height: 26px;
+}
+@media (max-width: 767px) {
+  .fieldset__title {
+    margin-bottom: 35px;
+  }
+}
+.fieldset__title--to-block {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .form {
+    padding: 0 20px 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .form__fields .form__button {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 34px 0 21px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.form__fields .form__notice {
+  margin: 0;
+  line-height: 16px;
+}
+@media (max-width: 767px) {
+  .form__fields .form__notice {
+    text-align: center;
+  }
 }
 
 .field {
@@ -1166,11 +1212,21 @@ img {
 }
 
 .field__input {
+  border: 0;
+  outline: 1px solid #e6e6e6;
   color: inherit;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
   text-transform: inherit;
+}
+.field__input:focus-visible {
+  outline: 2px solid #444444;
+}
+@media (max-width: 767px) {
+  .field__input {
+    padding: 13px 15px;
+  }
 }
 
 .select {

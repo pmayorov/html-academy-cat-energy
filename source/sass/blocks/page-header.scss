@@ -1,5 +1,6 @@
 .page-header__nav {
   @media (min-width: $width-tablet) {
+    position: relative;
     display: grid;
     grid-template-columns: 174px 1fr;
     column-gap: 20px;
@@ -11,6 +12,12 @@
   @media (min-width: $width-pre-desktop) {
     width: $width-desktop-content;
     padding: 53px 0 29px;
+  }
+}
+
+.page-header__nav--decorate {
+  @media (max-width: $width-max-mobile) {
+    border-bottom: 1px solid $special-grey-150;
   }
 }
 
@@ -73,6 +80,7 @@
 /// Иконка закрытия меню [X]
 
 .page-header__toggler--close {
+
   &::before,
   &::after {
     position: absolute;

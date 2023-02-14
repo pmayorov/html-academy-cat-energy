@@ -21,7 +21,11 @@
 
 .site-menu--open {
   @media (max-width: $width-max-mobile) {
+    position: absolute;
     display: block;
+    min-width: $width-mobile;
+    width: 100%;
+    background-color: $color-white;
   }
 }
 
