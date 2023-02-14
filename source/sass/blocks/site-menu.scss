@@ -8,6 +8,10 @@
   text-transform: uppercase;
   list-style-type: none;
 
+  @media (max-width: $width-max-mobile) {
+    border-top: 1px solid $special-grey-150;
+  }
+
   @media (min-width: $width-tablet) {
     display: flex;
     align-items: center;
@@ -22,7 +26,7 @@
 }
 
 .site-menu__item {
-  border-top: 1px solid $special-grey-150;
+  border-bottom: 1px solid $special-grey-150;
 
   @media (min-width: $width-tablet) {
     border: 0;
@@ -41,6 +45,5 @@
     line-height: 24px;
   }
 
-  @media (min-width: $width-pre-desktop) {
-  }
+  @media (min-width: $width-pre-desktop) {}
 }

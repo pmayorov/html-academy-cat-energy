@@ -36,16 +36,18 @@
   <!-- FORM - MAIN -->
   <main class="page__main page-main">
 
-    <h1 class="page-main__title">Подбор программы</h1>
-    <p class="page-main__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    <header class="page-main__header container">
+      <h1 class="page-main__title">Подбор программы</h1>
+      <p class="page-main__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+    </header>
 
     <!-- Секция формы -->
     <section class="page-main__section form">
       <h2 class="visually-hidden">Форма заявки</h2>
       <!-- Форма заявки -->
-      <form class="form__body" action="https://echo.htmlacademy.ru" name="initial-form" method="post">
+      <form class="form__body container" action="https://echo.htmlacademy.ru" name="initial-form" method="post">
         <!-- Информация о коте -->
-        <fieldset class="form__fields fieldset">
+        <fieldset class="form__fields form__fields--about fieldset">
           <legend class="visually-hidden">Информация о коте</legend>
           <ul class="fieldset__list">
             <li class="fieldset__item">
@@ -60,7 +62,7 @@
           </ul>
         </fieldset>
         <!-- Цель программы -->
-        <fieldset class="form__fields fieldset">
+        <fieldset class="form__fields form__fields--target fieldset">
           <legend class="visually-hidden">Цель программы</legend>
           <ul class="fieldset__list">
             <li class="fieldset__item">
@@ -75,7 +77,7 @@
           </ul>
         </fieldset>
         <!-- Контактные данные -->
-        <fieldset class="form__fields fieldset">
+        <fieldset class="form__fields form__fields--contacts fieldset">
           <legend class="fieldset__title">Контактные данные (владельца кота)</legend>
           <ul class="fieldset__list">
             <li class="fieldset__item">
@@ -87,14 +89,14 @@
           </ul>
         </fieldset>
         <!-- Коментарий -->
-        <div class="form__fields fieldset">
-          <label class="fieldset__title" for="comments">Коментарий</label>
+        <div class="form__fields form__fields--comments fieldset">
+          <label class="fieldset__title fieldset__title--to-block" for="comments">Коментарий</label>
           <div class="field">
             <textarea class="field__input" name="comments" id="comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </div>
         <!-- Дополнительно -->
-        <fieldset class="form__fields fieldset">
+        <fieldset class="form__fields form__fields--more fieldset">
           <legend class="fieldset__title">Дополнительно</legend>
           <ul class="fieldset__list">
             <li class="fieldset__item">
@@ -123,7 +125,7 @@
   <footer class="page__footer page-footer">
 
     <!-- Раздел с адресами и картой -->
-    <article class="page-footer__contacts contacts">
+    <article class="page-footer__contacts contacts contacts--no-fill">
       <h2 class="visually-hidden">Контакты</h2>
       <div class="contacts__wrapper container">
         <address class="contacts__address">

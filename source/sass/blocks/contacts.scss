@@ -1,5 +1,9 @@
 .contacts {
   background-color: $color-white;
+
+  &--no-fill {
+    background-color: transparent;
+  }
 }
 
 .contacts__wrapper {

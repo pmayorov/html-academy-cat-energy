@@ -7,9 +7,19 @@
 }
 
 .field__input {
+  border: 0;
+  outline: 1px solid $special-grey-150;
   color: inherit;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
   text-transform: inherit;
+
+  &:focus-visible {
+    outline: 2px solid $special-grey-700;
+  }
+
+  @media (max-width: $width-max-mobile) {
+    padding: 13px 15px;
+  }
 }

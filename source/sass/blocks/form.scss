@@ -1,7 +1,59 @@
 .form {
-  padding: 0 20px;
+  @media (max-width: $width-max-mobile) {
+    padding: 0 20px 32px;
+
+  }
+}
+
+.form__fields {
+
+  &--target {
+    position: relative;
+    padding: 21px 0;
+  }
+
+  &--target::before {
+    content: "";
+    position: absolute;
+    width: 10000%;
+    left: -1000%;
+    height: 1px;
+    background-color: $special-grey-150;
+  }
+
+  // @media (max-width: $width-max-mobile) {
+  //   &+& {
+  //     margin-top: 25px;
+  //   }
+  // }
+
+  &--about .fieldset__item+.fieldset__item,
+  &--contacts .fieldset__item+.fieldset__item {
+    margin-top: 14px;
+  }
+
+  &--target .fieldset__item+.fieldset__item,
+  &--more .fieldset__item+.fieldset__item {
+    margin-top: 12px;
+  }
+}
+
+
+.form__button {
+  @media (max-width: $width-max-mobile) {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 34px 0 21px;
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .form__notice {
+  margin: 0;
   line-height: 16px;
+
+  @media (max-width: $width-max-mobile) {
+    text-align: center;
+  }
 }
