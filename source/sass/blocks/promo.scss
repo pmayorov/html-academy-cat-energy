@@ -61,11 +61,11 @@
 }
 
 .promo__subtitle {
-  margin: 0;
-  margin-bottom: 29px;
-  font-size: 14px;
-  line-height: 1;
   text-transform: uppercase;
+
+  @media (max-width: $width-max-mobile) {
+    margin-bottom: 29px;
+  }
 
   @media (min-width: $width-tablet) {
     font-size: 20px;

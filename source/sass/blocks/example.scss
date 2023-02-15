@@ -35,19 +35,28 @@
     column-gap: 18px;
     align-items: center;
     justify-content: space-between;
-
-    .page-main__title {
-      margin-bottom: 63px;
-    }
   }
 
   @media (min-width: $width-pre-desktop) {
     align-self: start;
     margin-bottom: 0;
+  }
+}
 
-    .page-main__title {
-      margin: 43px 0 146px;
-    }
+.example__title {
+  @media (max-width: $width-max-mobile) {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $width-tablet) {
+    grid-column: 1/-1;
+    margin-bottom: 63px;
+    font-size: 60px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    margin: 43px 0 146px;
   }
 }
 
@@ -84,7 +93,7 @@
 
   @media (min-width: $width-pre-desktop) {
     margin-bottom: 55px;
-    grid-column: 1 / -1;  // Растягиваем информацию на всю ширину
+    grid-column: 1 / -1; // Растягиваем информацию на всю ширину
   }
 }
 

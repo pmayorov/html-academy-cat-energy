@@ -12,27 +12,31 @@
 @import "./blocks/visually-hidden.scss";
 @import "./blocks/container.scss";
 @import "./blocks/button.scss";
+@import "./blocks/site-menu.scss";
 @import "./blocks/logo.scss";
+@import "./blocks/page-title.scss";
 @import "./blocks/page.scss";
 @import "./blocks/page-header.scss";
-@import "./blocks/page-title.scss";
-@import "./blocks/site-menu.scss";
 @import "./blocks/page-main.scss";
+@import "./blocks/page-footer.scss";
 @import "./blocks/promo.scss";
 @import "./blocks/catalogues.scss";
 @import "./blocks/functional.scss";
 @import "./blocks/example.scss";
 @import "./blocks/switcher.scss";
-@import "./blocks/page-footer.scss";
 @import "./blocks/contacts.scss";
 @import "./blocks/social.scss";
 @import "./blocks/academy.scss";
+//
+@import "./blocks/page-catalog.scss";
 @import "./blocks/products.scss";
 @import "./blocks/card.scss";
-@import "./blocks/more-products.scss";
 @import "./blocks/card-row.scss";
+@import "./blocks/more-products.scss";
 @import "./blocks/bonus.scss";
-@import "./blocks/fieldset.scss";
+//
+@import "./blocks/page-form.scss";
 @import "./blocks/form.scss";
+@import "./blocks/fieldset.scss";
 @import "./blocks/field.scss";
 @import "./blocks/select.scss";
