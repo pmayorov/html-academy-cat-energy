@@ -40,43 +40,55 @@
     </header>
 
     <!-- Секция формы -->
-    <section class="page-form__section section-form">
+    <section class="page-form__section">
       <h2 class="visually-hidden">Форма заявки</h2>
+
       <!-- Форма заявки -->
-      <form class="form-body" action="https://echo.htmlacademy.ru" name="initial-form" method="post">
-        <!-- Информация о коте -->
-        <fieldset class="form__fields form__fields--about fieldset">
-          <legend class="visually-hidden">Информация о коте</legend>
-          <ul class="fieldset__list">
-            <li class="fieldset__item">
-              <label class="field"><span class="field__text">Имя:* </span><input class="field__input" name="cat-name" type="text" placeholder="Степан" required></label>
-            </li>
-            <li class="fieldset__item">
-              <label class="field"><span class="field__text">Вес (кг):* </span><input class="field__input" name="cat-weight" type="number" min="1" step="0.5" placeholder="7" required></label>
-            </li>
-            <li class="fieldset__item">
-              <label class="field"><span class="field__text">Возраст (лет): </span><input class="field__input" name="cat-age" type="number" min="1" placeholder="7"></label>
-            </li>
-          </ul>
-        </fieldset>
-        <!-- Цель программы -->
-        <fieldset class="form__fields form__fields--target fieldset">
-          <legend class="visually-hidden">Цель программы</legend>
-          <ul class="fieldset__list">
-            <li class="fieldset__item">
-              <label class="select select--radio"><input class="select__input" type="radio" name="target" value="slim" checked><span class="select__text"> Похудение</span></label>
-            </li>
-            <li class="fieldset__item">
-              <label class="select select--radio"><input class="select__input" type="radio" name="target" value="fatten"><span class="select__text"> Набор массы</span></label>
-            </li>
-            <li class="fieldset__item">
-              <label class="select select--radio"><input class="select__input" type="radio" name="target" value="offer"><span class="select__text"> Не знаю (Нужен ваш совет)</span></label>
-            </li>
-          </ul>
-        </fieldset>
+      <form class="form" action="https://echo.htmlacademy.ru" name="initial-form" method="post">
+
+        <div class="form__fieldset-wrapper">
+          <!-- Информация о коте -->
+          <fieldset class="form__fieldset form__fieldset--about fieldset">
+            <legend class="visually-hidden">
+              <h2 class="fieldset__title page-title">Информация о коте</h2>
+            </legend>
+            <ul class="fieldset__list">
+              <li class="fieldset__item">
+                <label class="field"><span class="field__text">Имя:* </span><input class="field__input" name="cat-name" type="text" placeholder="Степан" required></label>
+              </li>
+              <li class="fieldset__item">
+                <label class="field"><span class="field__text">Вес (кг):* </span><input class="field__input" name="cat-weight" type="number" min="1" step="0.5" placeholder="7" required></label>
+              </li>
+              <li class="fieldset__item">
+                <label class="field"><span class="field__text">Возраст (лет): </span><input class="field__input" name="cat-age" type="number" min="1" placeholder="7"></label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <!-- Цель программы -->
+          <fieldset class="form__fieldset form__fieldset--target fieldset">
+            <legend class="visually-hidden">
+              <h2 class="fieldset__title page-title">Цель программы</h2>
+            </legend>
+            <ul class="fieldset__list">
+              <li class="fieldset__item">
+                <label class="select select--radio"><input class="select__input" type="radio" name="target" value="slim" checked><span class="select__text"> Похудение</span></label>
+              </li>
+              <li class="fieldset__item">
+                <label class="select select--radio"><input class="select__input" type="radio" name="target" value="fatten"><span class="select__text"> Набор массы</span></label>
+              </li>
+              <li class="fieldset__item">
+                <label class="select select--radio"><input class="select__input" type="radio" name="target" value="offer"><span class="select__text"> Не знаю (Нужен ваш совет)</span></label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+
         <!-- Контактные данные -->
-        <fieldset class="form__fields form__fields--contacts fieldset">
-          <legend class="fieldset__title page-title">Контактные данные (владельца кота)</legend>
+        <fieldset class="form__fieldset form__fieldset--contacts fieldset">
+          <legend class="fieldset__title-wrapper">
+            <h2 class="fieldset__title page-title">Контактные данные (владельца кота)</h2>
+          </legend>
           <ul class="fieldset__list">
             <li class="fieldset__item">
               <label class="field"><span class="field__text">E-mail:* </span><input class="field__input" type="email" name="email" placeholder="catstepan@gmail.com" required></label>
@@ -86,16 +98,36 @@
             </li>
           </ul>
         </fieldset>
+
         <!-- Коментарий -->
-        <div class="form__fields form__fields--comments fieldset">
-          <label class="fieldset__title fieldset__title--to-block page-title" for="comments">Коментарий</label>
-          <div class="field">
-            <textarea class="field__input" name="comments" id="comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+        <div class="form__fieldset form__fieldset--comments fieldset">
+          <div class="fieldset__title-wrapper">
+            <h2 class="fieldset__title page-title">Коментарий</h2>
+          </div>
+          <div class="fieldset__list">
+            <label class="field" for="comments"><span class="visually-hidden">Оставьте Ваш коментарий</span>
+              <textarea class="field__input field__input--comments" name="comments" id="comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </label>
           </div>
         </div>
+
+        <!-- Коментарий -->
+        <fieldset class="form__fieldset  form__fieldset--comments fieldset" role="group">
+          <legend class="fieldset__title-wrapper">
+            <h2 class="fieldset__title page-title">Коментарий</h2>
+          </legend>
+          <div class="fieldset__list">
+            <label class="field" for="comments"><span class="visually-hidden">Оставьте Ваш коментарий</span>
+              <textarea class="field__input field__input--comments" name="comments" id="comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </label>
+          </div>
+        </fieldset>
+
         <!-- Дополнительно -->
-        <fieldset class="form__fields form__fields--more fieldset">
-          <legend class="fieldset__title page-title">Дополнительно</legend>
+        <fieldset class="form__fieldset form__fieldset--more fieldset">
+          <legend class="fieldset__title-wrapper">
+            <h2 class="fieldset__title page-title">Дополнительно</h2>
+          </legend>
           <ul class="fieldset__list">
             <li class="fieldset__item">
               <label class="select select--checkbox"><input class="select__input" type="checkbox" name="addition" value="sweetener" checked><span class="select__text"> Сахарозаменитель</span></label>
@@ -112,8 +144,10 @@
           </ul>
         </fieldset>
         <!-- Отправить анкету  -->
-        <button class="form__button button" type="submit">Отправить заявку</button>
-        <p class="form__notice">* – Обязательные поля</p>
+        <div class="form__button-wrapper">
+          <button class="form__button button" type="submit">Отправить заявку</button>
+          <p class="form__notice">* – Обязательные поля</p>
+        </div>
       </form>
     </section>
   </main>

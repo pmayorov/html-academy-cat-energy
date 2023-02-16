@@ -1,18 +1,59 @@
 .fieldset {
-  margin: 0;
   padding: 0;
   border: 0;
 }
 
 .fieldset__list {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   list-style-type: none;
+
+  @media (max-width: $width-max-mobile) {
+    width: $width-mobile-content;
+  }
+
+  @media (min-width: $width-tablet) {
+    width: $width-tablet-content;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    width: $width-desktop-content;
+  }
+}
+
+.fieldset__title-wrapper {
+  margin: 0 auto;
+  padding: 0;
+
+  @media (max-width: $width-max-mobile) {
+    margin-bottom: 35px;
+  }
+
+  @include outline;
+}
+
+.fieldset__title-wrapper--optional {
+
+  @media (max-width: $width-tablet) {
+    margin-bottom: 57px;
+  }
 }
 
 .fieldset__title {
   font-size: 24px;
   line-height: 26px;
+
+  @media (max-width: $width-max-mobile) {
+    width: $width-mobile-content;
+  }
+
+  @media (min-width: $width-tablet) {
+    width: $width-tablet-content;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    width: $width-desktop-content;
+  }
 
   &--to-block {
     // Заголовок подраздела "Комментарий" обернут в <label>.

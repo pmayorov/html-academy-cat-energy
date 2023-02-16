@@ -20,6 +20,23 @@
   }
 
   @media (max-width: $width-max-mobile) {
-    padding: 13px 15px;
+    padding: 13px 15px 14px;
   }
+}
+
+.field__input--comments {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+
+  @media (max-width: $width-max-mobile) {
+    padding: 9px 14px;
+  }
+
+  @media (min-width: $width-tablet) {
+  }
+
+  @media (min-width: $width-pre-desktop ) {
+  }
+
 }

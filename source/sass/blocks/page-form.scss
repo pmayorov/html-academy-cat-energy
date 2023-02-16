@@ -12,6 +12,10 @@
   }
 }
 
+.page-form__section {
+  padding-bottom: 32px;
+}
+
 .page-form__title {
   @media (max-width: $width-max-mobile) {
     margin-bottom: 37px;
@@ -41,15 +45,3 @@
     line-height: 30px;
   }
 }
-
-// @media (max-width: $width-max-mobile) {
-
-// }
-
-// @media (min-width: $width-tablet) {
-
-// }
-
-// @media (min-width: $width-pre-desktop) {
-
-// }

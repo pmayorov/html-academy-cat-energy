@@ -1,28 +1,102 @@
 .form {
-  @media (max-width: $width-max-mobile) {
-    padding: 0 20px 32px;
+  // @media (max-width: $width-max-mobile) {
+  //   padding: 0 20px 32px;
+  // }
+}
 
+.form__fieldset {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+// .form__fieldset--about {
+//   @media (max-width: $width-max-mobile) {
+//     margin-bottom: 24px;
+//   }
+
+//   @media (min-width: $width-tablet) {}
+
+//   @media (min-width: $width-pre-desktop) {}
+// }
+
+// .form__fieldset--target {
+//   @media (max-width: $width-max-mobile) {
+//     padding: 22px 0 19px;
+//     border-top: 1px solid $special-grey-200;
+//     border-bottom: 1px solid $special-grey-200;
+//   }
+
+//   @media (min-width: $width-tablet) {
+//     margin: 0 auto;
+//     border: 0;
+
+//     .fieldset__list {
+//       padding: 25px 28px;
+//       border: 1px solid $special-grey-200;
+//     }
+//   }
+// }
+
+// .form__fieldset--contacts {
+//   @media (max-width: $width-max-mobile) {
+//     margin-bottom: 23px;
+//   }
+
+//   @media (min-width: $width-tablet) {}
+
+//   @media (min-width: $width-pre-desktop) {}
+
+// }
+
+// .form__fieldset--comments {
+//   @media (max-width: $width-max-mobile) {
+//     margin-bottom: 23px;
+//   }
+
+//   @media (min-width: $width-tablet) {}
+
+//   @media (min-width: $width-pre-desktop) {}
+// }
+
+// .form__fieldset--more {
+//   @media (max-width: $width-max-mobile) {}
+
+//   @media (min-width: $width-tablet) {}
+
+//   @media (min-width: $width-pre-desktop) {}
+// }
+
+.form__fieldset-wrapper {
+  margin-bottom: 26px;
+}
+
+
+.form__button-wrapper {
+  display: grid;
+  margin-top: 34px;
+
+  @media (max-width: $width-max-mobile) {
+    grid-auto-flow: row;
+    row-gap: 21px;
   }
 }
 
-.form__fields {
-
-  .form__button {
-    @media (max-width: $width-max-mobile) {
-      width: 100%;
-      padding: 10px 20px;
-      margin: 34px 0 21px;
-      font-size: 16px;
-      line-height: 20px;
-    }
+.form__button {
+  @media (max-width: $width-max-mobile) {
+    justify-self: center;
+    width: $width-mobile-content;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 20px;
   }
+}
 
-  .form__notice {
-    margin: 0;
-    line-height: 16px;
 
-    @media (max-width: $width-max-mobile) {
-      text-align: center;
-    }
+.form__notice {
+  margin: 0;
+  line-height: 16px;
+
+  @media (max-width: $width-max-mobile) {
+    justify-self: center;
   }
 }
