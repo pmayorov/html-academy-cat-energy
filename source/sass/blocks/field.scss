@@ -4,9 +4,19 @@
   align-items: center;
   color: $special-grey-700;
   font-family: $font-title;
-  font-size: 16px;
-  line-height: 18px;
   text-transform: uppercase;
+
+  @media (max-width: $width-max-mobile) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $width-tablet) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  // @media (min-width: $width-pre-desktop) {}
 }
 
 .field__input {
@@ -19,23 +29,25 @@
   line-height: inherit;
   text-transform: inherit;
 
-  &:focus-visible {
-    outline: 2px solid $special-grey-700;
-  }
-
   @media (max-width: $width-max-mobile) {
     padding: 13px 15px 14px;
+  }
+
+  @media (min-width: $width-tablet) {
+    padding: 11px 20px;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $special-grey-700;
   }
 }
 
 .field__input--comments {
-
   @media (max-width: $width-max-mobile) {
     padding: 9px 14px;
   }
 
-  @media (min-width: $width-tablet) {}
+  // @media (min-width: $width-tablet) {}
 
-  @media (min-width: $width-pre-desktop ) {}
-
+  // @media (min-width: $width-pre-desktop) {}
 }

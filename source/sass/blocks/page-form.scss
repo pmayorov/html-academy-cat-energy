@@ -4,11 +4,11 @@
   }
 
   @media (min-width: $width-tablet) {
-    padding: 64px 39px 66px;
+    padding: 64px 39px 65px;
   }
 
   @media (min-width: $width-pre-desktop) {
-    padding: 74px 0 66px;
+    padding: 74px 0 65px;
   }
 }
 
@@ -37,10 +37,12 @@
   text-transform: uppercase;
 
   @media (max-width: $width-max-mobile) {
+    width: 230px;
     line-height: 18px;
   }
 
   @media (min-width: $width-tablet) {
+    width: 325px;
     font-size: 20px;
     line-height: 30px;
   }

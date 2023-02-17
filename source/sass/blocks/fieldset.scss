@@ -9,68 +9,150 @@
   padding: 0;
   list-style-type: none;
 
+  // @include outline(violet, 1px, dashed);
+
   @media (max-width: $width-max-mobile) {
     width: $width-mobile-content;
   }
 
   @media (min-width: $width-tablet) {
     width: $width-tablet-content;
+    padding-right: $width-tablet-padding-inner-right;
+    padding-left: $width-tablet-padding-inner-left;
   }
 
   @media (min-width: $width-pre-desktop) {
     width: $width-desktop-content;
+    padding: 0;
   }
 }
 
 .fieldset__list--about {
   row-gap: 14px;
+
+  // @media (max-width: $width-max-mobile) {}
+
+  // @media (min-width: $width-tablet) {}
+
+  @media (min-width: $width-pre-desktop) {
+    // Устанавливаем width: auto, т.к. при десктопном вьюпорте данный блок будет в 2-х колоночной сетке и должен принять ширину ячейки.
+    width: auto;
+  }
 }
 
 .fieldset__list--target {
   row-gap: 12px;
+
+  // @media (max-width: $width-max-mobile) {}
+
+  @media (min-width: $width-tablet) {
+    // В планшетном вьюпорте присутствуют дополнительные внутрисеточные оступы для контента.
+    // Для информационных блоков страницы мы его задаем padding-ами.
+    // А этот блок имеет бордер и уже заданные паддинги внутри, поэтому мы уменьшаем его общую ширину на размер внутрисеточных отступов.
+    width: ($width-tablet-content - $width-tablet-padding-inner-left - $width-tablet-padding-inner-right);
+    padding: 25px 28px;
+    row-gap: 13px;
+    border: 1px solid $special-grey-200;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    // Устанавливаем width: auto, т.к. при десктопном вьюпорте данный блок будет в 2-х колоночной сетке и должен принять ширину ячейки.
+    width: auto;
+  }
 }
 
 .fieldset__list--contacts {
   row-gap: 14px;
+
+  // @media (max-width: $width-max-mobile) {}
+
+  // @media (min-width: $width-tablet) {}
+
+  @media (min-width: $width-pre-desktop) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
 }
 
 .fieldset__list--more {
-  row-gap: 12px;
+  @media (max-width: $width-max-mobile) {
+    row-gap: 12px;
+  }
+
+  @media (min-width: $width-tablet) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 32px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 80px;
+  }
 }
 
 .fieldset__title-wrapper {
   width: 100%;
   padding: 0;
 
-  @media (max-width: $width-max-mobile) {
-    // margin-bottom: 35px;
+  &--contacts {
+    @media (max-width: $width-max-mobile) {
+      margin-bottom: 35px;
+    }
+
+    @media (min-width: $width-tablet) {
+      margin-bottom: 76px;
+    }
+
+    // @media (min-width: $width-pre-desktop) {}
   }
 
-  @include outline;
-}
+  &--comments {
+    @media (max-width: $width-max-mobile) {
+      margin-bottom: 37px;
+    }
 
-.fieldset__title-wrapper--optional {
+    @media (min-width: $width-tablet) {
+      margin-bottom: 76px;
+    }
 
-  @media (max-width: $width-tablet) {
-    margin-bottom: 57px;
+    // @media (min-width: $width-pre-desktop) {}
+  }
+
+  &--more {
+    @media (max-width: $width-max-mobile) {
+      margin-bottom: 35px;
+    }
+
+    @media (min-width: $width-tablet) {
+      margin-bottom: 57px;
+    }
+
+    // @media (min-width: $width-pre-desktop) {}
   }
 }
 
 .fieldset__title {
   margin: 0 auto;
-  font-size: 24px;
-  line-height: 26px;
+
+  // @include outline(#046fad);
 
   @media (max-width: $width-max-mobile) {
+    font-size: 24px;
+    line-height: 26px;
     width: $width-mobile-content;
   }
 
   @media (min-width: $width-tablet) {
+    font-size: 36px;
+    line-height: 1;
     width: $width-tablet-content;
+    padding-left: $width-tablet-padding-inner-left;
   }
 
   @media (min-width: $width-pre-desktop) {
     width: $width-desktop-content;
+    padding: 0;
   }
 
   &--to-block {

@@ -1,38 +1,35 @@
-.form {
-  // @media (max-width: $width-max-mobile) {
-  //   padding: 0 20px 32px;
-  // }
-}
+/// <form class="form">
 
 .form__fieldset-wrapper {
   display: grid;
-  margin-bottom: 24px;
 
   @media (max-width: $width-max-mobile) {
+    margin-bottom: 26px;
     row-gap: 27px;
+  }
+
+  @media (min-width: $width-tablet) {
+    margin-bottom: 72px;
+    row-gap: 72px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    width: $width-desktop-content;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    margin: 0 auto;
+    margin-bottom: 69px;
   }
 }
 
 .form__fieldset {
-  // ? Не срабатывает на обертку fieldset - legend
-  display: grid;
-  row-gap: 35px;
   margin: 0;
-  margin-bottom: 35px;
-
-  @include outline(violet, 1px, dashed)
 }
 
 // Каждый блок имеет разные отступы
 
 // Информация о коте
-.form__fieldset--about {
-  @media (max-width: $width-max-mobile) {}
-
-  @media (min-width: $width-tablet) {}
-
-  @media (min-width: $width-pre-desktop) {}
-}
+// .form__fieldset--about { }
 
 // Цель программы
 .form__fieldset--target {
@@ -42,15 +39,7 @@
     border-bottom: 1px solid $special-grey-200;
   }
 
-  @media (min-width: $width-tablet) {
-    margin: 0 auto;
-    border: 0;
-
-    .fieldset__list {
-      padding: 25px 28px;
-      border: 1px solid $special-grey-200;
-    }
-  }
+  // @media (min-width: $width-tablet) {}
 }
 
 // Контактные данные (владельца кота)
@@ -59,10 +48,13 @@
     margin-bottom: 23px;
   }
 
-  @media (min-width: $width-tablet) {}
+  @media (min-width: $width-tablet) {
+    margin-bottom: 65px;
+  }
 
-  @media (min-width: $width-pre-desktop) {}
-
+  @media (min-width: $width-pre-desktop) {
+    margin-bottom: 69px;
+  }
 }
 
 // Коментарий
@@ -71,28 +63,41 @@
     margin-bottom: 23px;
   }
 
-  @media (min-width: $width-tablet) {}
+  @media (min-width: $width-tablet) {
+    margin-bottom: 65px;
+  }
 
-  @media (min-width: $width-pre-desktop) {}
+  @media (min-width: $width-pre-desktop) {
+    margin-bottom: 67px;
+  }
 }
 
 // Дополнительно
-.form__fieldset--more {
-  @media (max-width: $width-max-mobile) {}
-
-  @media (min-width: $width-tablet) {}
-
-  @media (min-width: $width-pre-desktop) {}
-}
+// .form__fieldset--more {}
 
 // Обертка кнопки
 .form__button-wrapper {
   display: grid;
-  margin-top: 34px;
 
   @media (max-width: $width-max-mobile) {
-    grid-auto-flow: row;
+    margin-top: 34px;
     row-gap: 21px;
+  }
+
+  @media (min-width: $width-tablet) {
+    width: $width-tablet-content;
+    padding-left: $width-tablet-padding-inner-left;
+    padding-right: $width-tablet-padding-inner-right;
+    margin: 54px auto 0;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    width: $width-desktop-content;
+    margin-top: 61px;
+    padding: 0;
+    column-gap: 80px;
   }
 }
 
@@ -105,6 +110,12 @@
     font-size: 16px;
     line-height: 20px;
   }
+
+  @media (min-width: $width-tablet) {
+    padding: 16px 45px;
+    font-size: 20px;
+    line-height: 1;
+  }
 }
 
 .form__notice {
@@ -113,5 +124,10 @@
 
   @media (max-width: $width-max-mobile) {
     justify-self: center;
+  }
+
+  @media (min-width: $width-tablet) {
+    font-size: 16px;
+    padding-top: 15px;
   }
 }
