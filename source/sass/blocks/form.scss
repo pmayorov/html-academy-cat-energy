@@ -4,17 +4,23 @@
   // }
 }
 
-
 .form__fieldset-wrapper {
   display: grid;
   margin-bottom: 24px;
+
   @media (max-width: $width-max-mobile) {
     row-gap: 27px;
   }
 }
 
 .form__fieldset {
+  // ? Не срабатывает на обертку fieldset - legend
+  display: grid;
+  row-gap: 35px;
   margin: 0;
+  margin-bottom: 35px;
+
+  @include outline(violet, 1px, dashed)
 }
 
 // Каждый блок имеет разные отступы

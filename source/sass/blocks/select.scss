@@ -1,4 +1,7 @@
 .select {
+  display: flex;
+  gap: 16px;
+  align-items: center;
   font-family: $font-title;
   font-size: 16px;
   line-height: 18px;
@@ -7,8 +10,30 @@
   &--radio {
     color: $special-grey-800;
   }
+
+  &--checkbox {
+// 
+  }
 }
 
 .select__input {
   margin: 0;
 }
+
+// .field {
+//   color: $special-grey-700;
+//   font-family: $font-title;
+//   font-size: 16px;
+//   line-height: 18px;
+//   text-transform: uppercase;
+// }
+
+// .field__input {
+//   flex-grow: 1;
+//   border: 0;
+//   outline: 1px solid $special-grey-150;
+//   color: inherit;
+//   font-family: inherit;
+//   font-size: inherit;
+//   line-height: inherit;
+//   text-transform: inherit;

@@ -54,7 +54,7 @@
             </legend>
             <ul class="fieldset__list fieldset__list--about">
               <li class="fieldset__item">
-                <label class="field field--input"><span class="field__text">Имя:* </span><input class="field__input" name="cat-name" type="text" placeholder="Степан" required></label>
+                <label class="field"><span class="field__text">Имя:* </span><input class="field__input" name="cat-name" type="text" placeholder="Степан" required></label>
               </li>
               <li class="fieldset__item">
                 <label class="field"><span class="field__text">Вес (кг):* </span><input class="field__input" name="cat-weight" type="number" min="1" step="0.5" placeholder="7" required></label>
@@ -100,16 +100,16 @@
         </fieldset>
 
         <!-- Коментарий -->
-        <fieldset class="form__fieldset  form__fieldset--comments fieldset" role="group">
-          <legend class="fieldset__title-wrapper">
+        <div class="form__fieldset  form__fieldset--comments fieldset" role="group">
+          <div class="fieldset__title-wrapper">
             <h2 class="fieldset__title page-title">Коментарий</h2>
-          </legend>
+          </div>
           <div class="fieldset__list">
             <label class="field" for="comments"><span class="visually-hidden">Оставьте Ваш коментарий</span>
               <textarea class="field__input field__input--comments" name="comments" id="comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
             </label>
           </div>
-        </fieldset>
+        </div>
 
         <!-- Дополнительно -->
         <fieldset class="form__fieldset form__fieldset--more fieldset">

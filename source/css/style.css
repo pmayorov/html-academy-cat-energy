@@ -1245,7 +1245,14 @@ img {
 }
 
 .form__fieldset {
+  display: grid;
+  row-gap: 35px;
   margin: 0;
+  margin-bottom: 35px;
+  outline-color: violet;
+  outline-width: 1px;
+  outline-style: dashed;
+  outline-offset: -1px;
 }
 
 @media (max-width: 767px) {
@@ -1358,12 +1365,6 @@ img {
   outline-style: dotted;
   outline-offset: -1px;
 }
-@media (max-width: 767px) {
-  .fieldset__title-wrapper {
-    margin-bottom: 35px;
-  }
-}
-
 @media (max-width: 768px) {
   .fieldset__title-wrapper--optional {
     margin-bottom: 57px;
@@ -1430,6 +1431,9 @@ img {
   }
 }
 .select {
+  display: flex;
+  gap: 16px;
+  align-items: center;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
@@ -1438,7 +1442,6 @@ img {
 .select--radio {
   color: #222222;
 }
-
 .select__input {
   margin: 0;
 }
