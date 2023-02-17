@@ -4,73 +4,82 @@
   // }
 }
 
-.form__fieldset {
-  margin: 0;
-  margin-bottom: 25px;
-}
-
-// .form__fieldset--about {
-//   @media (max-width: $width-max-mobile) {
-//     margin-bottom: 24px;
-//   }
-
-//   @media (min-width: $width-tablet) {}
-
-//   @media (min-width: $width-pre-desktop) {}
-// }
-
-// .form__fieldset--target {
-//   @media (max-width: $width-max-mobile) {
-//     padding: 22px 0 19px;
-//     border-top: 1px solid $special-grey-200;
-//     border-bottom: 1px solid $special-grey-200;
-//   }
-
-//   @media (min-width: $width-tablet) {
-//     margin: 0 auto;
-//     border: 0;
-
-//     .fieldset__list {
-//       padding: 25px 28px;
-//       border: 1px solid $special-grey-200;
-//     }
-//   }
-// }
-
-// .form__fieldset--contacts {
-//   @media (max-width: $width-max-mobile) {
-//     margin-bottom: 23px;
-//   }
-
-//   @media (min-width: $width-tablet) {}
-
-//   @media (min-width: $width-pre-desktop) {}
-
-// }
-
-// .form__fieldset--comments {
-//   @media (max-width: $width-max-mobile) {
-//     margin-bottom: 23px;
-//   }
-
-//   @media (min-width: $width-tablet) {}
-
-//   @media (min-width: $width-pre-desktop) {}
-// }
-
-// .form__fieldset--more {
-//   @media (max-width: $width-max-mobile) {}
-
-//   @media (min-width: $width-tablet) {}
-
-//   @media (min-width: $width-pre-desktop) {}
-// }
 
 .form__fieldset-wrapper {
-  margin-bottom: 26px;
+  display: grid;
+  margin-bottom: 24px;
+  @media (max-width: $width-max-mobile) {
+    row-gap: 27px;
+  }
 }
 
+.form__fieldset {
+  margin: 0;
+}
 
+// Каждый блок имеет разные отступы
+
+// Информация о коте
+.form__fieldset--about {
+  @media (max-width: $width-max-mobile) {}
+
+  @media (min-width: $width-tablet) {}
+
+  @media (min-width: $width-pre-desktop) {}
+}
+
+// Цель программы
+.form__fieldset--target {
+  @media (max-width: $width-max-mobile) {
+    padding: 22px 0 19px;
+    border-top: 1px solid $special-grey-200;
+    border-bottom: 1px solid $special-grey-200;
+  }
+
+  @media (min-width: $width-tablet) {
+    margin: 0 auto;
+    border: 0;
+
+    .fieldset__list {
+      padding: 25px 28px;
+      border: 1px solid $special-grey-200;
+    }
+  }
+}
+
+// Контактные данные (владельца кота)
+.form__fieldset--contacts {
+  @media (max-width: $width-max-mobile) {
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: $width-tablet) {}
+
+  @media (min-width: $width-pre-desktop) {}
+
+}
+
+// Коментарий
+.form__fieldset--comments {
+  @media (max-width: $width-max-mobile) {
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: $width-tablet) {}
+
+  @media (min-width: $width-pre-desktop) {}
+}
+
+// Дополнительно
+.form__fieldset--more {
+  @media (max-width: $width-max-mobile) {}
+
+  @media (min-width: $width-tablet) {}
+
+  @media (min-width: $width-pre-desktop) {}
+}
+
+// Обертка кнопки
 .form__button-wrapper {
   display: grid;
   margin-top: 34px;
@@ -81,6 +90,7 @@
   }
 }
 
+// Отправить заявку
 .form__button {
   @media (max-width: $width-max-mobile) {
     justify-self: center;
@@ -90,7 +100,6 @@
     line-height: 20px;
   }
 }
-
 
 .form__notice {
   margin: 0;

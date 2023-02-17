@@ -1,4 +1,7 @@
 .field {
+  display: flex;
+  gap: 13px;
+  align-items: center;
   color: $special-grey-700;
   font-family: $font-title;
   font-size: 16px;
@@ -7,6 +10,7 @@
 }
 
 .field__input {
+  flex-grow: 1;
   border: 0;
   outline: 1px solid $special-grey-150;
   color: inherit;
@@ -25,18 +29,13 @@
 }
 
 .field__input--comments {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
 
   @media (max-width: $width-max-mobile) {
     padding: 9px 14px;
   }
 
-  @media (min-width: $width-tablet) {
-  }
+  @media (min-width: $width-tablet) {}
 
-  @media (min-width: $width-pre-desktop ) {
-  }
+  @media (min-width: $width-pre-desktop ) {}
 
 }

@@ -52,9 +52,9 @@
             <legend class="visually-hidden">
               <h2 class="fieldset__title page-title">Информация о коте</h2>
             </legend>
-            <ul class="fieldset__list">
+            <ul class="fieldset__list fieldset__list--about">
               <li class="fieldset__item">
-                <label class="field"><span class="field__text">Имя:* </span><input class="field__input" name="cat-name" type="text" placeholder="Степан" required></label>
+                <label class="field field--input"><span class="field__text">Имя:* </span><input class="field__input" name="cat-name" type="text" placeholder="Степан" required></label>
               </li>
               <li class="fieldset__item">
                 <label class="field"><span class="field__text">Вес (кг):* </span><input class="field__input" name="cat-weight" type="number" min="1" step="0.5" placeholder="7" required></label>
@@ -70,7 +70,7 @@
             <legend class="visually-hidden">
               <h2 class="fieldset__title page-title">Цель программы</h2>
             </legend>
-            <ul class="fieldset__list">
+            <ul class="fieldset__list  fieldset__list--target">
               <li class="fieldset__item">
                 <label class="select select--radio"><input class="select__input" type="radio" name="target" value="slim" checked><span class="select__text"> Похудение</span></label>
               </li>
@@ -89,7 +89,7 @@
           <legend class="fieldset__title-wrapper">
             <h2 class="fieldset__title page-title">Контактные данные (владельца кота)</h2>
           </legend>
-          <ul class="fieldset__list">
+          <ul class="fieldset__list fieldset__list--contacts">
             <li class="fieldset__item">
               <label class="field"><span class="field__text">E-mail:* </span><input class="field__input" type="email" name="email" placeholder="catstepan@gmail.com" required></label>
             </li>
@@ -98,18 +98,6 @@
             </li>
           </ul>
         </fieldset>
-
-        <!-- Коментарий -->
-        <div class="form__fieldset form__fieldset--comments fieldset">
-          <div class="fieldset__title-wrapper">
-            <h2 class="fieldset__title page-title">Коментарий</h2>
-          </div>
-          <div class="fieldset__list">
-            <label class="field" for="comments"><span class="visually-hidden">Оставьте Ваш коментарий</span>
-              <textarea class="field__input field__input--comments" name="comments" id="comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
-            </label>
-          </div>
-        </div>
 
         <!-- Коментарий -->
         <fieldset class="form__fieldset  form__fieldset--comments fieldset" role="group">
@@ -128,7 +116,7 @@
           <legend class="fieldset__title-wrapper">
             <h2 class="fieldset__title page-title">Дополнительно</h2>
           </legend>
-          <ul class="fieldset__list">
+          <ul class="fieldset__list fieldset__list--more">
             <li class="fieldset__item">
               <label class="select select--checkbox"><input class="select__input" type="checkbox" name="addition" value="sweetener" checked><span class="select__text"> Сахарозаменитель</span></label>
             </li>
