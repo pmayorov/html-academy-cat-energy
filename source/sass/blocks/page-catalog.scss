@@ -1,1 +1,23 @@
-//
+.page-catalog__header {
+  @media (max-width: $width-max-mobile) {
+    padding: 27px 0 41px;
+  }
+
+  @media (min-width: $width-tablet) {
+    padding: 64px 0 82px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    padding: 74px 0 84px;
+  }
+}
+
+.page-catalog__title {
+  @media (max-width: $width-max-mobile) {
+    font-size: 36px;
+  }
+
+  @media (min-width: $width-tablet) {
+    font-size: 60px;
+  }
+}

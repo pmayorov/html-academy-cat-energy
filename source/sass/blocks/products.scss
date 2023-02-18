@@ -1,9 +1,38 @@
 .products {
-  padding: 0 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .products__list {
+  display: block;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: grid;
+  row-gap: 11px;
+
+  @media (min-width: $width-tablet) {
+    width: $width-tablet-content;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    width: $width-desktop-content;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+    row-gap: 63px;
+    }
+
+}
+
+.products__item {
+  display: block;
+  padding-top: 8px;
+  border-top: 1px solid $special-grey-100;
+
+  @media (min-width: $width-tablet) {
+    padding: 0;
+    border-top: 0;
+  }
 }

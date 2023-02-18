@@ -4,3 +4,40 @@
   font-weight: 400;
   line-height: 1;
 }
+
+// .page__title {
+//   margin: 0;
+//   font-family: $font-title;
+//   font-weight: 400;
+//   line-height: 1;
+// }
+
+// .page__subtitle {
+//   margin: 0 auto;
+
+//   // @include outline(#046fad);
+
+//   @media (max-width: $width-max-mobile) {
+//     font-size: 24px;
+//     line-height: 26px;
+//     width: $width-mobile-content;
+//   }
+
+//   @media (min-width: $width-tablet) {
+//     font-size: 36px;
+//     line-height: 1;
+//     width: $width-tablet-content;
+//     padding-left: $width-tablet-padding-inner-left;
+//   }
+
+//   @media (min-width: $width-pre-desktop) {
+//     width: $width-desktop-content;
+//     padding: 0;
+//   }
+
+//   &--to-block {
+//     // Заголовок подраздела "Комментарий" обернут в <label>.
+//     // Преобразуем его в блочный, чтобы работали отступы.
+//     display: block;
+//   }
+// }

@@ -1,3 +1,20 @@
+.card {
+  display: grid;
+  width: $width-mobile-content;
+  height: 100%;
+
+  @include outline();
+
+  @media (max-width: $width-max-mobile) {
+    margin: 0 auto;
+  }
+
+
+  @media (min-width: $width-tablet) {
+    width: auto;
+  }
+}
+
 .card__title {
   font-family: $font-title;
   font-weight: 400;
