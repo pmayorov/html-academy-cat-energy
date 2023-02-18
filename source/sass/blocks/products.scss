@@ -4,12 +4,11 @@
 }
 
 .products__list {
-  display: block;
+  display: grid;
+  row-gap: 11px;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  display: grid;
-  row-gap: 11px;
 
   @media (min-width: $width-tablet) {
     width: $width-tablet-content;
@@ -22,8 +21,7 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
     row-gap: 63px;
-    }
-
+  }
 }
 
 .products__item {
