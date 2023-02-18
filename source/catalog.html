@@ -40,7 +40,7 @@
     </header>
 
     <!-- Секция основного товара -->
-    <section class="page-catalog__section products">
+    <section class="page-catalog__products products">
       <h2 class="visually-hidden">Основные товары</h2>
 
       <!-- Список основного товара -->
@@ -172,13 +172,13 @@
           </div>
         </li>
         <!-- 8-я – показать всё! -->
-        <li class="products__item">
+        <li class="products__item products__item--more">
           <div class="card">
             <h3 class="card__title">Показать еще 100500 товаров</h3>
             <div class="card__list">
               <p class="card__term">На самом деле вкусов гораздо больше!</p>
             </div>
-            <a class="card__button button button--secondary" href="#">Заказать</a>
+            <a class="card__button button button--secondary" href="#">Показать все</a>
           </div>
         </li>
 
@@ -186,63 +186,67 @@
     </section>
 
     <!-- Секция дополнительного товара -->
-    <section class="page-catalog__section more-products">
-      <div class="more-products__title-wrapper">
-        <h2 class="more-products__title page__title">Дополнительные товары</h2>
+    <section class="page-catalog__add-products add-products">
+
+      <div class="add-products__title-wrapper">
+        <h2 class="page__subtitle">Дополнительные товары</h2>
       </div>
 
-      <!-- Список дополнительного товара -->
-      <ul class="more-products__list">
-        <li class="more-products__item card-row">
-          <h3 class="card-row__title">Сахарозаменитель</h3>
-          <dl class="card-row__list">
-            <dt class="visually-hidden">Объем</dt>
-            <dd class="card-row__desc">1 упаковка (100 г)</dd>
-            <dt class="visually-hidden">Цена</dt>
-            <dd class="card-row__desc">200 Р.</dd>
-          </dl>
-          <a class="card-row__button button" href="#">Заказать</a>
-        </li>
+      <div class="add-products__wrapper container">
+        <!-- Список дополнительного товара -->
+        <ul class="add-products__list">
+          <li class="add-products__item card-row">
+            <h3 class="card-row__title">Сахарозаменитель</h3>
+            <dl class="card-row__list">
+              <dt class="visually-hidden">Объем</dt>
+              <dd class="card-row__desc">1 упаковка (100 г)</dd>
+              <dt class="visually-hidden">Цена</dt>
+              <dd class="card-row__desc">200 Р.</dd>
+            </dl>
+            <a class="card-row__button button" href="#">Заказать</a>
+          </li>
 
-        <li class="more-products__item card-row">
-          <h3 class="card-row__title">Питьевая вода</h3>
-          <dl class="card-row__list">
-            <dt class="visually-hidden">Объем</dt>
-            <dd class="card-row__desc">5 литров</dd>
-            <dt class="visually-hidden">Цена</dt>
-            <dd class="card-row__desc">50 Р.</dd>
-          </dl>
-          <a class="card-row__button button" href="#">Заказать</a>
-        </li>
+          <li class="add-products__item card-row">
+            <h3 class="card-row__title">Питьевая вода</h3>
+            <dl class="card-row__list">
+              <dt class="visually-hidden">Объем</dt>
+              <dd class="card-row__desc">5 литров</dd>
+              <dt class="visually-hidden">Цена</dt>
+              <dd class="card-row__desc">50 Р.</dd>
+            </dl>
+            <a class="card-row__button button" href="#">Заказать</a>
+          </li>
 
-        <li class="more-products__item card-row">
-          <h3 class="card-row__title">Молоко</h3>
-          <dl class="card-row__list">
-            <dt class="visually-hidden">Объем</dt>
-            <dd class="card-row__desc">1 литр</dd>
-            <dt class="visually-hidden">Цена</dt>
-            <dd class="card-row__desc">100 Р.</dd>
-          </dl>
-          <a class="card-row__button button" href="#">Заказать</a>
-        </li>
+          <li class="add-products__item card-row">
+            <h3 class="card-row__title">Молоко</h3>
+            <dl class="card-row__list">
+              <dt class="visually-hidden">Объем</dt>
+              <dd class="card-row__desc">1 литр</dd>
+              <dt class="visually-hidden">Цена</dt>
+              <dd class="card-row__desc">100 Р.</dd>
+            </dl>
+            <a class="card-row__button button" href="#">Заказать</a>
+          </li>
 
-        <li class="more-products__item card-row">
-          <h3 class="card-row__title">Витамины</h3>
-          <dl class="card-row__list">
-            <dt class="visually-hidden">Объем</dt>
-            <dd class="card-row__desc">1 упаковка (30 г)</dd>
-            <dt class="visually-hidden">Цена</dt>
-            <dd class="card-row__desc">300 Р.</dd>
-          </dl>
-          <a class="card-row__button button" href="#">Заказать</a>
-        </li>
-      </ul>
-      <!-- Заказать всё! -->
-      <div class="more-products__bonus bonus">
-        <h2 class="visually-hidden">Специальное предложение</h2>
-        <p class="bonus__text">Закажите все и получите чехол для кота в подарок!</p>
+          <li class="add-products__item card-row">
+            <h3 class="card-row__title">Витамины</h3>
+            <dl class="card-row__list">
+              <dt class="visually-hidden">Объем</dt>
+              <dd class="card-row__desc">1 упаковка (30 г)</dd>
+              <dt class="visually-hidden">Цена</dt>
+              <dd class="card-row__desc">300 Р.</dd>
+            </dl>
+            <a class="card-row__button button" href="#">Заказать</a>
+          </li>
+        </ul>
+        <!-- Заказать всё! -->
+        <div class="add-products__bonus bonus">
+          <h2 class="visually-hidden">Специальное предложение</h2>
+          <p class="bonus__text">Закажите все и получите чехол для кота в подарок!</p>
+        </div>
       </div>
     </section>
+
   </main>
 
   <!-- CATALOG - FOOTER -->

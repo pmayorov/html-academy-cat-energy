@@ -17,8 +17,8 @@
 
   @media (min-width: $width-tablet) {
     width: $width-tablet-content;
-    padding-right: $width-tablet-padding-inner-right;
-    padding-left: $width-tablet-padding-inner-left;
+    padding-right: $width-tablet-padding-inner;
+    padding-left: $width-tablet-padding-inner;
   }
 
   @media (min-width: $width-pre-desktop) {
@@ -49,7 +49,7 @@
     // В планшетном вьюпорте присутствуют дополнительные внутрисеточные оступы для контента.
     // Для информационных блоков страницы мы его задаем padding-ами.
     // А этот блок имеет бордер и уже заданные паддинги внутри, поэтому мы уменьшаем его общую ширину на размер внутрисеточных отступов.
-    width: ($width-tablet-content - $width-tablet-padding-inner-left - $width-tablet-padding-inner-right);
+    width: ($width-tablet-content - 2 * $width-tablet-padding-inner);
     padding: 25px 28px;
     row-gap: 13px;
     border: 1px solid $special-grey-200;

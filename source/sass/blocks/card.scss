@@ -16,6 +16,7 @@
 }
 
 .card__title {
+  margin: 0;
   font-family: $font-title;
   font-weight: 400;
   font-size: 16px;
@@ -39,6 +40,8 @@
 }
 
 .card__button {
+  height: fit-content;
+  padding: 10px 20px;
   font-size: 16px;
   line-height: 20px;
 }

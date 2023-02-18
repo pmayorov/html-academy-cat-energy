@@ -1,14 +1,38 @@
+.card-row {
+  @media (max-width: $width-max-mobile) {
+    border-top: 1px solid $special-grey-250;
+    padding-top: 12px
+  }
+
+  &:last-of-type{
+    padding-bottom: 19px;
+    border-bottom: 1px solid $special-grey-250;
+  }
+}
+
 .card-row__title {
+  margin: 0;
   font-family: $font-title;
   font-size: 16px;
   font-weight: 400;
   line-height: 1;
   text-transform: uppercase;
+
+  @media (max-width: $width-max-mobile) {
+    margin-bottom: 13px;
+  }
 }
 
 .card-row__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
   line-height: 1;
   color: $special-grey-700;
+
+  @media (max-width: $width-max-mobile) {
+    margin-bottom: 15px;
+  }
 }
 
 .card-row__desc {
@@ -18,4 +42,9 @@
 .card-row__button {
   font-size: 16px;
   line-height: 20px;
+
+  @media (max-width: $width-max-mobile) {
+    padding: 10px 20px;
+    width: 100%;
+  }
 }

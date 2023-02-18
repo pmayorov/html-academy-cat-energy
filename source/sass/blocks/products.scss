@@ -1,14 +1,13 @@
-.products {
-  display: flex;
-  justify-content: center;
-}
-
 .products__list {
   display: grid;
   row-gap: 11px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   list-style-type: none;
+
+  @media (max-width: $width-max-mobile) {
+    margin-bottom: 25px;
+    }
 
   @media (min-width: $width-tablet) {
     width: $width-tablet-content;
@@ -26,11 +25,20 @@
 
 .products__item {
   display: block;
-  padding-top: 8px;
-  border-top: 1px solid $special-grey-100;
+
+  @media (max-width: $width-max-mobile) {
+    padding-top: 8px;
+    border-top: 1px solid $special-grey-100;
+  }
 
   @media (min-width: $width-tablet) {
     padding: 0;
-    border-top: 0;
+  }
+}
+
+.products__item--more {
+  @media (max-width: $width-max-mobile) {
+    padding-bottom: 25px;
+    border-bottom: 1px solid $special-grey-100;
   }
 }

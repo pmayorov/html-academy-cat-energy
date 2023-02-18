@@ -86,8 +86,8 @@
 
   @media (min-width: $width-tablet) {
     width: $width-tablet-content;
-    padding-left: $width-tablet-padding-inner-left;
-    padding-right: $width-tablet-padding-inner-right;
+    padding-left: $width-tablet-padding-inner;
+    padding-right: $width-tablet-padding-inner;
     margin: 54px auto 0;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;

@@ -23,7 +23,7 @@
   }
 
   @media (min-width: $width-tablet) {
-    padding: 56px 40px;
+    padding: 56px $width-tablet-padding-inner;
     grid-template-columns: 175px 175px;
     justify-content: space-between;
   }
