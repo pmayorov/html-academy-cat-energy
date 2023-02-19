@@ -1260,10 +1260,6 @@ img {
   display: grid;
   width: 280px;
   height: 100%;
-  outline-color: #0f99da;
-  outline-width: 1px;
-  outline-style: dotted;
-  outline-offset: -1px;
 }
 @media (max-width: 767px) {
   .card {
@@ -1273,6 +1269,32 @@ img {
 @media (min-width: 768px) {
   .card {
     width: auto;
+    padding: 0 38px 39px;
+    background-color: #f2f2f2;
+  }
+}
+@media (min-width: 1320px) {
+  .card {
+    padding: 0 39px 40px;
+    background-color: #f2f2f2;
+  }
+}
+
+@media (min-width: 768px) {
+  .card--more {
+    background-color: initial;
+    border: 2px solid #f2f2f2;
+  }
+}
+@media (min-width: 768px) {
+  .card--more .card__title {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .card--more .card__term {
+    margin: 0;
+    text-align: center;
   }
 }
 
@@ -1286,11 +1308,16 @@ img {
   color: #222222;
 }
 
+.card__image {
+  grid-row: 1;
+}
+
 .card__link {
   text-decoration: none;
 }
 
 .card__list {
+  margin: 0;
   font-size: 12px;
   line-height: 16px;
   color: #444444;
@@ -1303,20 +1330,27 @@ img {
 .card__button {
   height: -moz-fit-content;
   height: fit-content;
+  align-self: end;
   padding: 10px 20px;
   font-size: 16px;
   line-height: 20px;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 1319px) {
   .card-row {
-    border-top: 1px solid #cdcdcd;
-    padding-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 25px;
   }
 }
-.card-row:last-of-type {
-  padding-bottom: 19px;
-  border-bottom: 1px solid #cdcdcd;
+@media (min-width: 1320px) {
+  .card-row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 325px 325px 245px;
+    align-items: center;
+  }
 }
 
 .card-row__title {
@@ -1335,13 +1369,13 @@ img {
 
 .card-row__list {
   display: flex;
-  justify-content: space-between;
   margin: 0;
   line-height: 1;
   color: #444444;
 }
 @media (max-width: 767px) {
   .card-row__list {
+    justify-content: space-between;
     margin-bottom: 15px;
   }
 }
@@ -1353,12 +1387,8 @@ img {
 .card-row__button {
   font-size: 16px;
   line-height: 20px;
-}
-@media (max-width: 767px) {
-  .card-row__button {
-    padding: 10px 20px;
-    width: 100%;
-  }
+  padding: 10px 20px;
+  width: 100%;
 }
 
 .add-products__wrapper {
@@ -1387,14 +1417,55 @@ img {
   padding: 0;
   list-style-type: none;
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .add-products__list {
-    row-gap: 19px;
+    border: 1px solid #cdcdcd;
   }
 }
 @media (min-width: 1320px) {
   .add-products__list {
+    border: 0;
     grid-column: 1/span 3;
+  }
+}
+
+.add-products__item {
+  border-top: 1px solid #cdcdcd;
+}
+@media (max-width: 767px) {
+  .add-products__item {
+    padding: 13px 0 19px;
+  }
+}
+@media (min-width: 768px) {
+  .add-products__item {
+    padding: 26px 38px 28px;
+  }
+}
+@media (min-width: 1320px) {
+  .add-products__item {
+    padding: 15px 0 17px;
+  }
+}
+@media (min-width: 768px) {
+  .add-products__item:first-of-type {
+    border: 0;
+  }
+}
+@media (min-width: 1320px) {
+  .add-products__item:first-of-type {
+    border-top: 1px solid #cdcdcd;
+  }
+}
+@media (max-width: 767px) {
+  .add-products__item:last-of-type {
+    padding-bottom: 19px;
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+@media (min-width: 1320px) {
+  .add-products__item:last-of-type {
+    border-bottom: 1px solid #cdcdcd;
   }
 }
 
@@ -1410,17 +1481,53 @@ img {
 }
 
 .bonus {
+  display: flex;
+  justify-content: center;
   min-height: 290px;
-  padding: 60px 60px 40px 60px;
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
-  text-align: center;
-  background-image: url("../../img/backtile/bonus.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #68b738;
+}
+@media (max-width: 767px) {
+  .bonus {
+    padding-bottom: 43px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1320px) {
+  .bonus {
+    align-items: center;
+    min-height: 200px;
+    padding-bottom: 0;
+  }
+}
+
+.bonus__text {
+  margin: 0;
+  width: 161px;
+}
+@media (max-width: 767px) {
+  .bonus__text {
+    align-self: end;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .bonus__text {
+    align-self: initial;
+    margin: 43px 0 43px 422px;
+    text-align: left;
+  }
+}
+@media (min-width: 1320px) {
+  .bonus__text {
+    margin: 0;
+    align-self: center;
+    text-align: center;
+  }
 }
 
 @media (max-width: 767px) {

@@ -1,16 +1,48 @@
 .bonus {
+  display: flex;
+  justify-content: center;
   min-height: 290px;
-  padding: 60px 60px 40px 60px;
   color: $color-white;
   font-size: 16px;
   line-height: 20px;
-  text-align: center;
 
   background: {
-    image: url("../../img/backtile/bonus.jpg");
+    // image: url("../../img/backtile/bonus-small.jpg");
     size: cover;
     repeat: no-repeat;
     position: center;
     color: $basic-green;
+  }
+
+  @media (max-width: $width-max-mobile) {
+    padding-bottom: 43px;
+  }
+
+  @media (min-width: $width-tablet) and (max-width: $width-pre-desktop) {
+    align-items: center;
+    min-height: 200px;
+    padding-bottom: 0;
+  }
+}
+
+.bonus__text {
+  margin: 0;
+  width: 161px;
+
+  @media (max-width: $width-max-mobile) {
+    align-self: end;
+    text-align: center;
+  }
+
+  @media (min-width: $width-tablet) {
+    align-self: initial;
+    margin: 43px 0 43px 422px;
+    text-align: left;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    margin: 0;
+    align-self: center;
+    text-align: center;
   }
 }
