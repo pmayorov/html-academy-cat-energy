@@ -1281,7 +1281,7 @@ img {
 }
 @media (min-width: 768px) {
   .card {
-    grid-template-rows: 1fr;
+    grid-template-rows: 242px min-content min-content;
     width: auto;
     padding: 0 38px 39px;
     background-color: #f2f2f2;

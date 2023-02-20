@@ -15,7 +15,8 @@
   }
 
   @media (min-width: $width-tablet) {
-    grid-template-rows: 1fr;
+    // grid-template-rows: 1fr;
+    grid-template-rows: 242px min-content min-content;
     width: auto;
     padding: 0 38px 39px;
     background-color: $basic-grey;
