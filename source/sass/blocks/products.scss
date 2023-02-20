@@ -27,18 +27,21 @@
   display: block;
 
   @media (max-width: $width-max-mobile) {
-    padding-top: 8px;
+    padding: 19px 0 14px;
     border-top: 1px solid $special-grey-100;
   }
 
   @media (min-width: $width-tablet) {
     padding: 0;
+
+    // todo Временно!?
+    min-height: 511px;
   }
 }
 
 .products__item--more {
   @media (max-width: $width-max-mobile) {
-    padding-bottom: 25px;
+    padding: 25px 0;
     border-bottom: 1px solid $special-grey-100;
   }
 }

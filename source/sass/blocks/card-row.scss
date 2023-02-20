@@ -1,15 +1,18 @@
 .card-row {
+  display: grid;
+
   @media (min-width: $width-tablet) and (max-width: ($width-pre-desktop - 1px)) {
-  // @media (min-width: $width-tablet) and (max-width: ($width-pre-desktop)) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    // @media (min-width: $width-tablet) and (max-width: ($width-pre-desktop)) {
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
     row-gap: 25px;
   }
 
   @media (min-width: $width-pre-desktop) {
-    display: grid;
-    grid-auto-flow: column;
+    // display: grid;
+    // grid-auto-flow: column;
     grid-template-columns: (245px + 80px) (245px + 80px) 245px;
     align-items: center;
   }
@@ -29,14 +32,26 @@
 }
 
 .card-row__list {
-  display: flex;
   margin: 0;
   line-height: 1;
   color: $special-grey-700;
 
   @media (max-width: $width-max-mobile) {
+    display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
+  }
+
+  @media (min-width: $width-tablet) {
+    display: grid;
+    text-align: right;
+    // 132 + 60 - колонка сетки + расстояние между колонками
+    grid-template-columns: (132px + 60px) 1fr;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    text-align: initial;
+    grid-template-columns: 245px 1fr;
   }
 }
 
@@ -45,8 +60,12 @@
 }
 
 .card-row__button {
+  padding: 10px 20px;
   font-size: 16px;
   line-height: 20px;
-  padding: 10px 20px;
-  width: 100%;
+
+  @media (min-width: $width-tablet) and (max-width: ($width-pre-desktop - 1px)) {
+    grid-column: 1 / -1;
+  }
+
 }

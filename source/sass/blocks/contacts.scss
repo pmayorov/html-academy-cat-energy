@@ -32,10 +32,14 @@
     position: absolute;
     left: 0;
     top: 95px;
+    width: 565px;
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
-    width: 565px;
     background-color: $color-white;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    padding: 56px 80px;
   }
 }
 
@@ -66,6 +70,11 @@
     font-size: 16px;
     text-align: right;
   }
+
+  @media (min-width: $width-pre-desktop) {
+    text-align: left;
+  }
+
 }
 
 .contacts__map {
