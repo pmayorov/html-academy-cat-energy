@@ -79,6 +79,7 @@
 
 .example__list {
   display: grid;
+  max-width: 366px;
   grid-template-columns: 1fr 1fr;
   margin: 0;
 
@@ -98,23 +99,36 @@
 }
 
 .example__item {
+  position: relative;
   display: flex;
   align-items: center;
   flex-direction: column-reverse;
-  border-top: 1px solid $special-grey-200;
+
 
   @media (max-width: $width-max-mobile) {
-    row-gap: 8px;
     padding-top: 14px;
+    row-gap: 8px;
   }
 
   @media (min-width: $width-tablet) {
-    row-gap: 11px;
     padding-top: 15px;
+    row-gap: 11px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 14px;
+    border: 1px solid $special-grey-200;
+    border-radius: 3px;
   }
 }
 
 .example__term {
+  position: relative;
   width: 77px;
   line-height: 1;
   color: $special-grey-700;
@@ -122,11 +136,17 @@
   text-align: center;
 
   @media (max-width: $width-max-mobile) {
+    background-color: $special-grey-100;
     font-size: 12px;
   }
 
   @media (min-width: $width-tablet) {
+    background-color: $color-white;
     font-size: 14px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    background-color: $special-grey-100;
   }
 }
 
@@ -146,20 +166,37 @@
   }
 }
 
-.example__costs {
+.example__total {
+  display: flex;
   margin: 0;
   font-family: $font-title;
   line-height: 20px;
   text-transform: uppercase;
-  text-align: center;
+
+  @media (max-width: $width-max-mobile) {
+    justify-content: center;
+  }
 
   @media (min-width: $width-tablet) {
+    flex-direction: column;
+    row-gap: 9px;
+    align-items: end;
     font-size: 20px;
-    text-align: right;
   }
 
   @media (min-width: $width-pre-desktop) {
-    text-align: left;
+    width: (245px + 80px);
+    flex-direction: initial;
+    justify-content: space-between;;
+    row-gap: initial;
+  }
+
+  &--desc {
+    margin: 0;
+
+    @media (max-width: $width-max-mobile) {
+      padding-left: 0.3em;
+    }
   }
 }
 
@@ -183,8 +220,12 @@
   display: block;
   margin: 0 auto;
 
+  &--before {
+      display: none;
+    }
+
   &--after {
-    display: none;
+    display: block;
   }
 
   @media (min-width: $width-tablet) {

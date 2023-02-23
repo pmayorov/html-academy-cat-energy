@@ -21,19 +21,22 @@
 .card-row__title {
   margin: 0;
   font-family: $font-title;
-  font-size: 16px;
   font-weight: 400;
-  line-height: 1;
   text-transform: uppercase;
+  line-height: 1;
 
   @media (max-width: $width-max-mobile) {
+    font-size: 16px;
     margin-bottom: 13px;
+  }
+
+  @media (min-width: $width-tablet) {
+    font-size: 20px;
   }
 }
 
 .card-row__list {
   margin: 0;
-  line-height: 1;
   color: $special-grey-700;
 
   @media (max-width: $width-max-mobile) {
@@ -57,12 +60,16 @@
 
 .card-row__desc {
   margin: 0;
+  line-height: 20px;
+
+  @media (min-width: $width-tablet) {
+    font-size: 16px;
+  }
 }
 
 .card-row__button {
   padding: 10px 20px;
   font-size: 16px;
-  line-height: 20px;
 
   @media (min-width: $width-tablet) and (max-width: ($width-pre-desktop - 1px)) {
     grid-column: 1 / -1;

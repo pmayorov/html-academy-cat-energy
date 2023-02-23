@@ -3,9 +3,10 @@
     color: $color-white;
     text-align: center;
 
+    // url("../../img/backtile/promo-small.jpg"),
+
     background: {
-      image: url("../../img/backtile/promo-small.jpg"),
-        linear-gradient($basic-green, $basic-green 302px, $color-white 302px);
+      image: linear-gradient($basic-green, $basic-green 302px, $color-white 302px);
       repeat: no-repeat;
       position: 50% 0;
     }
@@ -60,7 +61,7 @@
   }
 }
 
-.promo__subtitle {
+.promo__lead {
   text-transform: uppercase;
 
   @media (max-width: $width-max-mobile) {
@@ -68,7 +69,7 @@
   }
 
   @media (min-width: $width-tablet) {
-    font-size: 20px;
+    line-height: 1;
     margin-bottom: 49px;
   }
 }

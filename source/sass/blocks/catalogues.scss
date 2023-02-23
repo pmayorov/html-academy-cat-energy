@@ -18,8 +18,30 @@
     display: grid;
     grid-template-columns: 1fr 324px;
     padding: 77px 0 53px 52px;
+  }
 
-    &::before {
+  @media (min-width: $width-pre-desktop) {
+    display: initial;
+    position: initial;
+    padding: 77px 52px 55px 52px;
+  }
+
+  // Отступы между каточками
+
+  &+& {
+    @media (max-width: $width-max-mobile) {
+      margin-top: 20px;
+    }
+
+    @media (min-width: $width-tablet) and (max-width: $width-pre-desktop) {
+      margin-top: 30px;
+    }
+  }
+
+  // При планшетном вьюпорте позиционирую зеленый круг и лого котов относительно всей карточки
+
+  &::before {
+    @media (min-width: $width-tablet) and (max-width: $width-pre-desktop) {
       position: absolute;
       top: 92px;
       right: 62px;
@@ -31,19 +53,36 @@
     }
   }
 
-  @media (min-width: $width-pre-desktop) {
-    display: initial;
-    position: initial;
-    padding: 77px 52px 55px 52px;
+  // Позиционируем логотипы на зеленые круги
+
+  &::after {
+    @media (min-width: $width-tablet) and (max-width: $width-pre-desktop) {
+      position: absolute;
+      content: "";
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
   }
 
-  &+& {
-    @media (max-width: $width-max-mobile) {
-      margin-top: 20px;
-    }
+  &--thin::after {
 
     @media (min-width: $width-tablet) and (max-width: $width-pre-desktop) {
-      margin-top: 30px;
+      background-image: url("../../img/icons/ico-cat-slim.svg");
+      right: 91px;
+      top: 81px;
+      width: 140px;
+      height: 194px;
+    }
+  }
+
+  &--fat::after {
+
+    @media (min-width: $width-tablet) and (max-width: $width-pre-desktop) {
+      background-image: url("../../img/icons/ico-cat-pro.svg");
+      right: 27px;
+      top: 135px;
+      width: 268px;
+      height: 112px;
     }
   }
 }
@@ -59,16 +98,6 @@
     margin-bottom: 29px;
     font-size: 24px;
     line-height: 37px;
-
-    &::before {
-      position: absolute;
-      left: 2px;
-      content: "";
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background-color: $basic-green;
-    }
   }
 
   @media (min-width: $width-tablet) {
@@ -81,15 +110,70 @@
   @media (min-width: $width-pre-desktop) {
     padding-left: 162px;
     margin-bottom: 73px;
+  }
 
-    &::before {
-      position: absolute;
-      left: 2px;
-      content: "";
+  // Зеленый круг к заголовку каталогов питания
+
+  &::before {
+    position: absolute;
+    left: 2px;
+    content: "";
+    border-radius: 50%;
+    background-color: $basic-green;
+
+    @media (max-width: $width-max-mobile) {
+      width: 50px;
+      height: 50px;
+    }
+
+    @media (min-width: $width-pre-desktop) {
       width: 100px;
       height: 100px;
-      border-radius: 50%;
-      background-color: $basic-green;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  // Размещение иконок на фоне зеленого круга
+
+  .catalogues__item--thin &::after {
+    background-image: url("../../img/icons/ico-cat-slim.svg");
+
+    @media (max-width: $width-max-mobile) {
+      left: 9px;
+      top: -8px;
+      width: 36px;
+      height: 50px;
+    }
+
+    @media (min-width: $width-pre-desktop) {
+      left: 18px;
+      top: -38px;
+      width: 70px;
+      height: 97px;
+    }
+  }
+
+  .catalogues__item--fat &::after {
+    background-image: url("../../img/icons/ico-cat-pro.svg");
+
+    @media (max-width: $width-max-mobile) {
+      left: -7px;
+      top: 4px;
+      width: 67px;
+      height: 28px;
+    }
+
+    @media (min-width: $width-pre-desktop) {
+      left: -15px;
+      top: -10px;
+      width: 134px;
+      height: 56px;
     }
   }
 }
@@ -99,14 +183,17 @@
   color: $special-grey-700;
 
   @media (max-width: $width-max-mobile) {
-    margin-bottom: 23px;
+    margin-bottom: 15px;
+    padding-bottom: 23px;
+    border-bottom: 1px solid $special-grey-200;
   }
 
   @media (min-width: $width-tablet) {
     grid-column: 1 / 2;
+    margin-bottom: 48px;
+    border-bottom: none;
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 48px;
   }
 
   @media (min-width: $width-pre-desktop) {
@@ -115,23 +202,40 @@
 }
 
 .catalogues__link {
+  position: relative;
   display: inline-block;
+  margin-left: -8px;
+  padding: 4px 47px 4px 8px;
   color: $color-black;
   font-family: $font-title;
   text-transform: uppercase;
   text-decoration: none;
 
   @media (max-width: $width-max-mobile) {
-    width: 100%;
-    padding-top: 15px;
-    border-top: 1px solid $special-grey-200;
     font-size: 16px;
     line-height: 1;
   }
 
   @media (min-width: $width-tablet) {
     grid-column: 1 / 2;
+    width: fit-content; // При праншетном вьюпорте ссылка становится грид-ячейкой, - ужимаем до размера контента
+    padding-right: 57px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    padding-right: 60px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 12px;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url("../../img/icons/ico-arrow.svg") no-repeat center;
   }
 }

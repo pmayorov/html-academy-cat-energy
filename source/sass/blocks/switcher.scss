@@ -9,6 +9,41 @@
   @media (min-width: $width-tablet) {
     grid-template-columns: 70px 1fr 70px;
   }
+
+  &::before {
+    @media (max-width: $width-max-mobile) {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      align-self: center;
+      width: 100%;
+      height: 14px;
+      content: "";
+      background-color: $color-white;
+      border: 1px solid $special-grey-250;
+      border-radius: 6px;
+      padding: 0 6px;
+    }
+  }
+
+  &::after {
+    @media (max-width: $width-max-mobile) {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      align-self: center;
+      content: "";
+      width: calc(50% - 6px);
+      height: 6px;
+      margin: 0 6px;
+      border-radius: 6px;
+      background-color: $basic-green;
+    }
+  }
+
+  &--after::after {
+    @media (max-width: $width-max-mobile) {
+      justify-self: end;
+    }
+  }
 }
 
 .switcher__button {
@@ -39,4 +74,87 @@
 
 .switcher__button--after {
   grid-column: 3 / 4;
+}
+
+// СТИЛИЗАЦИЯ ПОЛЗУНКА RANGE
+
+// Для браузеров webkit (google chrome, chromium) используются псевдоселекторы
+
+// ::-webkit-slider-runnable-track
+// ::-webkit-slider-thumb
+
+// а для mozilla firefox
+
+// ::-moz-range-track
+// ::-moz-range-thumb
+
+// Где:
+// -track - полоса ползунка
+// -thumb – элемент ползунка
+
+.switcher__range {
+  display: none;
+  appearance: none;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  background-color: transparent;
+
+  @media (min-width: $width-tablet) {
+    display: block;
+  }
+}
+
+.switcher__range::-moz-range-track {
+  height: 6px;
+  background-color: $special-grey-175;
+  border-radius: 6px;
+}
+
+// Если объединить два селектора через "," то правило для -webkit не срабатывает.
+.switcher__range::-webkit-slider-runnable-track {
+  height: 6px;
+  background-color: $special-grey-175;
+  border-radius: 6px;
+}
+
+
+.switcher__range::-webkit-slider-thumb {
+  position: relative;
+  -webkit-appearance: none;
+  width: 34px;
+  margin-top: -14px;
+  height: 34px;
+  border-radius: 50%;
+  background: radial-gradient(circle, $basic-green 23.5%, $color-white 23.5%);
+  border: 1px solid $special-grey-250;
+  filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.16));
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: $basic-green;
+    border-radius: 50%;
+  }
+}
+
+.switcher__range::-moz-range-thumb {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: radial-gradient(circle, $basic-green 23.5%, $color-white 23.5%);
+  background-color: $color-white;
+  border: 1px solid $special-grey-250;
+  filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.16));
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: $basic-green;
+    border-radius: 50%;
+  }
 }

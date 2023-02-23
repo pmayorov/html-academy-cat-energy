@@ -25,23 +25,14 @@
   }
 }
 
-.page__lead-in {
+.page__lead {
   margin: 0;
   font-family: $font-title;
   font-weight: 400;
-  line-height: 1;
   text-transform: uppercase;
 
-  @media (max-width: $width-max-mobile) {
-    width: 230px;
-    font-size: 14px;
-    line-height: 18px;
-  }
-
   @media (min-width: $width-tablet) {
-    width: 325px;
     font-size: 20px;
-    line-height: 30px;
   }
 }
 

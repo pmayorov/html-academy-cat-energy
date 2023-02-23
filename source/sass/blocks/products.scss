@@ -33,9 +33,9 @@
 
   @media (min-width: $width-tablet) {
     padding: 0;
-
     // todo Временно!?
     min-height: 511px;
+    background-image: linear-gradient(to bottom, $color-white 81px, $basic-grey 81px);
   }
 }
 
@@ -44,4 +44,14 @@
     padding: 25px 0;
     border-bottom: 1px solid $special-grey-100;
   }
+
+  @media (min-width: $width-tablet) {
+    // padding: 52px 38px 38px;
+    // border: 2px solid $basic-grey;
+    padding-top: 81px;
+    background-image: initial;
+    }
+
+    @media (min-width: $width-pre-desktop) {
+    }
 }

@@ -39,3 +39,15 @@
     margin-bottom: 56px;
   }
 }
+
+.page-form__lead {
+  @media (max-width: $width-max-mobile) {
+    width: 230px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $width-tablet) {
+    width: 325px;
+    line-height: 30px;
+  }
+}

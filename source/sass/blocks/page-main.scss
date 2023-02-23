@@ -29,10 +29,12 @@
 
   @media (min-width: $width-tablet) {
     margin-bottom: 43px;
+    border-bottom: 1px solid #e6e6e6;
   }
 
   @media (min-width: $width-pre-desktop) {
     margin-bottom: 26px;
+    border-bottom: none;
   }
 }
 

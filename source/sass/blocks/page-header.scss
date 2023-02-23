@@ -35,10 +35,6 @@
 .page-header__menu {
   margin: 0;
   padding: 0;
-
-  @media (min-width: $width-tablet) {
-    margin-right: -17px;
-  }
 }
 
 .page-header__logo {
@@ -58,36 +54,38 @@
 
 /// Кнопка закрытия мобильного главного меню
 
-// По макету у кнопки закрытия меню [X] +3 мм отступ от правой границы контентной области.
-// Чтобы не "костылить" с правыми отступами добавляем эти 3 мм ввиде паддинга вокруг самой метки [X].
-// т.е. макетные ширина-высота: 18 мм + паддинги: 3 мм = область под кнопку: 24 мм,
-// которую уже выравниваем вправо под границу контентной области
-
 .page-header__toggler {
   grid-column: -2;
   justify-self: right;
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 100%;
+  height: 100%;
   padding: 0;
   border: none;
 
+  background-color: rgba($special-grey-100, 0.4);
+
   @media (min-width: $width-tablet) {
     display: none;
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }
 
 /// Иконка закрытия меню [X]
 
 .page-header__toggler--close {
+  margin-right: -5px;
+
   &::before,
   &::after {
     position: absolute;
-    top: 0;
-    left: 11px;
+    top: 18%;
     width: 1.5px;
-    height: 25px;
-    content: " ";
+    height: 24px;
+    content: "";
     background-color: $color-black;
   }
 
@@ -98,4 +96,20 @@
   &::after {
     transform: rotate(-45deg);
   }
+}
+
+.page-header__toggler--open {
+  margin-right: -5px;
+
+  &::before {
+    position: absolute;
+    top: 25%;
+    right: 5px;
+    width: 24px;
+    height: 2px;
+    content: "";
+    background-color: $color-black;
+    box-shadow: 0 8px 0 $color-black, 0 16px 0 0 $color-black;
+  }
+
 }

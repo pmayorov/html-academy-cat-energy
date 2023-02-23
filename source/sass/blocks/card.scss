@@ -19,26 +19,45 @@
     grid-template-rows: 242px min-content min-content;
     width: auto;
     padding: 0 38px 39px;
-    background-color: $basic-grey;
   }
 
   @media (min-width: $width-pre-desktop) {
     padding: 0 39px 40px;
-    background-color: $basic-grey;
   }
 }
 
 .card--more {
   // grid-template-columns: initial;
   // grid-template-areas: initial;
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 158px;
   text-align: center;
 
   @media (min-width: $width-tablet) {
+    padding: 0;
+    padding: 0 38px 39px;
     background-color: initial;
-    border: 2px solid $basic-grey;
+    // Если border, то он будет сдвигать вниз на 2px заголовок --more карточки, по отношению к заголовкам основных карточек.
+    outline: 2px solid $basic-grey;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: $special-grey-200;
+
+    @media (min-width: $width-tablet) {
+      top: 52px;
+      width: 60px;
+      height: 60px;
+    }
   }
 }
 
@@ -65,23 +84,28 @@
     text-align: center;
   }
 
+  @media (min-width: $width-pre-desktop) {
+    line-height: 21px;
+  }
+
   &--more {
-    position: relative;
     width: auto;
     grid-area: initial;
-    margin: 53px 0 8px;
-    margin-top: auto;
 
-    &::before {
-      position: absolute;
-      top: -60px;
-      left: 50%;
-      transform: translateX(-50%);
-      content: "";
-      width: 30px;
-      height: 30px;
-      background-color: $special-grey-200;
+    @media (max-width: $width-max-mobile) {
+      margin: 53px 0 8px;
     }
+
+    @media (min-width: $width-tablet) {
+      line-height: 22px;
+    }
+
+
+    // Magic digit: 161px (верхний маргин заголовка --more-карточки)
+    // 242 px (высота фото в основной карточке) – 81px (верхний отступ --more карточки).
+    // P.S> --more карточка ниже на 81px, чем основные, но ее заголовок должен быть на том же уровне что и в основных.
+    // Поэтому и считаем его отступ по выше указанному уравнению.
+    margin: 161px 0 23px;
   }
 }
 
@@ -155,13 +179,17 @@
 }
 
 .card__term {
-  @media (min-width: $width-tablet) {}
 
   &--more {
-    grid-area: initial;
+    // grid-area: initial;
     margin: 0;
     font-size: 12px;
     line-height: 16px;
+
+    @media (min-width: $width-tablet) {
+      font-size: 16px;
+      line-height: 18px;
+    }
   }
 }
 

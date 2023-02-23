@@ -16,18 +16,18 @@
     <nav class="page-header__nav">
       <div class="page-header__bar">
         <a class="page-header__logo logo">
-          <img class="logo__image logo__image--mobile" width="34" height="38" src="./img/logo-cat.svg" alt="Cat Energy">
-          <!-- <img class="logo__image logo__image--tablet" width="174" height="52" src="./img/logo-cat-tablet.svg" alt="Cat Energy"> -->
-          <!-- <img class="logo__image logo__image--desktop" width="202" height="59" src="./img/logo-cat-desktop.svg" alt="Cat Energy"> -->
-          <img class="logo__name" width="101" height="18" src="./img/logo-name.svg" alt="" aria-hidden="true">
+          <img class="logo__image logo__image--mobile" width="34" height="38" src="./img/logos/logo-cat.svg" alt="Cat Energy">
+          <!-- <img class="logo__image logo__image--tablet" width="174" height="52" src="./img/logos/logo-cat-tablet.svg" alt="Cat Energy"> -->
+          <!-- <img class="logo__image logo__image--desktop" width="202" height="59" src="./img/logos/logo-cat-desktop.svg" alt="Cat Energy"> -->
+          <img class="logo__name" width="101" height="18" src="./img/logos/logo-name.svg" alt="" aria-hidden="true">
         </a>
-        <button class="page-header__toggler page-header__toggler--close" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <button class="page-header__toggler page-header__toggler--open" type="button"><span class="visually-hidden">Открыть меню</span></button>
       </div>
       <!-- <ul class="page-header__menu site-menu site-menu--open"> -->
-      <ul class="page-header__menu site-menu">
-        <li class="site-menu__item site-menu__item--active"><a class="site-menu__link">Главная</a></li>
-        <li class="site-menu__item"><a class="site-menu__link" href="./catalog.html">Каталог продукции</a></li>
-        <li class="site-menu__item"><a class="site-menu__link" href="./form.html">Подбор программы</a></li>
+      <ul class="page-header__menu site-menu site-menu--index-page">
+        <li class="site-menu__item"><a class="site-menu__link site-menu__link--active site-menu__link--index-page">Главная</a></li>
+        <li class="site-menu__item"><a class="site-menu__link site-menu__link--index-page" href="./catalog.html">Каталог продукции</a></li>
+        <li class="site-menu__item"><a class="site-menu__link site-menu__link--index-page" href="./form.html">Подбор программы</a></li>
       </ul>
     </nav>
   </header>
@@ -39,9 +39,10 @@
     <header class="page-main__header promo">
       <div class="promo__wrapper container">
         <h1 class="promo__title page__title">Функциональное питание для котов</h1>
-        <p class="promo__subtitle page__title">Занялся собой? Займись котом!</p>
+        <p class="promo__lead page__lead">Занялся собой? Займись котом!</p>
+        <!-- <p class="promo__subtitle page__title">Занялся собой? Займись котом!</p> -->
         <img class="promo__image" width="280" height="270" src="./img/promo-mobile.png" alt="">
-        <a class="promo__button button" href="./scheme.html">Подобрать программу</a>
+        <a class="promo__button button" href="./form.html">Подобрать программу</a>
       </div>
     </header>
 
@@ -80,6 +81,7 @@
     <!-- Секция примеров -->
     <section class="page-main__example example">
       <div class="example__wrapper container">
+
         <!-- Блок с информацией -->
         <div class="example__info-inner">
           <h2 class="example__title page__title">Живой пример</h2>
@@ -94,8 +96,12 @@
               <dd class="example__desc">60 дней</dd>
             </div>
           </dl>
-          <p class="example__costs">Затраты на питание: 15 000 руб.</p>
+          <dl class="example__total">
+            <dt class="example__total--term">Затраты на питание:</dt>
+            <dd class="example__total--desc">15 000 руб.</dd>
+          </dl>
         </div>
+
         <!-- Блок фото переключателя -->
         <div class="example__images-inner">
           <!-- Рекламное фото -->
@@ -104,11 +110,13 @@
             <img class="example__image example__image--after" width="243" height="232" src="./img/cat-after-mobile.png" alt="Худой кот после питания кормом">
           </div>
           <!-- Переключатели фотографий -->
-          <div class="example__switcher switcher">
+          <div class="example__switcher switcher switcher--after">
             <button class="switcher__button switcher__button--before">Было</button>
+            <input class="switcher__range" type="range" value="50%">
             <button class="switcher__button switcher__button--after">Стало</button>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -134,7 +142,7 @@
     <div class="page-footer__inner container">
       <!-- Логотип со ссылкой на главную-->
       <a class="page-footer__logo logo" href="#">
-        <img class="logo__name" width="128" height="24" src="./img/logo-name.svg" alt="Cat Energy">
+        <img class="logo__name" width="128" height="24" src="./img/logos/logo-name.svg" alt="Cat Energy">
       </a>
       <!-- Список соцсетей -->
       <ul class="page-footer__social social">
@@ -145,7 +153,7 @@
       <!-- Ссылка на академию -->
       <a class="page-footer__academy academy" href="https://htmlacademy.org/">
         <span class="visually-hidden">Разработано в</span>&nbsp;HTML Academy
-        <img class="academy__logo" width="27" height="34" src="./img/htmlacademy.svg" alt="" aria-hidden="true">
+        <img class="academy__logo" width="27" height="34" src="./img/logos/htmlacademy.svg" alt="" aria-hidden="true">
       </a>
     </div>
   </footer>
