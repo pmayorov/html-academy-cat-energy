@@ -12,6 +12,9 @@
   @media (min-width: $width-pre-desktop) {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
+    // При переполнении колонки по высоте соседние
+    // не растягиваются следом и остаются в верхней позиции.
+    align-items: start;
   }
 }
 
@@ -69,6 +72,8 @@
 }
 
 .add-products__title-wrapper {
+  position: relative;
+
   @media (max-width: $width-max-mobile) {
     margin-bottom: 36px;
   }

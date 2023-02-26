@@ -13,10 +13,24 @@
 
   &:hover {
     cursor: pointer;
+    background-color: $secondary-green;
+  }
+
+  &:active {
+    background-color: $secondary-green;
+    color: rgba($color-white, 0.3);
   }
 }
 
 .button--secondary {
   color: $special-grey-700;
   background-color: $basic-grey;
+
+  &:hover {
+    background-color: $special-grey-150;
+  }
+
+  &:active {
+    color: rgba($special-grey-700, 0.3);
+  }
 }

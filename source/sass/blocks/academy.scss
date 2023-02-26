@@ -6,10 +6,20 @@
   font-size: 16px;
   color: $special-grey-700;
   text-decoration: none;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .academy__logo {
+  color: $special-grey-600;
+
   @media (min-width: $width-tablet) {
     margin-left: 22px;
+  }
+
+  .academy:hover & {
+    color: $basic-green;
   }
 }

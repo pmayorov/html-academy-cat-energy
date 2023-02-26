@@ -45,18 +45,62 @@
   @media (max-width: $width-max-mobile) {
     font-size: 24px;
     line-height: 26px;
-    width: $width-mobile-content;
   }
 
   @media (min-width: $width-tablet) {
     font-size: 36px;
     line-height: 1;
-    width: $width-tablet-content;
     padding-left: $width-tablet-padding-inner;
   }
 
   @media (min-width: $width-pre-desktop) {
-    width: $width-desktop-content;
     padding: 0;
+  }
+}
+
+// Разделитель между секциями - зеленая линия под заголовком
+
+.page__divider {
+  &::before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    top: 17px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: $basic-green;
+  }
+}
+
+// Название секции обернуто в span
+
+.page__divider-item {
+  display: inline-block;
+  background-color: $color-white;
+
+  @media (max-width: $width-max-mobile) {
+    padding: 0 20px;
+    margin: 0 -20px;
+  }
+
+  @media (min-width: $width-tablet) {
+    padding: 0 38px;
+    margin: 0 -38px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    padding: 0 40px;
+    margin: 0 -40px;
+  }
+
+  // todo Подслушано в Академии, но не знаю насколько применимо в реальной практике!
+  // Дабы решить проблему отображения 2-х и более строчного подзаголовка
+  // в разных вьюпортах – скрываем переносы строк когда это необходимо.
+
+  & br {
+    @media (min-width: $width-tablet) {
+      display: none;
+    }
   }
 }

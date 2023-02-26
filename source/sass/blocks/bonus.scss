@@ -1,4 +1,5 @@
 .bonus {
+  position: relative;
   display: flex;
   justify-content: center;
   min-height: 290px;
@@ -7,21 +8,42 @@
   line-height: 20px;
 
   background: {
-    // image: url("../../img/backtile/bonus-small.jpg");
+    image: url("../../img/backtile/bonus-small.jpg");
     size: cover;
     repeat: no-repeat;
     position: center;
     color: $basic-green;
   }
 
-  @media (max-width: $width-max-mobile) {
-    padding-bottom: 43px;
-  }
+  // @media (max-width: $width-max-mobile) {
+  padding: 187px 0 43px 0;
+  // }
 
   @media (min-width: $width-tablet) and (max-width: $width-pre-desktop) {
     align-items: center;
+    justify-content: end;
     min-height: 200px;
-    padding-bottom: 0;
+    padding: 70px 124px 70px;
+    background-position: 50% 60%;
+  }
+
+  &::after {
+    position: absolute;
+    top: 59px;
+    // Позиционирование по центру горизонтально в мобильном и десктопном вьюпорте
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 78px;
+    height: 80px;
+    background: url("../../img/icons/ico_gift.svg");
+
+    @media (min-width: $width-tablet) and (max-width: $width-pre-desktop) {
+      // Позиционирование по центру вертикально в планшетном вьюпорте
+      top: 50%;
+      transform: translateY(-50%);
+      left: 77px;
+    }
   }
 }
 
@@ -30,19 +52,10 @@
   width: 161px;
 
   @media (max-width: $width-max-mobile) {
-    align-self: end;
     text-align: center;
   }
 
-  @media (min-width: $width-tablet) {
-    align-self: initial;
-    margin: 43px 0 43px 422px;
-    text-align: left;
-  }
-
   @media (min-width: $width-pre-desktop) {
-    margin: 0;
-    align-self: center;
     text-align: center;
   }
 }

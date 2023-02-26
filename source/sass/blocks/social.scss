@@ -3,8 +3,7 @@
 .social {
   display: flex;
   justify-content: center;
-  align-items: center;
-  column-gap: 33px;
+  // column-gap: 33px;
   list-style: none;
 
   @media (max-width: $width-max-mobile) {
@@ -13,13 +12,50 @@
   }
 }
 
-//todo Тимчасово!
+.social__item {
+  // Ccылки в пункте списка становятся флекс-элементами и растягиваются на всю высоту пункта
+  // outline: 1px dotted aquamarine;
+  display: flex;
+}
 
 .social__link {
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  outline: 1px dotted $special-grey-250;
-  outline-offset: 1px;
+  padding: 20px 18px;
+  color: $special-grey-600;
+  // svg-логотипы внутри ссылок становятся флекс-элементами; обнуляется line-height; центрируются вертикально по всей высоте ссылки.
+  // background-color: ivory;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $width-tablet) {
+    &--vkontakte svg {
+      width: 30px;
+      height: 22px;
+    }
+
+    &--instagram svg {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--facebook svg {
+      width: 28px;
+      height: 33px;
+    }
+  }
+
+  &:hover {
+    color: $basic-green;
+  }
+
+  &:active {
+    color: rgba($basic-green, 0.3);
+  }
 }
+
+//todo Тимчасово!
+
+// .social__link {
+//   display: inline-block;
+//   outline: 1px dotted $special-grey-250;
+//   outline-offset: 1px;
+// }

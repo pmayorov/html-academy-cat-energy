@@ -12,6 +12,21 @@ img {
   height: auto;
 }
 
+// Disable arrows from input[type="number"]
+
+// input[type="number"]::-webkit-outer-spin-button,
+// input[type="number"]::-webkit-inner-spin-button {
+//   appearance: none;
+// }
+
+// input[type="number"],
+// input[type="number"]:hover,
+// input[type="number"]:focus {
+//   appearance: none;
+//   appearance: textfield;
+// }
+
+
 // @media (max-width: $width-max-mobile) {
 // }
 
@@ -20,3 +35,5 @@ img {
 
 // @media (min-width: $width-pre-desktop) {
 // }
+
+// url("data:image/svg+xml;utf8,<svg> … </svg>");

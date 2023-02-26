@@ -9,30 +9,18 @@
   padding: 0;
   list-style-type: none;
 
-  // @include outline(violet, 1px, dashed);
-
-  @media (max-width: $width-max-mobile) {
-    width: $width-mobile-content;
-  }
-
   @media (min-width: $width-tablet) {
-    width: $width-tablet-content;
     padding-right: $width-tablet-padding-inner;
     padding-left: $width-tablet-padding-inner;
   }
 
   @media (min-width: $width-pre-desktop) {
-    width: $width-desktop-content;
     padding: 0;
   }
 }
 
 .fieldset__list--about {
   row-gap: 14px;
-
-  // @media (max-width: $width-max-mobile) {}
-
-  // @media (min-width: $width-tablet) {}
 
   @media (min-width: $width-pre-desktop) {
     // Устанавливаем width: auto, т.к. при десктопном вьюпорте данный блок будет в 2-х колоночной сетке и должен принять ширину ячейки.
@@ -42,8 +30,6 @@
 
 .fieldset__list--target {
   row-gap: 12px;
-
-  // @media (max-width: $width-max-mobile) {}
 
   @media (min-width: $width-tablet) {
     // В планшетном вьюпорте присутствуют дополнительные внутрисеточные оступы для контента.
@@ -63,10 +49,6 @@
 
 .fieldset__list--contacts {
   row-gap: 14px;
-
-  // @media (max-width: $width-max-mobile) {}
-
-  // @media (min-width: $width-tablet) {}
 
   @media (min-width: $width-pre-desktop) {
     grid-template-columns: 1fr 1fr;
@@ -92,6 +74,8 @@
 }
 
 .fieldset__wrapper {
+  // Позиционирование для .page__divider
+  position: relative;
   width: 100%;
   padding: 0;
 
@@ -103,8 +87,6 @@
     @media (min-width: $width-tablet) {
       margin-bottom: 76px;
     }
-
-    // @media (min-width: $width-pre-desktop) {}
   }
 
   &--comments {
@@ -115,8 +97,6 @@
     @media (min-width: $width-tablet) {
       margin-bottom: 76px;
     }
-
-    // @media (min-width: $width-pre-desktop) {}
   }
 
   &--more {
@@ -127,7 +107,5 @@
     @media (min-width: $width-tablet) {
       margin-bottom: 57px;
     }
-
-    // @media (min-width: $width-pre-desktop) {}
   }
 }

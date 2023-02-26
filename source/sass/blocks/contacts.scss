@@ -69,12 +69,15 @@
   @media (min-width: $width-tablet) {
     font-size: 16px;
     text-align: right;
+    // Реализация отступа между span-элементами адреса
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
   @media (min-width: $width-pre-desktop) {
     text-align: left;
   }
-
 }
 
 .contacts__map {

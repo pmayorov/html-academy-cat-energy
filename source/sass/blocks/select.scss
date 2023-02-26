@@ -38,7 +38,7 @@
     height: 40px;
   }
 
-  &:focus+.select__text::before {
+  &:focus + .select__text::before {
     outline: 2px solid $special-grey-700;
   }
 }
@@ -90,7 +90,7 @@
     border-radius: 50%;
   }
 
-  .select--radio .select__input:checked+&::after {
+  .select--radio .select__input:checked + &::after {
     justify-self: center;
     background-color: $basic-green;
     border-radius: 50%;
@@ -107,15 +107,25 @@
   }
 
   // Модификаторы кастомных checkbox псевдо-контролов
-  .select--checkbox .select__input:checked+&::after {
+  .select--checkbox .select__input:checked + &::after {
     width: 100%;
     height: 100%;
-    background-image: url('../../img/icons/ico-check.svg');
+    background-image: url("../../img/icons/ico-check.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
 
     @media (min-width: $width-tablet) {
       background-size: 24px auto;
     }
+  }
+
+  // Активные состояния
+
+  .select:hover &::before {
+    border: 1px solid $special-grey-300;
+  }
+
+  .select__input:disabled + & {
+    opacity: 0.3;
   }
 }

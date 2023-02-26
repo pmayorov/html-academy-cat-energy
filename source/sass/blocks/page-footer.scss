@@ -24,10 +24,6 @@
 .page-footer__social {
   margin: 0;
   padding: 0;
-
-  @media (max-width: $width-max-mobile) {
-    padding: 20px 0;
-  }
 }
 
 .page-footer__academy {

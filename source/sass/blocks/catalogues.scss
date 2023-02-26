@@ -28,7 +28,7 @@
 
   // Отступы между каточками
 
-  &+& {
+  & + & {
     @media (max-width: $width-max-mobile) {
       margin-top: 20px;
     }
@@ -38,10 +38,12 @@
     }
   }
 
-  // При планшетном вьюпорте позиционирую зеленый круг и лого котов относительно всей карточки
+  // Позиционирую зеленый круг и лого котов относительно всей карточки
+
+  // Для данных правил устанавливаю диапазон сторго для планшета и минус 1px до срабатывания десктопных, иначе "планшетные" эелементы в "течение" первого десктопного пикселя пересекаются вместе с "десктопными" отчего получаются взаимные накладки.
 
   &::before {
-    @media (min-width: $width-tablet) and (max-width: $width-pre-desktop) {
+    @media (min-width: $width-tablet) and (max-width: calc($width-pre-desktop - 1px)) {
       position: absolute;
       top: 92px;
       right: 62px;
@@ -53,10 +55,10 @@
     }
   }
 
-  // Позиционируем логотипы на зеленые круги
+  // Позиционируем логотипы на зеленые круги.
 
   &::after {
-    @media (min-width: $width-tablet) and (max-width: $width-pre-desktop) {
+    @media (min-width: $width-tablet) and (max-width: calc($width-pre-desktop - 1px)) {
       position: absolute;
       content: "";
       background-repeat: no-repeat;
@@ -65,8 +67,7 @@
   }
 
   &--thin::after {
-
-    @media (min-width: $width-tablet) and (max-width: $width-pre-desktop) {
+    @media (min-width: $width-tablet) and (max-width: calc($width-pre-desktop - 1px)) {
       background-image: url("../../img/icons/ico-cat-slim.svg");
       right: 91px;
       top: 81px;
@@ -76,8 +77,7 @@
   }
 
   &--fat::after {
-
-    @media (min-width: $width-tablet) and (max-width: $width-pre-desktop) {
+    @media (min-width: $width-tablet) and (max-width: calc($width-pre-desktop - 1px)) {
       background-image: url("../../img/icons/ico-cat-pro.svg");
       right: 27px;
       top: 135px;
@@ -218,7 +218,8 @@
 
   @media (min-width: $width-tablet) {
     grid-column: 1 / 2;
-    width: fit-content; // При праншетном вьюпорте ссылка становится грид-ячейкой, - ужимаем до размера контента
+    // При праншетном вьюпорте ссылка становится грид-ячейкой, - ужимаем до размера контента
+    width: fit-content;
     padding-right: 57px;
     font-size: 20px;
     line-height: 30px;
@@ -233,9 +234,21 @@
     content: "";
     width: 24px;
     height: 12px;
-    right: 8px;
     top: 50%;
+    right: 8px;
     transform: translateY(-50%);
     background: url("../../img/icons/ico-arrow.svg") no-repeat center;
+  }
+
+  &:hover::after {
+    // Задаем ширину под новую длину стрелки и устанавливаем нулевой right,
+    // чтобы иконка могла "расшириться" вправо (иначе – влево).
+    width: 32px;
+    right: 0;
+    background: url("../../img/icons/ico-arrow-active.svg") no-repeat center;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

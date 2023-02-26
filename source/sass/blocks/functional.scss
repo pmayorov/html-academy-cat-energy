@@ -4,6 +4,7 @@
   padding: 0;
   color: $special-grey-700;
   list-style-type: none;
+  counter-reset: item;
 
   @media (max-width: $width-max-mobile) {
     row-gap: 20px;
@@ -23,6 +24,7 @@
 }
 
 .functional__item {
+  position: relative;
   display: grid;
 
   @media (max-width: $width-max-mobile) {
@@ -33,8 +35,8 @@
   @media (min-width: $width-tablet) {
     grid-template-rows: 80px 1fr;
     row-gap: 31px;
-    height: 286px;
-    padding-right: 80px;
+    min-height: 286px;
+    padding-right: 79px;
   }
 
   @media (min-width: $width-pre-desktop) {
@@ -54,6 +56,27 @@
     @media (min-width: $width-tablet) {
       width: 80px;
       height: 80px;
+    }
+  }
+
+
+  &::after {
+    @media (min-width: $width-tablet) {
+      position: absolute;
+      z-index: -1;
+      top: -37px;
+      right: 79px;
+      counter-increment: item;
+      content: counter(item);
+      font-family: $font-title;
+      font-size: 280px;
+      line-height: 1;
+      text-align: right;
+      color: $basic-grey;
+    }
+
+    @media (min-width: $width-pre-desktop) {
+      right: 0;
     }
   }
 

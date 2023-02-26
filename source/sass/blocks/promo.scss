@@ -3,12 +3,11 @@
     color: $color-white;
     text-align: center;
 
-    // url("../../img/backtile/promo-small.jpg"),
-
     background: {
-      image: linear-gradient($basic-green, $basic-green 302px, $color-white 302px);
-      repeat: no-repeat;
+      image: url("../../img/backtile/promo-small.jpg"), linear-gradient($promo-green, $promo-green 302px, $color-white 302px);
       position: 50% 0;
+      repeat: no-repeat;
+      size: auto 302px;
     }
   }
 
@@ -38,13 +37,16 @@
       content: "";
       position: absolute;
       width: 50%;
-      background-color: #68b738;
-      // Устанавливаю отрицательный отступ (-150px), чтобы top-граница фонового бекгранунда ушла вверх за область позиционирования.
-      // Высота меню в шапке 140px, поэтому -150px более чем достаточно.
+      // Устанавливаю отрицательный отступ (-150px), чтобы top-граница фонового бекгранунда ушла вверх за область позиционирования. Высота меню в шапке 140px, поэтому -150px более чем достаточно.
       top: -150px;
       right: 0;
       bottom: 0;
       z-index: -2;
+      background-color: $promo-green;
+      background-image: url("../../img/backtile/promo-big.jpg");
+      background-repeat: no-repeat;
+      // background-size: contain;
+      background-position: 0 100%;
     }
   }
 }

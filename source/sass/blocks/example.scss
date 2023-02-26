@@ -187,7 +187,7 @@
   @media (min-width: $width-pre-desktop) {
     width: (245px + 80px);
     flex-direction: initial;
-    justify-content: space-between;;
+    justify-content: space-between;
     row-gap: initial;
   }
 
@@ -221,8 +221,8 @@
   margin: 0 auto;
 
   &--before {
-      display: none;
-    }
+    display: none;
+  }
 
   &--after {
     display: block;

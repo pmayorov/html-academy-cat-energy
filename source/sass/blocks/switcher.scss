@@ -66,14 +66,38 @@
   &:hover {
     cursor: pointer;
   }
-}
 
-.switcher__button--before {
-  grid-column: 1 / 2;
-}
+  // Компенсация вертикального сдвига строки из-за отключения нижнего бордера
+  &:active {
+    margin-top: -1px;
+  }
 
-.switcher__button--after {
-  grid-column: 3 / 4;
+  &--before {
+    grid-column: 1 / 2;
+  }
+
+  &--after {
+    grid-column: 3 / 4;
+  }
+
+  // Вкладываю внутренний контейнер в button, чтобы оформить для текста
+  // нижний бордер строго на ширину текста, а не на всю ширину кнопки.
+
+  &--inner {
+    display: inline-block;
+
+    @media (min-width: $width-tablet) {
+      border-bottom: 1px dotted rgba($color-black, 0.25);
+
+      .switcher__button:hover & {
+        border-bottom: 1px solid rgba($color-black, 0.4);
+      }
+
+      .switcher__button:active & {
+        border-bottom: none;
+      }
+    }
+  }
 }
 
 // СТИЛИЗАЦИЯ ПОЛЗУНКА RANGE
@@ -102,7 +126,13 @@
   @media (min-width: $width-tablet) {
     display: block;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
+
+// Стилизация ползунка
 
 .switcher__range::-moz-range-track {
   height: 6px;
@@ -117,17 +147,21 @@
   border-radius: 6px;
 }
 
+// Стилизация кнопки
 
 .switcher__range::-webkit-slider-thumb {
   position: relative;
-  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -15px;
   width: 34px;
-  margin-top: -14px;
   height: 34px;
+  //Стилизация кнопки range-трекера
+  border: 12px solid $color-white;
   border-radius: 50%;
-  background: radial-gradient(circle, $basic-green 23.5%, $color-white 23.5%);
-  border: 1px solid $special-grey-250;
-  filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.16));
+  background-color: $basic-green;
+  box-shadow:
+    0 0 0 1px $special-grey-250, // Обводка кнопки
+    0 1px 3px rgba($color-black, 0.16); // Тень кнопки
 
   &::after {
     position: absolute;
@@ -137,17 +171,32 @@
     background-color: $basic-green;
     border-radius: 50%;
   }
+
+  &:hover {
+    box-shadow:
+      0 0 0 1px $special-grey-250,
+      0 2px 4px rgba($color-black, 0.19);
+  }
+
+  &:active {
+    box-shadow:
+      0 0 0 1px $basic-green,
+      0 3px 5px rgba($color-black, 0.2);
+  }
 }
 
 .switcher__range::-moz-range-thumb {
   position: relative;
+  box-sizing: border-box;
   width: 34px;
   height: 34px;
+  //Стилизация кнопки range-трекера
+  border: 12px solid $color-white;
   border-radius: 50%;
-  background: radial-gradient(circle, $basic-green 23.5%, $color-white 23.5%);
-  background-color: $color-white;
-  border: 1px solid $special-grey-250;
-  filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.16));
+  background-color: $basic-green;
+  box-shadow:
+    0 0 0 1px $special-grey-250, // Обводка кнопки
+    0 1px 3px rgba($color-black, 0.16); // Тень кнопки
 
   &::after {
     position: absolute;
@@ -156,5 +205,17 @@
     height: 8px;
     background-color: $basic-green;
     border-radius: 50%;
+  }
+
+  &:hover {
+    box-shadow:
+      0 0 0 1px $special-grey-250,
+      0 2px 4px rgba($color-black, 0.19);
+  }
+
+  &:active {
+    box-shadow:
+      0 0 0 1px $basic-green,
+      0 3px 5px rgba($color-black, 0.2);
   }
 }

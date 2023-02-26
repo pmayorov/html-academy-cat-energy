@@ -85,7 +85,6 @@
   }
 
   @media (min-width: $width-tablet) {
-    width: $width-tablet-content;
     padding-left: $width-tablet-padding-inner;
     padding-right: $width-tablet-padding-inner;
     margin: 54px auto 0;
@@ -94,7 +93,6 @@
   }
 
   @media (min-width: $width-pre-desktop) {
-    width: $width-desktop-content;
     margin-top: 61px;
     padding: 0;
     column-gap: 80px;
