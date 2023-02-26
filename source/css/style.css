@@ -527,7 +527,7 @@ img {
   .promo {
     color: #ffffff;
     text-align: center;
-    background-image: url("../../img/backtile/promo-small.jpg"), linear-gradient(#64a73d, #64a73d 302px, #ffffff 302px);
+    background-image: url("../img/backtile/promo-small.jpg"), linear-gradient(#64a73d, #64a73d 302px, #ffffff 302px);
     background-position: 50% 0;
     background-repeat: no-repeat;
     background-size: auto 302px;
@@ -564,7 +564,7 @@ img {
     bottom: 0;
     z-index: -2;
     background-color: #64a73d;
-    background-image: url("../../img/backtile/promo-big.jpg");
+    background-image: url("../img/backtile/promo-big.jpg");
     background-repeat: no-repeat;
     background-position: 0 100%;
   }
@@ -699,7 +699,7 @@ img {
 }
 @media (min-width: 768px) and (max-width: 1319px) {
   .catalogues__item--thin::after {
-    background-image: url("../../img/icons/ico-cat-slim.svg");
+    background-image: url("../img/icons/ico-cat-slim.svg");
     right: 91px;
     top: 81px;
     width: 140px;
@@ -708,7 +708,7 @@ img {
 }
 @media (min-width: 768px) and (max-width: 1319px) {
   .catalogues__item--fat::after {
-    background-image: url("../../img/icons/ico-cat-pro.svg");
+    background-image: url("../img/icons/ico-cat-pro.svg");
     right: 27px;
     top: 135px;
     width: 268px;
@@ -770,7 +770,7 @@ img {
   background-size: contain;
 }
 .catalogues__item--thin .catalogues__title::after {
-  background-image: url("../../img/icons/ico-cat-slim.svg");
+  background-image: url("../img/icons/ico-cat-slim.svg");
 }
 @media (max-width: 767px) {
   .catalogues__item--thin .catalogues__title::after {
@@ -789,7 +789,7 @@ img {
   }
 }
 .catalogues__item--fat .catalogues__title::after {
-  background-image: url("../../img/icons/ico-cat-pro.svg");
+  background-image: url("../img/icons/ico-cat-pro.svg");
 }
 @media (max-width: 767px) {
   .catalogues__item--fat .catalogues__title::after {
@@ -873,12 +873,12 @@ img {
   top: 50%;
   right: 8px;
   transform: translateY(-50%);
-  background: url("../../img/icons/ico-arrow.svg") no-repeat center;
+  background: url("../img/icons/ico-arrow.svg") no-repeat center;
 }
 .catalogues__link:hover::after {
   width: 32px;
   right: 0;
-  background: url("../../img/icons/ico-arrow-active.svg") no-repeat center;
+  background: url("../img/icons/ico-arrow-active.svg") no-repeat center;
 }
 .catalogues__link:active {
   opacity: 0.3;
@@ -973,16 +973,16 @@ img {
   }
 }
 .functional__item--nutrient::before {
-  background-image: url("../../img/icons/ico-leaf.svg");
+  background-image: url("../img/icons/ico-leaf.svg");
 }
 .functional__item--powder::before {
-  background-image: url("../../img/icons/ico-tub.svg");
+  background-image: url("../img/icons/ico-tub.svg");
 }
 .functional__item--diet::before {
-  background-image: url("../../img/icons/ico-eat.svg");
+  background-image: url("../img/icons/ico-eat.svg");
 }
 .functional__item--result::before {
-  background-image: url("../../img/icons/ico-alarm.svg");
+  background-image: url("../img/icons/ico-alarm.svg");
 }
 
 @media (max-width: 767px) {
@@ -1754,14 +1754,14 @@ img {
   content: "";
   width: 30px;
   height: 30px;
-  background: url("../../img/icons/ico-plus-sm.svg") no-repeat center;
+  background: url("../img/icons/ico-plus-sm.svg") no-repeat center;
 }
 @media (min-width: 768px) {
   .card--more::before {
     top: 52px;
     width: 60px;
     height: 60px;
-    background: url("../../img/icons/ico-plus-big.svg") no-repeat center;
+    background: url("../img/icons/ico-plus-big.svg") no-repeat center;
   }
 }
 
@@ -2111,7 +2111,7 @@ img {
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
-  background-image: url("../../img/backtile/bonus-small.jpg");
+  background-image: url("../img/backtile/bonus-small.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -2135,7 +2135,7 @@ img {
   content: "";
   width: 78px;
   height: 80px;
-  background: url("../../img/icons/ico_gift.svg");
+  background: url("../img/icons/ico_gift.svg");
 }
 @media (min-width: 768px) and (max-width: 1320px) {
   .bonus::after {
@@ -2496,16 +2496,16 @@ img {
   background-color: #444444;
 }
 .field__ico--email::after {
-  -webkit-mask-image: url("../../img/icons/ico-email.svg");
-          mask-image: url("../../img/icons/ico-email.svg");
+  -webkit-mask-image: url("../img/icons/ico-email.svg");
+          mask-image: url("../img/icons/ico-email.svg");
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   -webkit-mask-position: center right;
           mask-position: center right;
 }
 .field__ico--phone::after {
-  -webkit-mask-image: url("../../img/icons/ico-phone.svg");
-          mask-image: url("../../img/icons/ico-phone.svg");
+  -webkit-mask-image: url("../img/icons/ico-phone.svg");
+          mask-image: url("../img/icons/ico-phone.svg");
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
   -webkit-mask-position: center right;
@@ -2670,7 +2670,7 @@ img {
 .select--checkbox .select__input:checked + .select__text::after {
   width: 100%;
   height: 100%;
-  background-image: url("../../img/icons/ico-check.svg");
+  background-image: url("../img/icons/ico-check.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }

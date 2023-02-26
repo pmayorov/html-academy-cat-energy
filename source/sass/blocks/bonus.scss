@@ -8,7 +8,7 @@
   line-height: 20px;
 
   background: {
-    image: url("../../img/backtile/bonus-small.jpg");
+    image: url("../img/backtile/bonus-small.jpg");
     size: cover;
     repeat: no-repeat;
     position: center;
@@ -36,7 +36,7 @@
     content: "";
     width: 78px;
     height: 80px;
-    background: url("../../img/icons/ico_gift.svg");
+    background: url("../img/icons/ico_gift.svg");
 
     @media (min-width: $width-tablet) and (max-width: $width-pre-desktop) {
       // Позиционирование по центру вертикально в планшетном вьюпорте

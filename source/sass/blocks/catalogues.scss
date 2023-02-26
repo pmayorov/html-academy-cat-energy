@@ -68,7 +68,7 @@
 
   &--thin::after {
     @media (min-width: $width-tablet) and (max-width: calc($width-pre-desktop - 1px)) {
-      background-image: url("../../img/icons/ico-cat-slim.svg");
+      background-image: url("../img/icons/ico-cat-slim.svg");
       right: 91px;
       top: 81px;
       width: 140px;
@@ -78,7 +78,7 @@
 
   &--fat::after {
     @media (min-width: $width-tablet) and (max-width: calc($width-pre-desktop - 1px)) {
-      background-image: url("../../img/icons/ico-cat-pro.svg");
+      background-image: url("../img/icons/ico-cat-pro.svg");
       right: 27px;
       top: 135px;
       width: 268px;
@@ -142,7 +142,7 @@
   // Размещение иконок на фоне зеленого круга
 
   .catalogues__item--thin &::after {
-    background-image: url("../../img/icons/ico-cat-slim.svg");
+    background-image: url("../img/icons/ico-cat-slim.svg");
 
     @media (max-width: $width-max-mobile) {
       left: 9px;
@@ -160,7 +160,7 @@
   }
 
   .catalogues__item--fat &::after {
-    background-image: url("../../img/icons/ico-cat-pro.svg");
+    background-image: url("../img/icons/ico-cat-pro.svg");
 
     @media (max-width: $width-max-mobile) {
       left: -7px;
@@ -237,7 +237,7 @@
     top: 50%;
     right: 8px;
     transform: translateY(-50%);
-    background: url("../../img/icons/ico-arrow.svg") no-repeat center;
+    background: url("../img/icons/ico-arrow.svg") no-repeat center;
   }
 
   &:hover::after {
@@ -245,7 +245,7 @@
     // чтобы иконка могла "расшириться" вправо (иначе – влево).
     width: 32px;
     right: 0;
-    background: url("../../img/icons/ico-arrow-active.svg") no-repeat center;
+    background: url("../img/icons/ico-arrow-active.svg") no-repeat center;
   }
 
   &:active {

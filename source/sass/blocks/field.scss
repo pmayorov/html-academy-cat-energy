@@ -34,13 +34,13 @@
   }
 
   &--email::after {
-    mask-image: url("../../img/icons/ico-email.svg");
+    mask-image: url("../img/icons/ico-email.svg");
     mask-repeat: no-repeat;
     mask-position: center right;
   }
 
   &--phone::after {
-    mask-image: url("../../img/icons/ico-phone.svg");
+    mask-image: url("../img/icons/ico-phone.svg");
     mask-repeat: no-repeat;
     mask-position: center right;
   }
