@@ -88,7 +88,6 @@ img {
 }
 
 .site-menu {
-  display: none;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 500;
   font-size: 20px;
@@ -99,6 +98,12 @@ img {
 }
 @media (max-width: 767px) {
   .site-menu {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    min-width: 320px;
+    width: 100%;
+    background-color: #ffffff;
     border-top: 1px solid #e6e6e6;
   }
 }
@@ -121,12 +126,8 @@ img {
 }
 
 @media (max-width: 767px) {
-  .site-menu--open {
-    position: absolute;
-    display: block;
-    min-width: 320px;
-    width: 100%;
-    background-color: #ffffff;
+  .site-menu--closed {
+    display: none;
   }
 }
 
@@ -162,9 +163,13 @@ img {
 .site-menu__link:link:active {
   opacity: 0.3;
 }
-
+@media (max-width: 767px) {
+  .site-menu__link:not(:link) {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
 @media (min-width: 768px) {
-  .site-menu__link--active::after {
+  .site-menu__link:not(:link)::after {
     position: absolute;
     content: "";
     width: 100%;
@@ -176,7 +181,7 @@ img {
 }
 
 @media (min-width: 1320px) {
-  .site-menu__link--index-page.site-menu__link--active::after {
+  .site-menu__link--index-page.site-menu__link:not(:link)::after {
     background-color: #ffffff;
   }
 }
@@ -186,10 +191,10 @@ img {
   align-items: center;
   text-decoration: none;
 }
-.logo:hover {
+.logo:hover:link {
   opacity: 0.8;
 }
-.logo:active {
+.logo:active:link {
   opacity: 0.6;
 }
 
@@ -373,7 +378,7 @@ img {
   height: 100%;
   padding: 0;
   border: none;
-  background-color: rgba(235, 235, 235, 0.4);
+  background-color: transparent;
 }
 @media (min-width: 768px) {
   .page-header__toggler {
@@ -384,10 +389,10 @@ img {
   cursor: pointer;
 }
 
-.page-header__toggler--close {
+.page-header__toggler--open {
   margin-right: -5px;
 }
-.page-header__toggler--close::before, .page-header__toggler--close::after {
+.page-header__toggler--open::before, .page-header__toggler--open::after {
   position: absolute;
   top: 18%;
   width: 1.5px;
@@ -395,17 +400,17 @@ img {
   content: "";
   background-color: #000000;
 }
-.page-header__toggler--close::before {
+.page-header__toggler--open::before {
   transform: rotate(45deg);
 }
-.page-header__toggler--close::after {
+.page-header__toggler--open::after {
   transform: rotate(-45deg);
 }
 
-.page-header__toggler--open {
+.page-header__toggler--closed {
   margin-right: -5px;
 }
-.page-header__toggler--open::before {
+.page-header__toggler--closed::before {
   position: absolute;
   top: 25%;
   right: 5px;

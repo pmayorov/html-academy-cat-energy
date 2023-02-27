@@ -3,11 +3,11 @@
   align-items: center;
   text-decoration: none;
 
-  &:hover {
+  &:hover:link {
     opacity: 0.8;
   }
 
-  &:active {
+  &:active:link {
     opacity: 0.6;
   }
 }

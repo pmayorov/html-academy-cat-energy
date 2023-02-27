@@ -62,8 +62,7 @@
   height: 100%;
   padding: 0;
   border: none;
-
-  background-color: rgba($special-grey-100, 0.4);
+  background-color: transparent;
 
   @media (min-width: $width-tablet) {
     display: none;
@@ -76,7 +75,7 @@
 
 /// Иконка закрытия меню [X]
 
-.page-header__toggler--close {
+.page-header__toggler--open {
   margin-right: -5px;
 
   &::before,
@@ -98,7 +97,7 @@
   }
 }
 
-.page-header__toggler--open {
+.page-header__toggler--closed {
   margin-right: -5px;
 
   &::before {
