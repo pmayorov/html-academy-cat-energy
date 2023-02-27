@@ -110,7 +110,7 @@ img {
 @media (min-width: 768px) {
   .site-menu {
     display: flex;
-    column-gap: 17px;
+    column-gap: 36px;
     align-items: center;
     justify-self: end;
     font-size: 18px;
@@ -353,7 +353,7 @@ img {
     width: 320px;
     margin: 0 auto;
     grid-template-columns: 34px 1fr 34px;
-    padding: 12px 20px 16px;
+    padding: 12px 20px 15px;
     align-items: center;
   }
 }
@@ -556,7 +556,7 @@ img {
 @media (min-width: 768px) {
   .promo__wrapper {
     position: relative;
-    padding: 38px 87px 526px;
+    padding: 34px 87px 532px;
   }
 }
 @media (min-width: 1320px) {
@@ -582,7 +582,7 @@ img {
 @media (max-width: 767px) {
   .promo__title {
     font-size: 36px;
-    margin-bottom: 41px;
+    margin-bottom: 25px;
   }
 }
 @media (min-width: 768px) {
@@ -597,7 +597,7 @@ img {
 }
 @media (max-width: 767px) {
   .promo__lead {
-    margin-bottom: 29px;
+    margin-bottom: 28px;
   }
 }
 @media (min-width: 768px) {
@@ -658,7 +658,7 @@ img {
 }
 @media (max-width: 767px) {
   .catalogues__item {
-    padding: 30px 20px 20px;
+    padding: 30px 20px 18px 20px;
   }
 }
 @media (min-width: 768px) {
@@ -903,7 +903,7 @@ img {
 }
 @media (max-width: 767px) {
   .functional__list {
-    row-gap: 20px;
+    row-gap: 22px;
   }
 }
 @media (min-width: 768px) {
@@ -998,6 +998,7 @@ img {
   .functional__title {
     margin-bottom: 40px;
     font-size: 36px;
+    line-height: 40px;
   }
 }
 @media (min-width: 768px) {
@@ -1056,8 +1057,9 @@ img {
 
 @media (max-width: 767px) {
   .example__title {
-    font-size: 36px;
     margin-bottom: 40px;
+    font-size: 36px;
+    line-height: 40px;
   }
 }
 @media (min-width: 768px) {
@@ -1144,6 +1146,12 @@ img {
   border: 1px solid #d9d9d9;
   border-radius: 3px;
 }
+@media (min-width: 768px) {
+  .example__item::before {
+    bottom: 5px;
+    padding: 0 8px;
+  }
+}
 
 .example__term {
   position: relative;
@@ -1161,6 +1169,7 @@ img {
 }
 @media (min-width: 768px) {
   .example__term {
+    width: auto;
     background-color: #ffffff;
     font-size: 14px;
   }
@@ -1175,6 +1184,7 @@ img {
   margin: 0;
   font-family: "Oswald", "Arial", sans-serif;
   text-align: center;
+  text-transform: uppercase;
 }
 @media (max-width: 767px) {
   .example__desc {
@@ -1593,6 +1603,11 @@ img {
   font-size: 16px;
   color: #444444;
   text-decoration: none;
+}
+@media (max-width: 767px) {
+  .academy {
+    margin-left: -5px;
+  }
 }
 .academy:active {
   opacity: 0.3;

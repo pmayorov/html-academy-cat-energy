@@ -45,8 +45,10 @@
 
 .example__title {
   @media (max-width: $width-max-mobile) {
-    font-size: 36px;
     margin-bottom: 40px;
+    font-size: 36px;
+    line-height: 40px;
+
   }
 
   @media (min-width: $width-tablet) {
@@ -124,6 +126,11 @@
     bottom: 14px;
     border: 1px solid $special-grey-200;
     border-radius: 3px;
+
+    @media (min-width: $width-tablet) {
+      bottom: 5px;
+      padding: 0 8px;
+    }
   }
 }
 
@@ -141,6 +148,7 @@
   }
 
   @media (min-width: $width-tablet) {
+    width: auto;
     background-color: $color-white;
     font-size: 14px;
   }
@@ -154,6 +162,7 @@
   margin: 0;
   font-family: $font-title;
   text-align: center;
+  text-transform: uppercase;
 
   @media (max-width: $width-max-mobile) {
     font-size: 24px;

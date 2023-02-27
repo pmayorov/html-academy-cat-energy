@@ -24,7 +24,7 @@
 
   @media (min-width: $width-tablet) {
     position: relative;
-    padding: 38px 87px 526px;
+    padding: 34px 87px 532px;
   }
 
   @media (min-width: $width-pre-desktop) {
@@ -54,7 +54,7 @@
 .promo__title {
   @media (max-width: $width-max-mobile) {
     font-size: 36px;
-    margin-bottom: 41px;
+    margin-bottom: 25px;
   }
 
   @media (min-width: $width-tablet) {
@@ -67,7 +67,7 @@
   text-transform: uppercase;
 
   @media (max-width: $width-max-mobile) {
-    margin-bottom: 29px;
+    margin-bottom: 28px;
   }
 
   @media (min-width: $width-tablet) {

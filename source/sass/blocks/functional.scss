@@ -7,7 +7,7 @@
   counter-reset: item;
 
   @media (max-width: $width-max-mobile) {
-    row-gap: 20px;
+    row-gap: 22px;
   }
 
   @media (min-width: $width-tablet) {
@@ -101,6 +101,7 @@
   @media (max-width: $width-max-mobile) {
     margin-bottom: 40px;
     font-size: 36px;
+    line-height: 40px;
   }
 
   @media (min-width: $width-tablet) {

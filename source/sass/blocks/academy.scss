@@ -7,6 +7,10 @@
   color: $special-grey-700;
   text-decoration: none;
 
+  @media (max-width: $width-max-mobile) {
+    margin-left: -5px;
+    }
+
   &:active {
     opacity: 0.3;
   }
