@@ -8,7 +8,7 @@
   list-style-type: none;
 
   @media (max-width: $width-max-mobile) {
-    display: block;
+    display: none;
     position: absolute;
     z-index: 1;
     min-width: $width-mobile;
@@ -31,11 +31,18 @@
     font-size: 20px;
     line-height: 30px;
   }
-}
 
-.site-menu--closed {
-  @media (max-width: $width-max-mobile) {
-    display: none;
+  &--open {
+    @media (max-width: $width-max-mobile) {
+      display: block;
+    }
+  }
+
+  &--nojs {
+    @media (max-width: $width-max-mobile) {
+      display: block;
+      position: initial;
+    }
   }
 }
 
@@ -58,7 +65,7 @@
     padding: 17px 0;
   }
 
-  &--index-page {
+  .site-menu--index & {
     @media (min-width: $width-pre-desktop) {
       color: $color-white;
     }
@@ -72,13 +79,13 @@
     opacity: 0.3;
   }
 
-  &:not(:link){
+  &:not(:link) {
     @media (max-width: $width-max-mobile) {
       color: rgba($color-black, 0.3);
     }
   }
 
-  // Стилизация нижнего подчеркивания активного пункта меню
+  // Подчеркивание активного пункта меню
   &:not(:link)::after {
     @media (min-width: $width-tablet) {
       position: absolute;
@@ -90,12 +97,11 @@
       background-color: $basic-green;
     }
   }
-}
 
-// !gvnkd
-// Стилизация нижнего подчеркивания активного пункта меню на index-странице в десктопе
-.site-menu__link--index-page.site-menu__link:not(:link)::after {
-  @media (min-width: $width-pre-desktop) {
-    background-color: $color-white;
+  // Модификация подчеркивания на index-странице в десктопе
+  .site-menu--index &:not(:link)::after {
+    @media (min-width: $width-pre-desktop) {
+      background-color: $color-white;
+    }
   }
 }
