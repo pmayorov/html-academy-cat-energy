@@ -48,7 +48,6 @@
     margin-bottom: 40px;
     font-size: 36px;
     line-height: 40px;
-
   }
 
   @media (min-width: $width-tablet) {
@@ -63,8 +62,7 @@
 }
 
 .example__text {
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 0 108px 20px 0;
   color: $special-grey-700;
 
   @media (min-width: $width-tablet) {

@@ -4,7 +4,7 @@
 
 .page-footer__inner {
   @media (min-width: $width-tablet) {
-    padding: 53px 0 45px;
+    padding: 47px 0 45px;
     display: grid;
     grid-template-columns: 192px 1fr 192px;
     justify-content: space-between;
@@ -12,12 +12,13 @@
   }
 
   @media (min-width: $width-pre-desktop) {
-    padding: 57px 0 58px;
+    padding: 45px 0 47px;
   }
 }
 
 .page-footer__logo {
   justify-content: left;
+
   @media (max-width: $width-max-mobile) {
     padding: 39px 0 32px 0;
   }

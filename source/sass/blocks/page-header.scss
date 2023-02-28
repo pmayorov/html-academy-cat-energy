@@ -6,12 +6,12 @@
     column-gap: 20px;
     width: $width-tablet-content;
     margin: 0 auto;
-    padding: 24px 0;
+    padding: 25px 0;
   }
 
   @media (min-width: $width-pre-desktop) {
     width: $width-desktop-content;
-    padding: 55px 0 29px;
+    padding: 54px 0 25px;
   }
 }
 
