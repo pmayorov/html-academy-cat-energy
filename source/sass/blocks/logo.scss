@@ -14,6 +14,13 @@
 
 .logo__name {
   margin: 0 auto;
+
+  // ! Не уверен, что БЭМ-канонично, но пока так!
+  &--nomargin {
+    @media (min-width: $width-tablet) {
+      margin: 0;
+    }
+  }
 }
 
 // todo Тимчасово!

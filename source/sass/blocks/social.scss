@@ -19,27 +19,33 @@
 }
 
 .social__link {
-  padding: 20px 18px;
   color: $special-grey-600;
   // svg-логотипы внутри ссылок становятся флекс-элементами; обнуляется line-height; центрируются вертикально по всей высоте ссылки.
   // background-color: ivory;
   display: flex;
   align-items: center;
 
+  @media (max-width: $width-max-mobile) {
+    padding: 20px 14px;
+  }
+
   @media (min-width: $width-tablet) {
+
+    padding: 14px 14px;
+
     &--vkontakte svg {
-      width: 30px;
-      height: 22px;
+      width: auto;
+      height: 17px;
     }
 
     &--instagram svg {
-      width: 23px;
+      width: auto;
       height: 23px;
     }
 
     &--facebook svg {
-      width: 28px;
-      height: 33px;
+      width: auto;
+      height: 29px;
     }
   }
 

@@ -24,13 +24,13 @@
 
   @media (min-width: $width-tablet) {
     position: relative;
-    padding: 34px 87px 532px;
+    padding: 38px 87px 526px;
   }
 
   @media (min-width: $width-pre-desktop) {
     // Возвращаем исходное позиционирование в пользу родителя .promo.
     position: initial;
-    padding: 111px 726px 185px 80px;
+    padding: 81px 726px 185px 80px;
 
     /// Оформляю фоновый бекграунд псевдоэлементом.
     &::after {
@@ -74,6 +74,10 @@
     line-height: 1;
     margin-bottom: 49px;
   }
+
+  @media (min-width: $width-pre-desktop) {
+    margin-bottom: 52px;
+  }
 }
 
 .promo__image {
@@ -90,10 +94,10 @@
   }
 
   @media (min-width: $width-pre-desktop) {
-    top: 29px;
+    top: 0;
     /// Расчет статичной левой позиции промофото –> середина вьюпорта минус половина ширины иллюстрации.
     /// Иначе, если указать только процент, то при изменении ширины вьюпорта и фото будет сдвигаться на новое значение позиции.
-    left: calc(50% - 162px);
+    left: calc(50% - 131px);
     width: 552px;
     height: 500px;
   }
@@ -106,7 +110,7 @@
   }
 
   @media (min-width: $width-tablet) {
-    padding: 14px 26px;
+    padding: 17px 26px;
     width: auto;
     font-size: 20px;
     line-height: 20px;

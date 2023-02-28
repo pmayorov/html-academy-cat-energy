@@ -23,7 +23,7 @@
   }
 
   @media (min-width: $width-tablet) {
-    padding: 56px $width-tablet-padding-inner;
+    padding: 59px $width-tablet-padding-inner;
     grid-template-columns: 175px 175px;
     justify-content: space-between;
   }
@@ -34,7 +34,7 @@
     top: 95px;
     width: 565px;
     grid-template-columns: 1fr 1fr;
-    column-gap: 80px;
+    column-gap: 87px;
     background-color: $color-white;
   }
 
@@ -72,7 +72,7 @@
     // Реализация отступа между span-элементами адреса
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 19px;
   }
 
   @media (min-width: $width-pre-desktop) {

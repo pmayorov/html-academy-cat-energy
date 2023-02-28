@@ -2,14 +2,19 @@
 .academy {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   font-size: 16px;
   color: $special-grey-700;
   text-decoration: none;
 
   @media (max-width: $width-max-mobile) {
+    justify-content: space-between;
     margin-left: -5px;
-    }
+  }
+
+  @media (min-width: $width-tablet) {
+    justify-content: end;
+
+  }
 
   &:active {
     opacity: 0.3;
