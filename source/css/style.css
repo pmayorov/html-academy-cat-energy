@@ -1615,9 +1615,6 @@ img {
     height: 29px;
   }
 }
-.social__link--facebook path {
-  transform: translateX(-7px);
-}
 .social__link:hover {
   color: #68b738;
 }
