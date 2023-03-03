@@ -41,16 +41,20 @@
       content: "";
       position: absolute;
       width: 50%;
-      // Устанавливаю отрицательный отступ (-200px), чтобы top-граница фонового бекгранунда ушла вверх за область позиционирования. Высота меню в шапке 140px, поэтому -200px достаточно.
+      // Устанавливаю отрицательный отступ (-200px), чтобы top-граница фонового бекгранунда ушла вверх за область позиционирования. Высота меню в шапке 140px, поэтому -200px достаточно. Но есть проблема при переполнении пунктами меню!
       top: -200px;
       right: 0;
       bottom: 0;
       z-index: -2;
       background-color: $promo-green;
-      background-image: url("../img/background/promo-big.jpg");
+      background-image: url("../img/background/promo-back-desktop.jpg");
       background-repeat: no-repeat;
-      // background-size: contain;
       background-position: 0 100%;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/background/promo-back-desktop@2x.jpg");
+        background-size: auto 690px;
+      }
     }
   }
 }
