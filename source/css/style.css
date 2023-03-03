@@ -602,9 +602,15 @@ img {
     bottom: 0;
     z-index: -2;
     background-color: #63a63b;
-    background-image: url("../img/background/promo-big.jpg");
+    background-image: url("../img/background/promo-back-desktop.jpg");
     background-repeat: no-repeat;
     background-position: 0 100%;
+  }
+}
+@media (min-width: 1320px) and (min-resolution: 2dppx) {
+  .promo__wrapper::after {
+    background-image: url("../img/background/promo-back-desktop@2x.jpg");
+    background-size: auto 690px;
   }
 }
 
