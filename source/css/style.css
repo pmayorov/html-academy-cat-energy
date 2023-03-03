@@ -110,8 +110,9 @@ img {
 @media (min-width: 768px) {
   .site-menu {
     display: flex;
-    column-gap: 36px;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: end;
     justify-self: end;
     font-size: 18px;
     font-weight: 400;
@@ -154,12 +155,7 @@ img {
 }
 @media (min-width: 768px) {
   .site-menu__link {
-    padding: 17px 0 11px 0;
-  }
-}
-@media (min-width: 1320px) {
-  .site-menu__link {
-    padding: 15px 0;
+    padding: 17px;
   }
 }
 @media (min-width: 1320px) {
@@ -182,9 +178,9 @@ img {
   .site-menu__link:not(:link)::after {
     position: absolute;
     content: "";
-    width: 100%;
+    width: calc(100% - 34px);
     height: 2px;
-    left: 0;
+    left: 17px;
     bottom: 2px;
     background-color: #68b738;
   }
@@ -196,9 +192,16 @@ img {
 }
 
 .logo {
-  display: flex;
+  display: grid;
+  grid-template-columns: 34px 1fr;
   align-items: center;
   text-decoration: none;
+}
+@media (min-width: 768px) {
+  .logo {
+    grid-template-columns: auto auto;
+    column-gap: 12px;
+  }
 }
 .logo:hover:link {
   opacity: 0.8;
@@ -207,24 +210,41 @@ img {
   opacity: 0.6;
 }
 
+.logo__image {
+  display: block;
+}
+@media (min-width: 768px) {
+  .logo__image {
+    width: 61px;
+    height: auto;
+  }
+}
+@media (min-width: 1320px) {
+  .logo__image {
+    width: 71px;
+    height: auto;
+  }
+}
+
 .logo__name {
-  margin: 0 auto;
+  display: block;
 }
-@media (min-width: 768px) {
-  .logo__name--nomargin {
-    margin: 0;
+@media (max-width: 767px) {
+  .logo__name--header {
+    margin: 0 auto;
   }
 }
-
 @media (min-width: 768px) {
-  .logo__image--mobile {
-    visibility: hidden;
+  .logo__name--header {
+    width: 101px;
+    height: auto;
+    margin-bottom: -6px;
   }
 }
-
-@media (min-width: 768px) {
-  .page-header__logo.logo {
-    outline: 1px dotted #cdcdcd;
+@media (min-width: 1320px) {
+  .logo__name--header {
+    width: 117px;
+    height: auto;
   }
 }
 
@@ -337,7 +357,7 @@ img {
   .page-header__nav {
     position: relative;
     display: grid;
-    grid-template-columns: 174px 1fr;
+    grid-template-columns: auto 1fr;
     column-gap: 20px;
     width: 708px;
     margin: 0 auto;
@@ -360,9 +380,9 @@ img {
 @media (max-width: 767px) {
   .page-header__bar {
     display: grid;
+    grid-template-columns: 1fr 34px;
     width: 320px;
     margin: 0 auto;
-    grid-template-columns: 34px 1fr 34px;
     padding: 12px 20px 15px;
     align-items: center;
   }
@@ -371,17 +391,6 @@ img {
 .page-header__menu {
   margin: 0;
   padding: 0;
-}
-
-@media (max-width: 767px) {
-  .page-header__logo {
-    grid-column: 1/span 2;
-  }
-}
-@media (min-width: 768px) {
-  .page-header__logo .logo__name {
-    display: none;
-  }
 }
 
 .page-header__toggler {
@@ -527,10 +536,11 @@ img {
 }
 
 .page-footer__logo {
-  justify-content: left;
+  grid-template-columns: auto;
 }
 @media (max-width: 767px) {
   .page-footer__logo {
+    justify-content: center;
     padding: 39px 0 32px 0;
   }
 }
@@ -550,10 +560,15 @@ img {
   .promo {
     color: #ffffff;
     text-align: center;
-    background-image: url("../img/backtile/promo-small.jpg"), linear-gradient(#64a73d, #64a73d 302px, #ffffff 302px);
+    background-image: url("../img/background/promo-back-mobile.jpg"), linear-gradient(#63a63b, #63a63b 302px, #ffffff 302px);
     background-position: 50% 0;
     background-repeat: no-repeat;
     background-size: auto 302px;
+  }
+}
+@media (max-width: 767px) and (min-resolution: 2dppx) {
+  .promo {
+    background-image: url("../img/background/promo-back-mobile@2x.jpg"), linear-gradient(#63a63b, #63a63b 302px, #ffffff 302px);
   }
 }
 @media (min-width: 1320px) {
@@ -582,12 +597,12 @@ img {
     content: "";
     position: absolute;
     width: 50%;
-    top: -150px;
+    top: -200px;
     right: 0;
     bottom: 0;
     z-index: -2;
-    background-color: #64a73d;
-    background-image: url("../img/backtile/promo-big.jpg");
+    background-color: #63a63b;
+    background-image: url("../img/background/promo-big.jpg");
     background-repeat: no-repeat;
     background-position: 0 100%;
   }
@@ -1869,10 +1884,6 @@ img {
 .card__image-wrapper {
   display: flex;
   justify-content: center;
-  outline-color: green;
-  outline-width: 1px;
-  outline-style: dotted;
-  outline-offset: -1px;
 }
 @media (max-width: 767px) {
   .card__image-wrapper {
@@ -1892,7 +1903,13 @@ img {
   }
 }
 
+.card__picture {
+  display: flex;
+}
+
+.card__picture,
 .card__image {
+  width: auto;
   align-self: end;
 }
 
@@ -2163,23 +2180,43 @@ img {
   display: flex;
   justify-content: center;
   min-height: 290px;
+  padding: 187px 0 43px 0;
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
-  background-image: url("../img/backtile/bonus-small.jpg");
+  background-image: url("../img/background/bonus-back-mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #68b738;
-  padding: 187px 0 43px 0;
 }
-@media (min-width: 768px) and (max-width: 1320px) {
+@media (min-resolution: 2dppx) {
+  .bonus {
+    background-image: url("../img/background/bonus-back-mobile@2x.jpg");
+  }
+}
+@media (min-width: 768px) and (max-width: 1319px) {
   .bonus {
     align-items: center;
     justify-content: end;
     min-height: 200px;
     padding: 70px 124px 70px;
-    background-position: 50% 60%;
+    background-image: url("../img/background/bonus-back-tablet.jpg");
+  }
+}
+@media (min-width: 768px) and (max-width: 1319px) and (min-resolution: 2dppx) {
+  .bonus {
+    background-image: url("../img/background/bonus-back-tablet@2x.jpg");
+  }
+}
+@media (min-width: 1320px) {
+  .bonus {
+    background-image: url("../img/background/bonus-back-desktop.jpg");
+  }
+}
+@media (min-width: 1320px) and (min-resolution: 2dppx) {
+  .bonus {
+    background-image: url("../img/background/bonus-back-desktop@2x.jpg");
   }
 }
 .bonus::after {
@@ -2192,7 +2229,7 @@ img {
   height: 80px;
   background: url("../img/icons/ico_gift.svg");
 }
-@media (min-width: 768px) and (max-width: 1320px) {
+@media (min-width: 768px) and (max-width: 1319px) {
   .bonus::after {
     top: 50%;
     transform: translateY(-50%);

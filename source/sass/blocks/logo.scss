@@ -1,7 +1,13 @@
 .logo {
-  display: flex;
+  display: grid;
+  grid-template-columns: 34px 1fr;
   align-items: center;
   text-decoration: none;
+
+  @media (min-width: $width-tablet) {
+    grid-template-columns: auto auto;
+    column-gap: 12px;
+  }
 
   &:hover:link {
     opacity: 0.8;
@@ -12,27 +18,46 @@
   }
 }
 
-.logo__name {
-  margin: 0 auto;
+.logo__image {
+  display: block;
 
-  // ! Не уверен, что БЭМ-канонично, но пока так!
-  &--nomargin {
+  @media (min-width: $width-tablet) {
+    width: 61px;
+    height: auto;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    width: 71px;
+    height: auto;
+  }
+}
+
+.logo__name {
+  display: block;
+
+  &--header {
+    @media (max-width: $width-max-mobile) {
+      margin: 0 auto;
+    }
+
     @media (min-width: $width-tablet) {
-      margin: 0;
+      width: 101px;
+      height: auto;
+      // Немного выравниваем текст логотипа по базовой линии главного меню
+      margin-bottom: -6px;
+    }
+
+    @media (min-width: $width-pre-desktop) {
+      width: 117px;
+      height: auto;
     }
   }
 }
 
 // todo Тимчасово!
 
-.logo__image--mobile {
-  @media (min-width: $width-tablet) {
-    visibility: hidden;
-  }
-}
-
-.page-header__logo.logo {
-  @media (min-width: $width-tablet) {
-    outline: 1px dotted $special-grey-250;
-  }
-}
+// .page-header__logo.logo {
+//   @media (min-width: $width-tablet) {
+//     outline: 1px dotted $special-grey-250;
+//   }
+// }

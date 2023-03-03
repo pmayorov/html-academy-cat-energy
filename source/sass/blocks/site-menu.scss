@@ -19,8 +19,9 @@
 
   @media (min-width: $width-tablet) {
     display: flex;
-    column-gap: 36px;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: end;
     justify-self: end;
     font-size: 18px;
     font-weight: 400;
@@ -62,11 +63,11 @@
   text-decoration: none;
 
   @media (min-width: $width-tablet) {
-    padding: 17px 0 11px 0;
+    padding: 17px;
   }
 
   @media (min-width: $width-pre-desktop) {
-    padding: 15px 0;
+    // padding: 15px 0;
   }
 
   .site-menu--index & {
@@ -94,9 +95,9 @@
     @media (min-width: $width-tablet) {
       position: absolute;
       content: "";
-      width: 100%;
+      width: calc(100% - 34px);
       height: 2px;
-      left: 0;
+      left: 17px;
       bottom: 2px;
       background-color: $basic-green;
     }

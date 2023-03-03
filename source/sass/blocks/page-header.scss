@@ -2,7 +2,7 @@
   @media (min-width: $width-tablet) {
     position: relative;
     display: grid;
-    grid-template-columns: 174px 1fr;
+    grid-template-columns: auto 1fr;
     column-gap: 20px;
     width: $width-tablet-content;
     margin: 0 auto;
@@ -10,6 +10,7 @@
   }
 
   @media (min-width: $width-pre-desktop) {
+    // grid-template-columns: 202px 1fr;
     width: $width-desktop-content;
     padding: 54px 0 25px;
   }
@@ -24,9 +25,9 @@
 .page-header__bar {
   @media (max-width: $width-max-mobile) {
     display: grid;
+    grid-template-columns: 1fr 34px;
     width: 320px;
     margin: 0 auto;
-    grid-template-columns: 34px 1fr 34px;
     padding: 12px 20px 15px;
     align-items: center;
   }
@@ -37,20 +38,6 @@
   padding: 0;
 }
 
-.page-header__logo {
-
-  // Растягиваем в мобильной версии хедера ссылку с логотипами на 2 ячейки грид-сетки. 3-я под кнопку [X]
-  @media (max-width: $width-max-mobile) {
-    grid-column: 1 / span 2;
-  }
-
-  // Скрываем в хедере текстовую часть логотипа
-  @media (min-width: $width-tablet) {
-    & .logo__name {
-      display: none;
-    }
-  }
-}
 
 /// Кнопка закрытия мобильного главного меню
 
