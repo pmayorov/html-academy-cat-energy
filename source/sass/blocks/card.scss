@@ -121,11 +121,15 @@
   @media (min-width: $width-pre-desktop) {
     padding-bottom: 46px;
   }
-
-  @include outline(green, 1px, dotted);
 }
 
+.card__picture {
+  display: flex;
+}
+
+.card__picture,
 .card__image {
+  width: auto;
   align-self: end;
 }
 

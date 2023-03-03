@@ -4,10 +4,14 @@
     text-align: center;
 
     background: {
-      image: url("../img/backtile/promo-small.jpg"), linear-gradient($promo-green, $promo-green 302px, $color-white 302px);
+      image: url("../img/background/promo-back-mobile.jpg"), linear-gradient($promo-green, $promo-green 302px, $color-white 302px);
       position: 50% 0;
       repeat: no-repeat;
       size: auto 302px;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/promo-back-mobile@2x.jpg"), linear-gradient($promo-green, $promo-green 302px, $color-white 302px);
     }
   }
 
@@ -28,7 +32,7 @@
   }
 
   @media (min-width: $width-pre-desktop) {
-    // Возвращаем исходное позиционирование в пользу родителя .promo.
+    // Возвращаем static позиционирование в пользу родителя .promo.
     position: initial;
     padding: 81px 726px 185px 80px;
 
@@ -37,13 +41,13 @@
       content: "";
       position: absolute;
       width: 50%;
-      // Устанавливаю отрицательный отступ (-150px), чтобы top-граница фонового бекгранунда ушла вверх за область позиционирования. Высота меню в шапке 140px, поэтому -150px более чем достаточно.
-      top: -150px;
+      // Устанавливаю отрицательный отступ (-200px), чтобы top-граница фонового бекгранунда ушла вверх за область позиционирования. Высота меню в шапке 140px, поэтому -200px достаточно.
+      top: -200px;
       right: 0;
       bottom: 0;
       z-index: -2;
       background-color: $promo-green;
-      background-image: url("../img/backtile/promo-big.jpg");
+      background-image: url("../img/background/promo-big.jpg");
       background-repeat: no-repeat;
       // background-size: contain;
       background-position: 0 100%;

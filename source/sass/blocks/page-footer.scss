@@ -17,9 +17,10 @@
 }
 
 .page-footer__logo {
-  justify-content: left;
+  grid-template-columns: auto;
 
   @media (max-width: $width-max-mobile) {
+    justify-content: center;
     padding: 39px 0 32px 0;
   }
 }
