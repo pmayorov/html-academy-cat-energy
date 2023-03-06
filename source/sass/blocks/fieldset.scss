@@ -22,6 +22,10 @@
 .fieldset__list--about {
   row-gap: 14px;
 
+  @media (min-width: $width-tablet) {
+    row-gap: 21px;
+  }
+
   @media (min-width: $width-pre-desktop) {
     // Устанавливаем width: auto, т.к. при десктопном вьюпорте данный блок будет в 2-х колоночной сетке и должен принять ширину ячейки.
     width: auto;
@@ -49,6 +53,10 @@
 
 .fieldset__list--contacts {
   row-gap: 14px;
+
+  @media (min-width: $width-tablet) {
+    row-gap: 21px;
+  }
 
   @media (min-width: $width-pre-desktop) {
     grid-template-columns: 1fr 1fr;

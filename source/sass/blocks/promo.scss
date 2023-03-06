@@ -28,7 +28,7 @@
 
   @media (min-width: $width-tablet) {
     position: relative;
-    padding: 38px 87px 526px;
+    padding: 33px 87px 526px;
   }
 
   @media (min-width: $width-pre-desktop) {
@@ -105,7 +105,7 @@
     top: 0;
     /// Расчет статичной левой позиции промофото –> середина вьюпорта минус половина ширины иллюстрации.
     /// Иначе, если указать только процент, то при изменении ширины вьюпорта и фото будет сдвигаться на новое значение позиции.
-    left: calc(50% - 131px);
+    left: calc(50% - 162px);
     width: 552px;
     height: 500px;
   }

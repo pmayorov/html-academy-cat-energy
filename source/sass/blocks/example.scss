@@ -62,7 +62,8 @@
 }
 
 .example__text {
-  margin: 0 108px 20px 0;
+  margin: 0;
+  margin-bottom: 20px;
   color: $special-grey-700;
 
   @media (min-width: $width-tablet) {
@@ -73,7 +74,7 @@
   }
 
   @media (min-width: $width-pre-desktop) {
-    margin-bottom: 70px;
+    margin: 0 108px 68px 0;
   }
 }
 

@@ -1,5 +1,6 @@
 .card-row {
   display: grid;
+  align-items: baseline;
 
   @media (min-width: $width-tablet) and (max-width: ($width-pre-desktop - 1px)) {
     // @media (min-width: $width-tablet) and (max-width: ($width-pre-desktop)) {
@@ -7,14 +8,13 @@
     // justify-content: space-between;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
-    row-gap: 25px;
+    row-gap: 21px;
   }
 
   @media (min-width: $width-pre-desktop) {
     // display: grid;
     // grid-auto-flow: column;
     grid-template-columns: (245px + 80px) (245px + 80px) 245px;
-    align-items: center;
   }
 }
 
@@ -60,16 +60,18 @@
 
 .card-row__desc {
   margin: 0;
-  line-height: 20px;
+  line-height: 14px;
 
   @media (min-width: $width-tablet) {
     font-size: 16px;
+    line-height: 20px;
   }
 }
 
 .card-row__button {
   padding: 10px 20px;
   font-size: 16px;
+  line-height: 20px;
 
   @media (min-width: $width-tablet) and (max-width: ($width-pre-desktop - 1px)) {
     grid-column: 1 / -1;
