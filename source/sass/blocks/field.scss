@@ -1,7 +1,6 @@
 .field {
   position: relative;
   display: flex;
-  gap: 13px;
   align-items: center;
   color: $special-grey-700;
   font-family: $font-title;
@@ -10,11 +9,13 @@
   @media (max-width: $width-max-mobile) {
     font-size: 16px;
     line-height: 18px;
+    column-gap: 13px;
   }
 
   @media (min-width: $width-tablet) {
     font-size: 20px;
     line-height: 30px;
+    column-gap: 19px;
   }
 }
 
@@ -26,7 +27,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 20px;
+    right: 15px;
     content: "";
     width: 30px;
     height: 30px;
@@ -115,6 +116,11 @@
 
 .field__input--comments {
   @media (max-width: $width-max-mobile) {
+    height: 150px;
     padding: 9px 14px;
+  }
+
+  @media (min-width: $width-tablet) {
+    height: 174px;
   }
 }

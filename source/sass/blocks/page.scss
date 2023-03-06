@@ -70,6 +70,10 @@
     right: 0;
     height: 2px;
     background-color: $basic-green;
+
+    @media (min-width: $width-tablet) {
+      top: 22px;
+    }
   }
 }
 
@@ -85,8 +89,8 @@
   }
 
   @media (min-width: $width-tablet) {
-    padding: 0 38px;
-    margin: 0 -38px;
+    padding: 0 41px;
+    margin: 0 -41px;
   }
 
   @media (min-width: $width-pre-desktop) {

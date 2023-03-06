@@ -6,7 +6,7 @@
   }
 
   @media (min-width: $width-tablet) {
-    row-gap: 69px;
+    row-gap: 68px;
   }
 
   @media (min-width: $width-pre-desktop) {
@@ -38,15 +38,15 @@
   border-top: 1px solid $special-grey-250;
 
   @media (max-width: $width-max-mobile) {
-    padding: 13px 0 19px;
+    padding: 12px 0 18px;
   }
 
   @media (min-width: $width-tablet) {
-    padding: 26px 38px 28px;
+    padding: 26px 38px 27px;
   }
 
   @media (min-width: $width-pre-desktop) {
-    padding: 15px 0 17px;
+    padding: 15px 0 16px;
   }
 
   &:first-of-type {

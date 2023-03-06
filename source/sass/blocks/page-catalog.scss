@@ -18,11 +18,11 @@
   }
 
   @media (min-width: $width-tablet) {
-    padding: 64px 0 82px;
+    padding: 33px 0 82px;
   }
 
   @media (min-width: $width-pre-desktop) {
-    padding: 74px 0 84px;
+    padding: 45px 0 84px;
   }
 }
 
@@ -30,7 +30,7 @@
 
 .page-catalog__products {
   @media (max-width: $width-max-mobile) {
-    margin-bottom: 25px;
+    margin-bottom: 22px;
   }
 
   @media (min-width: $width-tablet) {

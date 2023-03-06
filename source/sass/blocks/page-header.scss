@@ -36,6 +36,10 @@
 .page-header__menu {
   margin: 0;
   padding: 0;
+
+  @media (min-width: $width-tablet) {
+    margin-right: -17px;
+  }
 }
 
 
