@@ -10,9 +10,15 @@
   }
 
   @media (min-width: $width-pre-desktop) {
-    // grid-template-columns: 202px 1fr;
     width: $width-desktop-content;
     padding: 54px 0 25px;
+  }
+
+  &--index {
+    @media (min-width: $width-pre-desktop) {
+      grid-template-columns: auto 50%;
+      justify-content: space-between;
+    }
   }
 }
 

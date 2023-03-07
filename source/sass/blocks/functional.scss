@@ -19,13 +19,14 @@
 
   @media (min-width: $width-pre-desktop) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 80px;
+    gap: 60px  80px;
   }
 }
 
 .functional__item {
   position: relative;
   display: grid;
+  word-break: break-word;
 
   @media (max-width: $width-max-mobile) {
     grid-template-columns: 60px 1fr;

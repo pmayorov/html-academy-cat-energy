@@ -15,6 +15,7 @@
   font-family: $font-title;
   font-weight: 400;
   line-height: 1;
+  word-break: break-word;
 
   @media (max-width: $width-max-mobile) {
     font-size: 36px;

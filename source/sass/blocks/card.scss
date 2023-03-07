@@ -64,6 +64,7 @@
   font-weight: 400;
   text-transform: uppercase;
   color: $special-grey-800;
+  word-break: break-word;
 
   @media (max-width: $width-max-mobile) {
     width: 80px;
@@ -111,6 +112,7 @@
 
   @media (max-width: $width-max-mobile) {
     grid-area: image;
+    min-width: 140px;
   }
 
   @media (min-width: $width-tablet) {
@@ -182,6 +184,8 @@
 }
 
 .card__term {
+  word-break: break-word;
+
   &--more {
     // grid-area: initial;
     margin: 0;
@@ -199,6 +203,7 @@
   margin: 0;
   text-align: right;
   min-width: min-content;
+  // flex-shrink: 0;
 }
 
 .card__button {

@@ -2,7 +2,7 @@
   @media (min-width: $width-pre-desktop) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 80px;
+    gap: 60px 80px;
   }
 }
 
@@ -146,14 +146,14 @@
 
     @media (max-width: $width-max-mobile) {
       left: 9px;
-      top: -8px;
+      top: calc(50% - 27px);
       width: 36px;
       height: 50px;
     }
 
     @media (min-width: $width-pre-desktop) {
       left: 18px;
-      top: -38px;
+      top: calc(50% - 56px);
       width: 70px;
       height: 97px;
     }
@@ -164,14 +164,14 @@
 
     @media (max-width: $width-max-mobile) {
       left: -7px;
-      top: 4px;
+      top: calc(50% - 15px);
       width: 67px;
       height: 28px;
     }
 
     @media (min-width: $width-pre-desktop) {
       left: -18px;
-      top: -10px;
+      top: calc(50% - 28px);
       width: 134px;
       height: 56px;
     }
