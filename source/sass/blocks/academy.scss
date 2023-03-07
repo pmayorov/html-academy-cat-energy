@@ -5,6 +5,7 @@
   font-size: 16px;
   color: $special-grey-700;
   text-decoration: none;
+  word-break: break-word;
 
   @media (max-width: $width-max-mobile) {
     justify-content: space-between;
@@ -22,10 +23,8 @@
 
 .academy__logo {
   color: $special-grey-600;
-
-  @media (min-width: $width-tablet) {
-    margin-left: 22px;
-  }
+  flex-shrink: 0;
+  margin-left: 22px;
 
   .academy:hover & {
     color: $basic-green;

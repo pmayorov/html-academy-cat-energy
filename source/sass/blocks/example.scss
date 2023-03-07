@@ -140,6 +140,8 @@
   color: $special-grey-700;
   text-transform: lowercase;
   text-align: center;
+  word-break: break-word;
+  padding: 0 7px;
 
   @media (max-width: $width-max-mobile) {
     background-color: $special-grey-100;
@@ -148,6 +150,7 @@
 
   @media (min-width: $width-tablet) {
     width: auto;
+    max-width: 90%;
     background-color: $color-white;
     font-size: 14px;
   }

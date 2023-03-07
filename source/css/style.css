@@ -265,6 +265,7 @@ img {
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   line-height: 1;
+  word-break: break-word;
 }
 @media (max-width: 767px) {
   .page__title {
@@ -373,6 +374,12 @@ img {
   .page-header__nav {
     width: 1220px;
     padding: 54px 0 25px;
+  }
+}
+@media (min-width: 1320px) {
+  .page-header__nav--index {
+    grid-template-columns: auto 50%;
+    justify-content: space-between;
   }
 }
 
@@ -607,7 +614,7 @@ img {
     content: "";
     position: absolute;
     width: 50%;
-    top: -200px;
+    top: -400px;
     right: 0;
     bottom: 0;
     z-index: -2;
@@ -624,6 +631,9 @@ img {
   }
 }
 
+.promo__title {
+  word-break: break-word;
+}
 @media (max-width: 767px) {
   .promo__title {
     font-size: 36px;
@@ -638,6 +648,7 @@ img {
 }
 
 .promo__lead {
+  word-break: break-word;
   text-transform: uppercase;
 }
 @media (max-width: 767px) {
@@ -699,7 +710,7 @@ img {
   .catalogues__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 80px;
+    gap: 60px 80px;
   }
 }
 
@@ -834,7 +845,7 @@ img {
 @media (max-width: 767px) {
   .catalogues__item--thin .catalogues__title::after {
     left: 9px;
-    top: -8px;
+    top: calc(50% - 27px);
     width: 36px;
     height: 50px;
   }
@@ -842,7 +853,7 @@ img {
 @media (min-width: 1320px) {
   .catalogues__item--thin .catalogues__title::after {
     left: 18px;
-    top: -38px;
+    top: calc(50% - 56px);
     width: 70px;
     height: 97px;
   }
@@ -853,7 +864,7 @@ img {
 @media (max-width: 767px) {
   .catalogues__item--fat .catalogues__title::after {
     left: -7px;
-    top: 4px;
+    top: calc(50% - 15px);
     width: 67px;
     height: 28px;
   }
@@ -861,7 +872,7 @@ img {
 @media (min-width: 1320px) {
   .catalogues__item--fat .catalogues__title::after {
     left: -18px;
-    top: -10px;
+    top: calc(50% - 28px);
     width: 134px;
     height: 56px;
   }
@@ -967,13 +978,14 @@ img {
 @media (min-width: 1320px) {
   .functional__list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 80px;
+    gap: 60px 80px;
   }
 }
 
 .functional__item {
   position: relative;
   display: grid;
+  word-break: break-word;
 }
 @media (max-width: 767px) {
   .functional__item {
@@ -1211,6 +1223,8 @@ img {
   color: #444444;
   text-transform: lowercase;
   text-align: center;
+  word-break: break-word;
+  padding: 0 7px;
 }
 @media (max-width: 767px) {
   .example__term {
@@ -1221,6 +1235,7 @@ img {
 @media (min-width: 768px) {
   .example__term {
     width: auto;
+    max-width: 90%;
     background-color: #ffffff;
     font-size: 14px;
   }
@@ -1509,8 +1524,39 @@ img {
 }
 
 @media (min-width: 1320px) {
-  .contacts__wrapper {
+  .contacts__inner-address {
     position: relative;
+  }
+}
+
+.contacts__inner-map {
+  background-image: url("../../img/index/map.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media (max-width: 767px) {
+  .contacts__inner-map {
+    height: 362px;
+  }
+}
+@media (min-width: 768px) {
+  .contacts__inner-map {
+    height: 400px;
+  }
+}
+
+.contacts__map {
+  display: block;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .contacts__map {
+    height: 362px;
+  }
+}
+@media (min-width: 768px) {
+  .contacts__map {
+    height: 400px;
   }
 }
 
@@ -1554,6 +1600,7 @@ img {
   color: #111111;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
+  word-break: break-word;
 }
 @media (max-width: 767px) {
   .contacts__title {
@@ -1573,6 +1620,7 @@ img {
   margin: 0;
   line-height: 20px;
   color: #444444;
+  word-break: break-word;
 }
 @media (min-width: 768px) {
   .contacts__text {
@@ -1588,21 +1636,6 @@ img {
   .contacts__text {
     margin: 0;
     text-align: left;
-  }
-}
-
-.contacts__map {
-  display: block;
-  width: 100%;
-}
-@media (max-width: 767px) {
-  .contacts__map {
-    height: 362px;
-  }
-}
-@media (min-width: 768px) {
-  .contacts__map {
-    height: 400px;
   }
 }
 
@@ -1662,6 +1695,7 @@ img {
   font-size: 16px;
   color: #444444;
   text-decoration: none;
+  word-break: break-word;
 }
 @media (max-width: 767px) {
   .academy {
@@ -1680,11 +1714,8 @@ img {
 
 .academy__logo {
   color: #666666;
-}
-@media (min-width: 768px) {
-  .academy__logo {
-    margin-left: 22px;
-  }
+  flex-shrink: 0;
+  margin-left: 22px;
 }
 .academy:hover .academy__logo {
   color: #68b738;
@@ -1856,6 +1887,7 @@ img {
   font-weight: 400;
   text-transform: uppercase;
   color: #222222;
+  word-break: break-word;
 }
 @media (max-width: 767px) {
   .card__title {
@@ -1903,6 +1935,7 @@ img {
 @media (max-width: 767px) {
   .card__image-wrapper {
     grid-area: image;
+    min-width: 140px;
   }
 }
 @media (min-width: 768px) {
@@ -1981,6 +2014,9 @@ img {
   }
 }
 
+.card__term {
+  word-break: break-word;
+}
 .card__term--more {
   margin: 0;
   font-size: 12px;
@@ -2058,6 +2094,11 @@ img {
     font-size: 20px;
   }
 }
+@media (min-width: 1320px) {
+  .card-row__title {
+    margin-right: 80px;
+  }
+}
 
 .card-row__list {
   margin: 0;
@@ -2075,6 +2116,7 @@ img {
     display: grid;
     text-align: right;
     grid-template-columns: 192px 1fr;
+    column-gap: 12px;
   }
 }
 @media (min-width: 1320px) {
@@ -2092,6 +2134,11 @@ img {
   .card-row__desc {
     font-size: 16px;
     line-height: 20px;
+  }
+}
+@media (min-width: 1320px) {
+  .card-row__desc {
+    margin-right: 20px;
   }
 }
 
@@ -2406,6 +2453,9 @@ img {
   }
 }
 
+.fieldset__list--more {
+  align-items: center;
+}
 @media (max-width: 767px) {
   .fieldset__list--more {
     row-gap: 12px;
@@ -2712,14 +2762,12 @@ img {
 }
 @media (max-width: 767px) {
   .select {
-    height: 30px;
     font-size: 16px;
     line-height: 18px;
   }
 }
 @media (min-width: 768px) {
   .select {
-    height: 40px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -2733,13 +2781,11 @@ img {
 @media (max-width: 767px) {
   .select__input {
     width: 30px;
-    height: 30px;
   }
 }
 @media (min-width: 768px) {
   .select__input {
     width: 40px;
-    height: 40px;
   }
 }
 .select__input:focus + .select__text::before {
@@ -2749,6 +2795,7 @@ img {
 .select__text {
   display: grid;
   align-items: center;
+  word-break: break-word;
 }
 @media (max-width: 767px) {
   .select__text {

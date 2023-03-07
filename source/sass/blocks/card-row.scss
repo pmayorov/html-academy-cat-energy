@@ -33,6 +33,10 @@
   @media (min-width: $width-tablet) {
     font-size: 20px;
   }
+
+  @media (min-width: $width-pre-desktop) {
+    margin-right: 80px;
+  }
 }
 
 .card-row__list {
@@ -50,6 +54,7 @@
     text-align: right;
     // 132 + 60 - колонка сетки + расстояние между колонками
     grid-template-columns: (132px + 60px) 1fr;
+    column-gap: 12px;
   }
 
   @media (min-width: $width-pre-desktop) {
@@ -65,6 +70,10 @@
   @media (min-width: $width-tablet) {
     font-size: 16px;
     line-height: 20px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    margin-right: 20px;
   }
 }
 

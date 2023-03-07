@@ -1,7 +1,7 @@
 // //* Бордер для орієнтування!
 // @include outline();
 
-@mixin outline ($color: #0f99da, $width: 1px, $style: dotted) {
+@mixin outline ($width: 1px, $style: dotted, $color: #0f99da) {
   outline: {
     color: $color;
     width: $width;

@@ -65,6 +65,8 @@
 }
 
 .fieldset__list--more {
+  align-items: center;
+
   @media (max-width: $width-max-mobile) {
     row-gap: 12px;
   }
