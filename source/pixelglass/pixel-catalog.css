@@ -1,0 +1,23 @@
+ html {
+   height: 3400px;
+   background-repeat: no-repeat;
+   background-position: 50% 0;
+   /* По умолчанию показывается мобильный макет */
+   background-image: url("../pixelglass/catalog_mobile.jpg");
+ }
+
+ /* Планшет */
+ @media (min-width: 760px) {
+   html {
+     /* Планшетный макет */
+     background-image: url("../pixelglass/catalog_tablet.jpg");
+   }
+ }
+
+ /* Десктоп */
+ @media (min-width: 960px) {
+   html {
+     /* Десктопный макет */
+     background-image: url("../pixelglass/catalog_desktop.jpg");
+   }
+ }

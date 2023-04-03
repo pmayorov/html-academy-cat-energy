@@ -1,19 +1,29 @@
 {
-  "name": "Cat-Energy",
+  "name": "cat-energy",
   "private": true,
-  "description": "Личный проект «Cat-Energy» от HTML Academy",
+  "description": "Личный проект «Cat Energy» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
+    "@linthtml/gulp-linthtml": "^0.7.0",
     "@linthtml/linthtml": "^0.9.4",
     "autoprefixer": "^10.4.13",
     "browser-sync": "^2.27.7",
+    "del": "^7.0.0",
     "gulp": "^4.0.2",
     "gulp-dart-sass": "^1.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-libsquoosh": "^1.1.2",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-svgstore": "^9.0.0",
+    "gulp-terser": "^2.1.0",
+    "gulp-webp": "^4.0.1",
     "linthtml-config-htmlacademy": "^1.0.3",
     "pixel-glass": "^1.0.13",
     "postcss": "^8.4.21",
+    "postcss-csso": "^6.0.1",
     "stylelint": "^14.16.1",
     "stylelint-config-htmlacademy": "^1.1.4",
     "stylelint-config-standard-scss": "^6.1.0"
@@ -21,9 +31,10 @@
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --custom-syntax postcss-scss",
-    "lint": "npm run editorconfig && npm run stylelint",
-    "build": "gulp styles",
-    "start": "gulp"
+    "test": "npm run editorconfig && npm run stylelint",
+    "start": "gulp",
+    "dev": "gulp dev",
+    "build": "gulp build"
   },
   "browserslist": [
     "last 2 versions",

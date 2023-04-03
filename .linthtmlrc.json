@@ -1,3 +1,6 @@
 {
-  "extends": "linthtml-config-htmlacademy"
+  "extends": "linthtml-config-htmlacademy",
+  "rules": {
+    "attr-new-line": false
+  }
 }
