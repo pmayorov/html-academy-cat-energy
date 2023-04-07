@@ -36,9 +36,9 @@
       margin: 0 6px;
       border-radius: 6px;
       background-color: $basic-green;
-      /* начальное значение */
+      // Почему то не работает :( оставляю как есть
       justify-self: start;
-      transition: justify-self 1s ease;
+      transition: justify-self 0.5s ease;
     }
   }
 

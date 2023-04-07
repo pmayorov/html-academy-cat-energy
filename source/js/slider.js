@@ -15,7 +15,6 @@ const switcherAfter = 'switcher--after';
 // Изменяем стили слайдера при загрузке страницы
 switcherRange.value = 53;
 slider.style.gridTemplateColumns = '47% 1fr';
-slider.style.transition = 'grid-template-columns 0.5s'
 
 // Функция для изменения слайдера в зависимости от размера экрана
 
@@ -23,11 +22,13 @@ function handleViewportChange() {
   if (window.matchMedia('(min-width: 768px)').matches) {
 
     buttonBefore.onclick = () => {
+      slider.style.transition = 'grid-template-columns 0.5s'
       slider.style.gridTemplateColumns = '100% 1fr';
       switcherRange.value = 0;
     };
 
     buttonAfter.onclick = () => {
+      slider.style.transition = 'grid-template-columns 0.5s'
       slider.style.gridTemplateColumns = '0 1fr';
       switcherRange.value = 100;
     };
