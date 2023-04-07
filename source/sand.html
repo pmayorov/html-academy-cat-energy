@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <!-- Слайдер - фото котов до и после -->
+  <div class="example__images-inner slider">
+    <!-- Рекламные фото -->
+    <div class="example__images slider__images">
+      <div class="slider__image-before">
+        <picture>
+          <source media="(min-width: 768px)" srcset="./img/index/cat-before-tablet.png 1x, ./img/index/cat-before-tablet@2x.png 2x">
+          <img class="example__image example__image--before" width="280" height="232" src="./img/index/cat-before-mobile.png" srcset="./img/index/cat-before-mobile@2x.png" alt="Толстый кот до питания кормом">
+        </picture>
+      </div>
+      <div class="slider__image-after">
+        <picture>
+          <source media=" (min-width: 768px)" srcset="./img/index/cat-after-tablet.png 1x, ./img/index/cat-after-tablet@2x.png 2x">
+          <img class="example__image example__image--after example__image--active" width="243" height="232" src="./img/cat-after-mobile.png" srcset="./img/index/cat-after-mobile@2x.png" alt="Худой кот после питания кормом">
+        </picture>
+      </div>
+    </div>
+    <!-- Переключатели фотографий -->
+    <div class="example__switcher switcher switcher--after">
+      <button class="switcher__button switcher__button--before"><span class="switcher__button--inner">Было</span></button>
+      <input class="switcher__range" type="range" value="95">
+      <button class="switcher__button switcher__button--after"><span class="switcher__button--inner">Стало</span></button>
+    </div>
+  </div>
+
+
+  <!-- !!!! -->
+
+  <!-- Слайдер - фото котов до и после -->
+  <div class="example__images-inner">
+    <!-- Рекламные фото -->
+    <div class="example__images">
+      <picture>
+        <source media="(min-width: 768px)" srcset="./img/index/cat-before-tablet.png 1x, ./img/index/cat-before-tablet@2x.png 2x">
+        <img class="example__image example__image--before" width="280" height="232" src="./img/index/cat-before-mobile.png" srcset="./img/index/cat-before-mobile@2x.png" alt="Толстый кот до питания кормом">
+      </picture>
+      <picture>
+        <source media="(min-width: 768px)" srcset="./img/index/cat-after-tablet.png 1x, ./img/index/cat-after-tablet@2x.png 2x">
+        <img class="example__image example__image--after example__image--active" width="243" height="232" src="./img/cat-after-mobile.png" srcset="./img/index/cat-after-mobile@2x.png" alt="Худой кот после питания кормом">
+      </picture>
+    </div>
+    <!-- Переключатели фотографий -->
+    <div class="example__switcher switcher switcher--after">
+      <button class="switcher__button switcher__button--before"><span class="switcher__button--inner">Было</span></button>
+      <input class="switcher__range" type="range" value="95">
+      <button class="switcher__button switcher__button--after"><span class="switcher__button--inner">Стало</span></button>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

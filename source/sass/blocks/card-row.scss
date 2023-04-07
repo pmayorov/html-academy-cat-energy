@@ -24,6 +24,7 @@
   font-weight: 400;
   text-transform: uppercase;
   line-height: 1;
+  word-break: break-word;
 
   @media (max-width: $width-max-mobile) {
     font-size: 16px;

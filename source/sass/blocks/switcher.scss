@@ -36,6 +36,9 @@
       margin: 0 6px;
       border-radius: 6px;
       background-color: $basic-green;
+      /* начальное значение */
+      justify-self: start;
+      transition: justify-self 1s ease;
     }
   }
 

@@ -222,26 +222,55 @@
   margin-bottom: 15px;
 
   @media (min-width: $width-tablet) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 50% 1fr;
     margin-bottom: 25px;
   }
 }
 
 .example__image {
-  display: block;
+  display: none;
   margin: 0 auto;
 
+  @media (min-width: $width-tablet) {
+    display: block;
+    width: auto;
+    height: 511px;
+    object-fit: cover;
+  }
+
   &--before {
-    display: none;
+    @media (min-width: $width-tablet) {
+      // Читай ниже ...
+      // margin: 0;
+      // margin-right: auto;
+      // border-right: 2px solid rgba($color-white, 0.5);
+      object-position: left;
+    }
   }
 
   &--after {
-    display: block;
+    @media (min-width: $width-tablet) {
+
+      // Изначально (когда) размер фото было непропопрционально
+      // размерам контейнера по ее краям возникают маргины и при перемещении инпута,
+      // в момент когда ширина ячейки становится шире самого фото,
+      // оно начинает двигаться вслед за граиницей ячейки.
+      // Придумал такой костыль.
+
+      // margin: 0;
+      // margin-left: auto;
+
+      // Это другое! Тут align не работает.
+      // Позиционируем фото справа, иначе при масштабированиии ширины ячейки
+      // оно постоянно позиционируется относительно ее центра.
+
+      object-position: right;
+    }
   }
 
-  @media (min-width: $width-tablet) {
-    width: auto;
-    height: 511px;
+  &--active {
+    display: block;
   }
 }
 

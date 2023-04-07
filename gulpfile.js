@@ -157,18 +157,20 @@ const watcher = () => {
 };
 
 
-// Watcher styles only
+// Watcher scripts and styles for DevMode
 
-const watcherStyles = () => {
+const watcherDev = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
+  gulp.watch('source/js/**/!(*.min).js', gulp.series(minjs));
 };
 
-// My develop Mode
+
+// My Develop Mode
 
 export const dev = gulp.series(
   styles,
   minjs,
-  watcherStyles);
+  watcherDev);
 
 // Build project
 

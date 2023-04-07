@@ -118,9 +118,9 @@
           </dl>
         </div>
 
-        <!-- Блок фото переключателя -->
+        <!-- Слайдер - фото котов до и после -->
         <div class="example__images-inner">
-          <!-- Рекламное фото -->
+          <!-- Рекламные фото -->
           <div class="example__images">
             <picture>
               <source media="(min-width: 768px)" srcset="./img/index/cat-before-tablet.png 1x, ./img/index/cat-before-tablet@2x.png 2x">
@@ -128,13 +128,13 @@
             </picture>
             <picture>
               <source media="(min-width: 768px)" srcset="./img/index/cat-after-tablet.png 1x, ./img/index/cat-after-tablet@2x.png 2x">
-              <img class="example__image example__image--after" width="243" height="232" src="./img/cat-after-mobile.png" srcset="./img/index/cat-after-mobile@2x.png" alt="Худой кот после питания кормом">
+              <img class="example__image example__image--after example__image--active" width="280" height="232" src="./img/cat-after-mobile.png" srcset="./img/index/cat-after-mobile@2x.png" alt="Худой кот после питания кормом">
             </picture>
           </div>
           <!-- Переключатели фотографий -->
           <div class="example__switcher switcher switcher--after">
             <button class="switcher__button switcher__button--before"><span class="switcher__button--inner">Было</span></button>
-            <input class="switcher__range" type="range" value="95">
+            <input class="switcher__range" type="range" value="50">
             <button class="switcher__button switcher__button--after"><span class="switcher__button--inner">Стало</span></button>
           </div>
         </div>
@@ -204,7 +204,8 @@
       </a>
     </div>
   </footer>
-  <script src="./js/app.min.js"></script>
+  <script src="./js/siteMenu.min.js"></script>
+  <script src="./js/slider.min.js"></script>
 </body>
 
 </html>
