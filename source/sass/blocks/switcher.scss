@@ -37,6 +37,8 @@
       border-radius: 6px;
       background-color: $basic-green;
       // Почему то не работает :( оставляю как есть
+      //* P.S. А не работает потому, что на justify-self
+      //* действие transition не распространяется!
       justify-self: start;
       transition: justify-self 0.5s ease;
     }
@@ -44,6 +46,7 @@
 
   &--after::after {
     @media (max-width: $width-max-mobile) {
+      background-color: red;
       justify-self: end;
     }
   }
