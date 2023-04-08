@@ -8,7 +8,7 @@
 
 Вообщем – [**Animatable CSS properties**](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties)
 
-На этом решил проект закончить. Перехожу к следующему разделу.
+На этом решил проект закончить. Перехожу к следующему разделу обучения и новому проекту.
 
 ***
 
