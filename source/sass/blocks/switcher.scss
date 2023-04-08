@@ -46,7 +46,6 @@
 
   &--after::after {
     @media (max-width: $width-max-mobile) {
-      background-color: red;
       justify-self: end;
     }
   }
