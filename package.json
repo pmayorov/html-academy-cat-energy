@@ -2,6 +2,7 @@
   "name": "cat-energy",
   "private": true,
   "description": "Личный проект «Cat Energy» от HTML Academy",
+  "repository": "github:pmayorov/html-academy-cat-energy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "@linthtml/gulp-linthtml": "^0.7.0",
