@@ -55,5 +55,6 @@
   "engines": {
     "node": ">=16"
   },
-  "type": "module"
+  "type": "module",
+  "version": "0.1.0"
 }
